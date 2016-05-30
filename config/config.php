@@ -6,9 +6,9 @@
  * Time: 15:51
  */
 
-Config::set('site_name','Your site name');
+Config::set('site_name','Картотека');
 
-Config::set('languages', array('en','fr'));
+
 
 // Routes. Route name => method prefix
 
@@ -18,13 +18,13 @@ Config::set('routes', array (
 ));
 
 Config::set('default_route', 'default');
-Config::set('default_language', 'en');
+Config::set('default_language', 'ua');
 Config::set('default_controller', 'pages');
 Config::set('default_action', 'index');
 Config::set('db.host', 'localhost');
 Config::set('db.user', 'root');
 Config::set('db.password', '111111');
-Config::set('db.db_name', 'mvc');
+Config::set('db.db_name', 'legis_mvc');
 
 
 Config::set('salt','jd7sj3sdkd964he7e');

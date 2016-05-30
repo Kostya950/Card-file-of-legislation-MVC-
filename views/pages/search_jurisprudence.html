@@ -1,0 +1,63 @@
+<table class="categoriesTxt nav_bar">
+    <tr>
+        <td colspan="2" class="btns_search">
+            <div class="col-sm-12 text-center">
+                <div class="col-sm-4"><a href="/pages/search/" class="btn btn-success">Законодавчі акти</a></div>
+                <div class="col-sm-4"><a href="/pages/search_jurisprudence/" class="btn btn-primary">Судова практика</a></div>
+                <div class="col-sm-4"><a href="/pages/search_articles/" class="btn btn-info">Публікації з правової тематики</a></div>
+            </div>
+        </td>
+    </tr>
+</table>
+<form>
+    <input type="hidden" name="jurisprudence_search">
+    <div class="col-sm-12 text-center h4 text-info">Судова практика</div>
+    <table class="categoriesTxt">
+        <tr>
+            <td class="btns_search first_td"><label for="title">Слова з назви:</label></td>
+            <td class="text-left"><input id="title" class="form-control" name="title"></td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="category">Категорії:</label></td>
+            <td>
+                <select name="category" id="category" class="form-control form-control_search">
+                    <option></option>
+                    <?php
+                    foreach ($data['categories'] as $category){
+                        echo "<option value='{$category['id']}'>{$category['index']} {$category['title']}</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="type">Вид:</label></td>
+            <td>
+                <select name="type" id="type" class="form-control form-control_search">
+                    <option></option>
+                    <?php
+                    foreach ($data['types'] as $type){
+                        echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="publisher">Видавник:</label></td>
+            <td>
+                <input id="title" class="form-control" name="publisher">
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="date_start">Дата прийняття:</label></td>
+            <td class="text-left">
+                <label for="date_start"> від </label> <input type="date" id="date_start" class="publ date" name="date_start">
+                <label for="date_end"> до </label> <input type="date" id="date_end" class="publ date" name="date_end">
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td text-right" colspan="2"><input type="submit" class="btn btn-default" value="Шукати"></td>
+        </tr>
+    </table>
+</form>

@@ -1,0 +1,127 @@
+<table class="categoriesTxt nav_bar">
+    <tr>
+        <td colspan="2" class="btns_search">
+            <div class="col-sm-12 text-center">
+                <div class="col-sm-4"><a href="/pages/search/" class="btn btn-success">Законодавчі акти</a></div>
+                <div class="col-sm-4"><a href="/pages/search_jurisprudence/" class="btn btn-primary">Судова практика</a></div>
+                <div class="col-sm-4"><a href="/pages/search_articles/" class="btn btn-info">Публікації з правової тематики</a></div>
+            </div>
+        </td>
+    </tr>
+</table>
+    <div class="col-sm-12 text-center h4 text-success">Законодавчі акти</div>
+
+<?php if (!$_GET){?>
+    <form method="get" action="">
+    <table class="categoriesTxt">
+        <tr>
+            <td class="btns_search first_td"><label for="title">Слова з назви:</label></td>
+            <td class="text-left"><input id="title" class="form-control" name="title"></td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="category">Категорії:</label></td>
+            <td>
+                <select name="category" id="category" class="form-control form-control_search">
+                    <option></option>
+                    <?php
+                    foreach ($data['categories'] as $category){
+                        echo "<option value='{$category['id']}'>{$category['index']} {$category['title']}</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="type">Вид:</label></td>
+            <td>
+                <select name="type" id="type" class="form-control form-control_search">
+                    <option></option>
+                    <?php
+                    foreach ($data['types'] as $type){
+                        echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="publisher">Видавник:</label></td>
+            <td>
+                <select name="publisher" id="publisher" class="form-control form-control_search">
+                    <option></option>
+                    <?php
+                    foreach ($data['publishers'] as $publisher){
+                        echo "<option value='{$publisher['id']}'>{$publisher['publisher']}</option>";
+                    }
+                    ?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="date_start">Дата прийняття:</label></td>
+            <td class="text-left">
+                <label for="date_start"> від </label> <input type="date" id="date_start" class="publ date" name="date_start">
+                <label for="date_end"> до </label> <input type="date" id="date_end" class="publ date" name="date_end">
+            </td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td"><label for="number">Номер:</label></td>
+            <td class="text-left"><input id='number' class="form-control" name="number"></td>
+        </tr>
+        <tr>
+            <td class="btns_search first_td text-right" colspan="2"><input type="submit" class="btn btn-default" value="Шукати"></td>
+        </tr>
+    </table>
+</form>
+<?php }
+if($_GET AND $data['empty_fields']){?>
+    <div class="col-sm-12 text-center h3">
+        <div class="alert alert-warning" role="alert"> <?=$data['empty_fields']?>
+        </div>
+    </div>
+<?php }
+if ($_GET) {
+    if(isset($data['search_result'][0])) {?>
+        <table class='categoriesTxt'>
+        <?php $i = 0;
+        foreach ($data['search_result'] as $doc) {
+            $i++;?>
+            <tr><td class='td_view_numbering'><?=$i?>.</td>
+            <td class='td_view_content'><?=$doc['type']?>, від <?=$doc['nice_date']?>, № <?=$doc['number']?><br>
+            <?php
+            if ($doc['link'] != '') {
+                echo "<a href='{$doc['link']}'>{$doc['title']}</a>";
+            } else {
+                echo "<span class='text-info'>{$doc['title']}</span>";
+            }
+            echo "<br>{$doc['publisher_1']}";
+            if ($doc['publisher_2'] != '') {
+                echo ", {$doc['publisher_2']}";
+            }
+            if ($doc['publisher_3'] != '') {
+                echo ", {$doc['publisher_3']}";
+            }
+            if ($doc['publisher_4'] != '') {
+                echo ", {$doc['publisher_4']}";
+            }
+            echo "<br><span class='text-muted'>{$doc['notice']}</span></td>
+                        <td class='text-muted mrg'><b>{$doc['folder']}</b><br>{$doc['source_1']}";
+            if ($doc['source_2'] != '') {
+                echo "<br>" . $doc['source_2'];
+            }
+            if ($doc['source_3'] != '') {
+                echo "<br>" . $doc['source_3'];
+            }
+            if ($doc['source_4'] != '') {
+                echo "<br>" . $doc['source_4'];
+            }
+            echo "</td></tr>";
+        } echo "</table>";
+    }  else {
+        ?>
+        <div class="col-sm-12 text-center h3"><div class="alert alert-warning" role="alert"> В базі відсутні документи з вказаними атрибутками </div></div>
+        <?
+    }
+}
+?>
+
