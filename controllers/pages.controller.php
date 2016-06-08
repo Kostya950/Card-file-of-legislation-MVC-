@@ -85,6 +85,21 @@
 
      }
 
+     public function laws()
+     {
+        $this->data['laws_categories'] = $this->model->getLawsCategories();
+     }
+
+     public function jurisprudence()
+     {
+         $this->data['jurisprudence_categories'] = $this->model->getJurisrpudenceCategories();
+     }
+
+     public function articles()
+     {
+         $this->data['articles_categories'] = $this->model->getArticlesCategories();
+     }
+
 
 
      public function view() {

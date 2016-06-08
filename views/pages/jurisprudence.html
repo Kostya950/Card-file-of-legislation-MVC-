@@ -1,0 +1,10 @@
+<table class="categoriesTxt">
+
+    <tr>
+        <td class="td_view_h1" colspan="3"><span class='btn btn_back text-center text-danger glyphicon glyphicon-chevron-left' onclick='window.history.back()'></span>
+            Систематична картотека судової практики</td>
+    </tr>
+<?php foreach ($data['jurisprudence_categories'] as $item) {
+    echo "<tr><td class='td_view_numbering'>{$item['index']}.</td>";
+    echo "<td class='td_view_content'><a href='view_laws.php?{$item['index']}'>{$item['title']}</td></tr>";
+}

@@ -498,8 +498,8 @@ class Page extends  Model
     public function getNewLegislativeActs($range_date)
     {
         $sql = "SELECT n.name, n.number, n.link, n.notice, rd.range_date, pbl.publisher, type.type, DATE_FORMAT(date,'%d.%m.%Y') AS date FROM new_legislative_acts n JOIN new_legislative_acts_range_date rd ON n.id_range_data=rd.id
-JOIN new_legislative_acts_publishers pbl ON n.id_publisher=pbl.id
-JOIN type_laws_acts type ON n.id_type=type.id WHERE rd.range_date = '{$range_date}'";
+        JOIN new_legislative_acts_publishers pbl ON n.id_publisher=pbl.id
+        JOIN type_laws_acts type ON n.id_type=type.id WHERE rd.range_date = '{$range_date}'";
         return $this->db->query($sql);
     }
 
@@ -508,8 +508,6 @@ JOIN type_laws_acts type ON n.id_type=type.id WHERE rd.range_date = '{$range_dat
         $sql = "SELECT COUNT(id) AS cnt FROM new_legislative_acts_range_date";
         return $this->db->query($sql);
     }
-
-
 
     public function getClassifier()
     {
@@ -523,6 +521,23 @@ JOIN type_laws_acts type ON n.id_type=type.id WHERE rd.range_date = '{$range_dat
         return $this->db->query($sql);
     }
 
+    public function getLawsCategories()
+    {
+        $sql = "SELECT * FROM classifier_laws WHERE parent_id=0";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisrpudenceCategories()
+    {
+        $sql = "SELECT * FROM classifier_jurisprudence WHERE parent_id=0";
+        return $this->db->query($sql);
+    }
+
+    public function getArticlesCategories()
+    {
+        $sql = "SELECT * FROM classifier_articles WHERE parent_id=0";
+        return $this->db->query($sql);
+    }
 
 
 }
