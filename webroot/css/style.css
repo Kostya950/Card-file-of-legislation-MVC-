@@ -645,3 +645,11 @@ a.btns .disabled,fieldset[disabled] a.btns {
 .mrg {
     width: 220px;
 }
+
+.chevron {
+    margin-left: 80px;
+    margin-right: 90px;
+}
+.chevron:hover {
+    color: blue;
+}

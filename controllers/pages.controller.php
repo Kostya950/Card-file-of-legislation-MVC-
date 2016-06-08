@@ -15,6 +15,11 @@
          $this->model = new Page();
      }
 
+     public function index(){
+         $this->data['classifier'] = $this->model->getClassifier();
+
+     }
+
      public function search()
      {
          $this->data['categories'] = $this->model->getCategoriesLawsSearch();
@@ -59,12 +64,28 @@
          }
      }
 
-
-
-     public function index(){
-         $this->data['classifier'] = $this->model->getClassifier();
+     public function information()
+     {
 
      }
+
+     public function new_acts()
+     {
+         $params = App::getRouter()->getParams();
+
+         $this->data['numb_pages'] = $this->model->getNumbPagesNewActs();
+         if(!isset($params[0])){
+             $params[0]=1;
+         }
+         if(isset($params[0])) {
+             $this->data['range_legislative_acts'] = $this->model->getRangeNewLegislativeActs($params[0]);
+             $this->data['new_legislative_acts'] = $this->model->getNewLegislativeActs($this->data['range_legislative_acts'][0]['range_date']);
+
+        }
+
+     }
+
+
 
      public function view() {
          $params = App::getRouter()->getParams();

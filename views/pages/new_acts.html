@@ -1,0 +1,17 @@
+<?php $params = App::getRouter()->getParams();?>
+
+<table class="categoriesTxt">
+    <tr>
+        <td class="text-danger text-center"><a class="h6" href="<?=$data['range_legislative_acts'][0]['link']?>"><span class="glyphicon glyphicon-save"> Завантажити</span></a></td>
+        <td class="td_view_h1 text-right" >
+        Нове в законодавстві <br>
+            <a href='<?php if ($params[0]>1) { ?>/pages/new_acts/<?php echo $params[0]-1; } ?> ' class="text-muted h3 chevron"><span class="glyphicon glyphicon-chevron-left"> </span></a><?=$data['range_legislative_acts'][0]['range_date']?>  <a href='<?php if(($data['numb_pages'][0]['cnt'] - $params[0]) > 0) { ?>/pages/new_acts/<?php echo $params[0]+1;} ?>' class="text-muted h3 chevron"><span class="glyphicon glyphicon-chevron-right"> </span></a></td>
+    </tr>
+    <?php
+    foreach ($data['new_legislative_acts'] as $doc) {
+        $i++;
+        echo "<tr><td class='td_view_numbering'>$i.</td>";
+        echo "<td colspan='' class='td_view_content'>{$doc['type']}, від {$doc['date']}, № {$doc['number']}<br><a href='{$doc['link']}'>{$doc['name']}</a><br>{$doc['publisher']}<br><span class='text-muted'>{$doc['notice']}</span></td></tr>";
+    }
+    ?>
+</table>
