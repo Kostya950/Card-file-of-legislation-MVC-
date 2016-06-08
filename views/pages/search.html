@@ -10,7 +10,6 @@
     </tr>
 </table>
     <div class="col-sm-12 text-center h4 text-success">Законодавчі акти</div>
-
 <?php if (!$_GET){?>
     <form method="get" action="">
     <table class="categoriesTxt">
@@ -75,7 +74,7 @@
 </form>
 <?php }
 if($_GET AND $data['empty_fields']){?>
-    <div class="col-sm-12 text-center h3">
+    <div class="col-sm-offset-2 col-sm-8  text-center h3">
         <div class="alert alert-warning" role="alert"> <?=$data['empty_fields']?>
         </div>
     </div>
@@ -117,9 +116,9 @@ if ($_GET) {
             }
             echo "</td></tr>";
         } echo "</table>";
-    }  else {
+    }  elseif(!isset($data['search_result'][0]) AND !isset($data['empty_fields'])) {
         ?>
-        <div class="col-sm-12 text-center h3"><div class="alert alert-warning" role="alert"> В базі відсутні документи з вказаними атрибутками </div></div>
+        <div class="col-sm-offset-2 col-sm-8 text-center h3"><div class="alert alert-warning" role="alert"> В базі відсутні документи з вказаними атрибутками </div></div>
         <?
     }
 }

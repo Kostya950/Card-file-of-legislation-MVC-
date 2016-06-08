@@ -51,14 +51,442 @@ class Page extends  Model
         return $this->db->query($sql);
     }
 
-    public function getSearchResultLaws($search_content)
+    public function getSearchResultLaws($data)
     {
-        $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
+        if($_GET) {
+            $title = $data['title'];
+            $category = $data['category'];
+            $type = $data['type'];
+            $publisher = $data['publisher'];
+            $date_start = $data['date_start'];
+            $date_end = $data['date_end'];
+            $number = $data['number'];
+            if($date_start=='' AND $date_end!=''){
+                $date_start = '1900-01-01';
+            } elseif ($date_start!='' AND $date_end==''){
+                $date_end = date("Y-m-d");
+            }
+            if ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}')";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') ";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND  date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}'  AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}'  AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}'  AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "title LIKE '%{$title}%' AND (id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') ";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND  date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "(id_1 = '{$category}' OR id_2 = '{$category}' OR id_3 = '{$category}' OR
+            id_4 = '{$category}' OR id_5 = '{$category}' OR id_6 = '{$category}' OR id_7 = '{$category}' OR id_8 = '{$category}' OR
+            id_9 = '{$category}' OR id_10 = '{$category}' OR id_11 = '{$category}' OR id_12 = '{$category}' OR id_13 = '{$category}' OR
+            id_14 = '{$category}' OR id_15 = '{$category}') AND type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "type_id = '{$type}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "type_id = '{$type}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "type_id = '{$type}' AND (publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number == '') {
+                $search_content = "(publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}' OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}')";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "(publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "(publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "(publisher_id_1 = '{$publisher}' OR publisher_id_2 = '{$publisher}'
+            OR publisher_id_3 = '{$publisher}' OR publisher_id_4 = '{$publisher}') AND date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number == '') {
+                $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '' AND $number != '') {
+                $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}' AND number LIKE '{$number}%'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
+                $search_content = "number LIKE '{$number}%'";
+            }
+            $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
                     publisher_2, publisher_3, publisher_4, source_1, source_2, source_3, source_4, folder FROM file_laws_all_info
                     WHERE {$search_content} ORDER BY date DESC";
+        }
+
         return $this->db->query($sql);
     }
 
+    public function getSearchResultJurisprudence($data)
+    {
+        if($_GET) {
+            $title = $data['title'];
+            $category = $data['category'];
+            $type = $data['type'];
+            $publisher = $data['publisher'];
+            $date_start = $data['date_start'];
+            $date_end = $data['date_end'];
+            if ($date_start == '' AND $date_end != '') {
+                $date_start = '1900-01-01';
+            } elseif ($date_start != '' AND $date_end == '') {
+                $date_end = date("Y-m-d");
+            }
+
+            if ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}')";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}')";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "type_id = '{$type}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "type_id = '{$type}' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "type_id = '{$type}' AND publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "publisher_1 LIKE '%{$publisher}%'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "publisher_1 LIKE '%{$publisher}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
+            }
+            $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1,
+                   type, index_1, index_2, index_3, index_4, index_5 FROM file_jurisprudence_all_info WHERE {$search_content}
+                   ORDER BY date DESC";
+        }
+        return $this->db->query($sql);
+    }
+
+    public function getSearchResultArticles($data){
+        if($_GET) {
+            $title = $data['title'];
+            $category = $data['category'];
+            $publisher = $data['publisher'];
+            $date_start = $data['date_start'];
+            $date_end = $data['date_end'];
+            if ($date_start == '' AND $date_end != '') {
+                $date_start = '1900-01-01';
+            } elseif ($date_start != '' AND $date_end == '') {
+                $date_end = date("Y-m-d");
+            }
+            if ($title != '' AND $category == '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%'";
+            } elseif ($title != '' AND $category != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}')";
+            } elseif ($title != '' AND $category == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')";
+            } elseif ($title != '' AND $category == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')";
+            } elseif ($title != '' AND $category != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')  AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title != '' AND $category != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "title LIKE '%{$title}%' AND (n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')  AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $publisher == '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}')";
+            } elseif ($title == '' AND $category != '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')";
+            } elseif ($title == '' AND $category != '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category != '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(n_id_1 = '{$category}' OR n_id_2 = '{$category}' OR n_id_3 = '{$category}' OR
+            n_id_4 = '{$category}' OR n_id_5 = '{$category}') AND (publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')  AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            } elseif ($title == '' AND $category == '' AND $publisher != '' AND $date_start == '' AND $date_end == '') {
+                $search_content = "(publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')";
+            }elseif ($title == '' AND $category == '' AND $publisher != '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "(publisher_1 LIKE '%{$publisher}%' OR publisher_2 LIKE '%{$publisher}%')  AND date BETWEEN '{$date_start}' AND '{$date_end}'";
+            }elseif ($title == '' AND $category == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
+                $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
+            }
+
+            $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1, publisher_2,
+                   type, index_1, index_2, index_3, index_4, index_5 FROM file_articles_all_info WHERE {$search_content}
+                   ORDER BY date DESC";
+        }
+        return $this->db->query($sql);
+    }
 
 
 
@@ -77,71 +505,6 @@ class Page extends  Model
         return $this->db->query($sql);
     }
 
-
-    public function getList($only_published = false)
-    {
-        $sql = "SELECT * FROM pages where 1";
-        if ($only_published) {
-            $sql .= " AND is_published = 1";
-        }
-        return $this->db->query($sql);
-    }
-
-    public function getByAlias($alias)
-    {
-        $alias = $this->db->escape($alias);
-        $sql = "SELECT * FROM pages where alias = '{$alias}' limit 1";
-        $result = $this->db->query($sql);
-        return isset($result[0]) ? $result[0] : null;
-    }
-
-    public function getById($id)
-    {
-        $id = (int)$id;
-        $sql = "SELECT * FROM pages where id = '{$id}' limit 1";
-        $result = $this->db->query($sql);
-        return isset($result[0]) ? $result[0] : null;
-    }
-
-    public function save($data, $id = null)
-    {
-        if (!isset($data['alias']) || !isset($data['title'])  || !isset($data['content'])) {
-            return false;
-        }
-        $id = (int)$id;
-        $alias = $this->db->escape($data['alias']);
-        $title  = $this->db->escape($data['title']);
-        $content = $this->db->escape($data['content']);
-        $is_published = isset($data['is_published']) ? 1 : 0;
-
-        if ( !$id ) { // Add new record
-            $sql = "
-                    INSERT INTO pages
-                    set alias = '{$alias}',
-                        title = '{$title}',
-                        content = '{$content }',
-                        is_published = '{$is_published}'
-            ";
-        } else {// Update existing record
-            $sql = "
-                    UPDATE pages
-                    set alias = '{$alias}',
-                        title = '{$title}',
-                        content = '{$content }',
-                        is_published = '{$is_published}'
-                    WHERE id = '{$id}'
-            ";
-        }
-
-        return $this->db->query($sql);
-    }
-
-    public function delete($id)
-    {
-        $id = (int)$id;
-        $sql = "DELETE FROM pages WHERE id = '{$id}'";
-        return $this->db->query($sql);
-    }
 
 
 }

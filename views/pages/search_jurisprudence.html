@@ -9,9 +9,9 @@
         </td>
     </tr>
 </table>
-<form>
-    <input type="hidden" name="jurisprudence_search">
     <div class="col-sm-12 text-center h4 text-info">Судова практика</div>
+<?php if (!$_GET){?>
+    <form method="get" action="">
     <table class="categoriesTxt">
         <tr>
             <td class="btns_search first_td"><label for="title">Слова з назви:</label></td>
@@ -61,3 +61,33 @@
         </tr>
     </table>
 </form>
+    <?php }
+if($_GET AND $data['empty_fields']){?>
+<div class="col-sm-offset-2 col-sm-8  text-center h3">
+    <div class="alert alert-warning" role="alert"> <?=$data['empty_fields']?>
+    </div>
+</div>
+<?php }
+if ($_GET){
+if(isset($data['search_result'][0])) {?>
+    <table class='categoriesTxt'>
+    <?php $i = 0;
+    foreach ($data['search_result'] as $doc) {
+    $i++;?>
+
+                <tr><td class='td_view_numbering'><?=$i?>.</td>
+            <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
+                <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?>,
+            </span><span class='text-muted h6'><?= $doc['source']?></span></td></tr>
+        <?php } ?>
+    </table>
+        <?php } elseif(!isset($data['search_result'][0]) AND !isset($data['empty_fields'])) {
+        ?>
+        <div class="col-sm-offset-2 col-sm-8 text-center h3">
+            <div class="alert alert-warning" role="alert"> В базі відсутні документи з вказаними атрибутками</div>
+        </div>
+        <?
+    }
+
+}
+
