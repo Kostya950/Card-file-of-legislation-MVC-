@@ -7,6 +7,6 @@
  */
 
 return array (
-    'lng.test' => 'Examlpe de texte',
-    'lng.test2' => 'Examlpe de texte2'
+    'lng.test' => 'Пример текста',
+    'lng.test2' => 'Пример текста2'
 );

@@ -7,5 +7,5 @@
  */
 
 return array (
-    'lng.test' => 'Sample test'
+    'lng.test' => 'Зразок тексту'
 );
