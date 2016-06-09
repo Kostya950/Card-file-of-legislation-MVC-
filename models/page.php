@@ -539,5 +539,56 @@ class Page extends  Model
         return $this->db->query($sql);
     }
 
+    public function getLawsCategory($index)
+    {
+        $sql = "SELECT * FROM classifier_laws WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getLawsSubcategories($parent_id)
+    {
+        $sql = "SELECT * FROM classifier_laws WHERE `parent_id`='{$parent_id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getLawsSubcategory($index)
+    {
+        $sql = "SELECT * FROM classifier_laws WHERE `index`='{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getLawsSubSubcategories($id)
+    {
+        $sql = "SELECT * FROM classifier_laws WHERE `parent_id`= '{$id}' ORDER BY title";
+        return $this->db->query($sql);
+    }
+
+    public function getAllDocsBySubcategoryId($id)
+    {
+        $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
+                    publisher_2, publisher_3, publisher_4,source_1, source_2, source_3, source_4, folder FROM file_laws_all_info
+                    WHERE id_1 = '{$id}'
+                    OR id_2 = '{$id}' OR id_3 = '{$id}' OR id_4 = '{$id}'
+                    OR id_5 = '{$id}' OR id_6 = '{$id}' OR id_7 = '{$id}'
+                    OR id_8 = '{$id}' OR id_9 = '{$id}' OR id_10 = '{$id}'
+                    OR id_11 = '{$id}' OR id_12 = '{$id}' OR id_13 = '{$id}'
+                    OR id_14 = '{$id}' OR id_15 = '{$id}' ORDER BY date DESC";
+        return $this->db->query($sql);
+    }
+
+    public function getAllDocsBySubSubcategoryId($sub_id)
+    {
+        $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
+                    publisher_2, publisher_3, publisher_4,source_1, source_2, source_3, source_4, folder FROM file_laws_all_info
+                    WHERE sub_id_1 = '{$sub_id}'
+                    OR sub_id_2 = '{$sub_id}' OR sub_id_3 = '{$sub_id}' OR sub_id_4 = '{$sub_id}'
+                    OR sub_id_5 = '{$sub_id}' OR sub_id_6 = '{$sub_id}' OR sub_id_7 = '{$sub_id}'
+                    OR sub_id_8 = '{$sub_id}' OR sub_id_9 = '{$sub_id}' OR sub_id_10 = '{$sub_id}'
+                    OR sub_id_11 = '{$sub_id}' OR sub_id_12 = '{$sub_id}' OR sub_id_13 = '{$sub_id}'
+                    OR sub_id_14 = '{$sub_id}' OR sub_id_15 = '{$sub_id}' ORDER BY date DESC";
+        return $this->db->query($sql);
+    }
+
+
 
 }

@@ -87,7 +87,24 @@
 
      public function laws()
      {
-        $this->data['laws_categories'] = $this->model->getLawsCategories();
+         $params = App::getRouter()->getParams();
+         if(!isset($params[0])) {
+             $this->data['laws_categories'] = $this->model->getLawsCategories();
+         } elseif (isset($params[0]) AND !isset($params[1])) {
+             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]);
+             $this->data['laws_subcategories'] = $this->model->getLawsSubcategories($this->data['laws_category'][0]['id']);
+         } elseif (isset($params[1]) AND !isset($params[2])) {
+             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]);
+             $this->data['laws_subcategory'] = $this->model->getLawsSubcategory($params[0]."/".$params[1]);
+             $this->data['laws_sub_subcategories'] = $this->model->getLawsSubSubcategories( $this->data['laws_subcategory'][0]['id']);
+             if($_GET['id'] ==''){
+                 $this->data['docs'] = $this->model->getAllDocsBySubcategoryId($this->data['laws_subcategory'][0]['id']);
+             } else {
+                 $sub_id = (int)$_GET['id'];
+                 $this->data['docs'] = $this->model->getAllDocsBySubSubcategoryId($sub_id);
+             }
+
+         }
      }
 
      public function jurisprudence()
