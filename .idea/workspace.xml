@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/button.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/pagination.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/pages.controller.php" afterPath="$PROJECT_DIR$/controllers/pages.controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/page.php" afterPath="$PROJECT_DIR$/models/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/laws.html" afterPath="$PROJECT_DIR$/views/pages/laws.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search.html" afterPath="$PROJECT_DIR$/views/pages/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search_articles.html" afterPath="$PROJECT_DIR$/views/pages/search_articles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search_jurisprudence.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.4935064">
-              <caret line="588" column="38" selection-start-line="588" selection-start-column="38" selection-end-line="588" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.5833333">
+              <caret line="934" column="56" selection-start-line="934" selection-start-column="56" selection-end-line="934" selection-end-column="56" />
               <folding>
                 <element signature="e#6#84#0#PHP" expanded="true" />
                 <element signature="n#getCategoriesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
@@ -40,52 +55,52 @@
                 <element signature="n#getTypesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
                 <element signature="n#getCategoriesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
                 <element signature="n#getTypesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
-                <element signature="n#getSearchResultJurisprudence#0;n#Page#0;n#!!top" expanded="false" />
-                <element signature="n#getSearchResultArticles#0;n#Page#0;n#!!top" expanded="false" />
-                <element signature="n#getRangeNewLegislativeActs#0;n#Page#0;n#!!top" expanded="false" />
-                <element signature="n#getNumbPagesNewActs#0;n#Page#0;n#!!top" expanded="false" />
-                <marker date="1465502107000" expanded="true" signature="183:257" placeholder="SELECT id, `... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="374:422" placeholder="SELECT * FRO... publishers_laws" />
-                <marker date="1465502107000" expanded="true" signature="534:576" placeholder="SELECT * FRO... type_laws_acts" />
-                <marker date="1465502107000" expanded="true" signature="702:740" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1465502107000" expanded="true" signature="861:912" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-                <marker date="1465502107000" expanded="true" signature="1033:1142" placeholder="SELECT id, `... classifier_articles" />
-                <marker date="1465502107000" expanded="true" signature="1258:1304" placeholder="SELECT * FRO... type_articles_acts" />
-                <marker date="1465502107000" expanded="true" signature="35934:36216" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1465502107000" expanded="true" signature="46704:46949" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1465502107000" expanded="true" signature="52265:52518" placeholder="SELECT id, D... file_articles_all_info" />
-                <marker date="1465502107000" expanded="true" signature="52682:52747" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1465502107000" expanded="true" signature="52682:52767" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1465502107000" expanded="true" signature="52682:52770" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1465502107000" expanded="false" signature="52896:53275" placeholder="SELECT n.nam... " />
-                <marker date="1465502107000" expanded="true" signature="52896:53552" placeholder="SELECT n.nam... " />
-                <marker date="1465502107000" expanded="true" signature="53388:53448" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
-                <marker date="1465502107000" expanded="true" signature="53554:53603" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="53723:53784" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="53895:53942" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="54062:54118" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1465502107000" expanded="true" signature="54233:54284" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1465502107000" expanded="true" signature="54399:54455" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="54579:54641" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="54759:54813" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="54933:55004" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1465502107000" expanded="true" signature="55126:55762" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1465502107000" expanded="true" signature="55891:56647" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="183:257" placeholder="SELECT id, `... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="374:422" placeholder="SELECT * FRO... publishers_laws" />
+                <marker date="1465560947000" expanded="true" signature="534:576" placeholder="SELECT * FRO... type_laws_acts" />
+                <marker date="1465560947000" expanded="true" signature="702:740" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1465560947000" expanded="true" signature="861:912" placeholder="SELECT * FRO... type_jurisprudence_acts" />
+                <marker date="1465560947000" expanded="true" signature="1033:1142" placeholder="SELECT id, `... classifier_articles" />
+                <marker date="1465560947000" expanded="true" signature="1258:1304" placeholder="SELECT * FRO... type_articles_acts" />
+                <marker date="1465560947000" expanded="true" signature="35943:36000" placeholder="SELECT COUNT... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="35943:36017" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="70818:71100" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="70818:71119" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="81616:81681" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
+                <marker date="1465560947000" expanded="true" signature="81616:81698" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1465560947000" expanded="true" signature="92347:92592" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1465560947000" expanded="true" signature="92347:92611" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1465560947000" expanded="true" signature="97940:98000" placeholder="SELECT COUNT... file_articles_all_info" />
+                <marker date="1465560947000" expanded="true" signature="97940:98017" placeholder="SELECT COUNT... file_articles_all_info" />
+                <marker date="1465560947000" expanded="true" signature="103494:103747" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1465560947000" expanded="true" signature="103494:103766" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1465560947000" expanded="true" signature="103930:104018" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
+                <marker date="1465560947000" expanded="true" signature="104144:104523" placeholder="SELECT n.nam... " />
+                <marker date="1465560947000" expanded="true" signature="104636:104696" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
+                <marker date="1465560947000" expanded="true" signature="104802:104851" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="104971:105032" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="105143:105190" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="105310:105366" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1465560947000" expanded="true" signature="105481:105532" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1465560947000" expanded="true" signature="105647:105703" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="105827:105889" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="106007:106061" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="106181:106252" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465560947000" expanded="true" signature="106497:107152" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="107404:108179" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="108309:108734" placeholder="SELECT COUNT... file_laws_all_info" />
+                <marker date="1465560947000" expanded="true" signature="108871:109416" placeholder="SELECT COUNT... file_laws_all_info" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/message.php">
+      <file leaf-file-name="new_acts.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/new_acts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0">
-              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-              <folding>
-                <marker date="1464260246000" expanded="true" signature="558:711" placeholder="INSERT INTO messages... " />
-                <marker date="1464260246000" expanded="true" signature="810:997" placeholder="UPDATE messa... " />
-                <marker date="1464260246000" expanded="true" signature="1121:1151" placeholder="SELECT * FRO... messages" />
-              </folding>
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,30 +108,8 @@
       <file leaf-file-name="pages.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="20.416666">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding>
-                <marker date="1464427103000" expanded="true" signature="218:270" placeholder="SELECT * FRO... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/users.controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="63" column="64" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -125,10 +118,20 @@
       <file leaf-file-name="laws.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.077922">
-              <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
+            <state vertical-scroll-proportion="-18.75">
+              <caret line="71" column="5" selection-start-line="69" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.625">
+              <caret line="93" column="7" selection-start-line="93" selection-start-column="7" selection-end-line="95" selection-end-column="9" />
               <folding>
-                <marker date="1465503719000" expanded="true" signature="3206:4516" placeholder="..." />
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,28 +140,30 @@
       <file leaf-file-name="button.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/button.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pagination.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/pagination.class.php">
+      <file leaf-file-name="search_articles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15384616">
-              <caret line="13" column="116" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="116" />
-              <folding />
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lang/ru.php">
+      <file leaf-file-name="pagination.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/pagination.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="13" column="116" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -167,7 +172,7 @@
       <file leaf-file-name="ua.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lang/ua.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding />
             </state>
@@ -204,9 +209,6 @@
         <option value="$PROJECT_DIR$/models/searchs.php" />
         <option value="$PROJECT_DIR$/controllers/search.controller.php" />
         <option value="$PROJECT_DIR$/views/pages/search_laws.html" />
-        <option value="$PROJECT_DIR$/views/pages/search.html" />
-        <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
-        <option value="$PROJECT_DIR$/views/pages/search_articles.html" />
         <option value="$PROJECT_DIR$/views/pages/information.html" />
         <option value="$PROJECT_DIR$/views/pages/new_legislative_acts.html" />
         <option value="$PROJECT_DIR$/views/default.html" />
@@ -216,12 +218,15 @@
         <option value="$PROJECT_DIR$/views/pages/index.html" />
         <option value="$PROJECT_DIR$/views/pages/articles.html" />
         <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
-        <option value="$PROJECT_DIR$/controllers/pages.controller.php" />
-        <option value="$PROJECT_DIR$/models/page.php" />
-        <option value="$PROJECT_DIR$/views/pages/laws.html" />
         <option value="$PROJECT_DIR$/lang/ru.php" />
         <option value="$PROJECT_DIR$/lang/ua.php" />
         <option value="$PROJECT_DIR$/lib/pagination.class.php" />
+        <option value="$PROJECT_DIR$/views/pages/laws.html" />
+        <option value="$PROJECT_DIR$/views/pages/search.html" />
+        <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
+        <option value="$PROJECT_DIR$/controllers/pages.controller.php" />
+        <option value="$PROJECT_DIR$/views/pages/search_articles.html" />
+        <option value="$PROJECT_DIR$/models/page.php" />
       </list>
     </option>
   </component>
@@ -266,6 +271,76 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Card-file-of-legislation(MVC)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -339,9 +414,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34263232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553648" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -419,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,7 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.125">
           <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.875">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -501,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.625">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -574,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-28.125">
           <caret line="50" column="35" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -590,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -598,23 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="92" selection-start-line="78" selection-start-column="92" selection-end-line="78" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -622,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.0">
           <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,23 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
           <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/new_acts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.705882">
           <caret line="653" column="11" selection-start-line="653" selection-start-column="11" selection-end-line="653" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -662,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,13 +709,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/users.controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
@@ -692,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
           <folding>
             <marker date="1464260246000" expanded="true" signature="558:711" placeholder="INSERT INTO messages... " />
@@ -704,7 +734,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
+        <state vertical-scroll-proportion="0.0">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
             <marker date="1464427103000" expanded="true" signature="218:270" placeholder="SELECT * FRO... users" />
@@ -712,57 +742,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4935064">
-          <caret line="588" column="38" selection-start-line="588" selection-start-column="38" selection-end-line="588" selection-end-column="38" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#getCategoriesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getPublishersLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoriesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoriesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getSearchResultJurisprudence#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getSearchResultArticles#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getRangeNewLegislativeActs#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getNumbPagesNewActs#0;n#Page#0;n#!!top" expanded="false" />
-            <marker date="1465502107000" expanded="true" signature="183:257" placeholder="SELECT id, `... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="374:422" placeholder="SELECT * FRO... publishers_laws" />
-            <marker date="1465502107000" expanded="true" signature="534:576" placeholder="SELECT * FRO... type_laws_acts" />
-            <marker date="1465502107000" expanded="true" signature="702:740" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1465502107000" expanded="true" signature="861:912" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-            <marker date="1465502107000" expanded="true" signature="1033:1142" placeholder="SELECT id, `... classifier_articles" />
-            <marker date="1465502107000" expanded="true" signature="1258:1304" placeholder="SELECT * FRO... type_articles_acts" />
-            <marker date="1465502107000" expanded="true" signature="35934:36216" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1465502107000" expanded="true" signature="46704:46949" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1465502107000" expanded="true" signature="52265:52518" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1465502107000" expanded="true" signature="52682:52747" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="52682:52767" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="52682:52770" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="false" signature="52896:53275" placeholder="SELECT n.nam... " />
-            <marker date="1465502107000" expanded="true" signature="52896:53552" placeholder="SELECT n.nam... " />
-            <marker date="1465502107000" expanded="true" signature="53388:53448" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="53554:53603" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="53723:53784" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="53895:53942" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54062:54118" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1465502107000" expanded="true" signature="54233:54284" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1465502107000" expanded="true" signature="54399:54455" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54579:54641" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54759:54813" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54933:55004" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="55126:55762" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1465502107000" expanded="true" signature="55891:56647" placeholder="SELECT numbe... file_laws_all_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lang/ru.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding />
         </state>
@@ -770,27 +752,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lang/ua.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.416666">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.077922">
-          <caret line="82" column="8" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding>
-            <marker date="1465503719000" expanded="true" signature="3206:4516" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,9 +768,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/pagination.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15384616">
+        <state vertical-scroll-proportion="-5.0">
           <caret line="13" column="116" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="116" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/new_acts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="114" selection-start-line="7" selection-start-column="114" selection-end-line="7" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75">
+          <caret line="71" column="5" selection-start-line="69" selection-start-column="4" selection-end-line="71" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="93" column="7" selection-start-line="93" selection-start-column="7" selection-end-line="95" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="63" column="64" selection-start-line="63" selection-start-column="64" selection-end-line="63" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5833333">
+          <caret line="934" column="56" selection-start-line="934" selection-start-column="56" selection-end-line="934" selection-end-column="56" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="n#getCategoriesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getPublishersLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getTypesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getCategoriesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getTypesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getCategoriesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <element signature="n#getTypesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
+            <marker date="1465560947000" expanded="true" signature="183:257" placeholder="SELECT id, `... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="374:422" placeholder="SELECT * FRO... publishers_laws" />
+            <marker date="1465560947000" expanded="true" signature="534:576" placeholder="SELECT * FRO... type_laws_acts" />
+            <marker date="1465560947000" expanded="true" signature="702:740" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1465560947000" expanded="true" signature="861:912" placeholder="SELECT * FRO... type_jurisprudence_acts" />
+            <marker date="1465560947000" expanded="true" signature="1033:1142" placeholder="SELECT id, `... classifier_articles" />
+            <marker date="1465560947000" expanded="true" signature="1258:1304" placeholder="SELECT * FRO... type_articles_acts" />
+            <marker date="1465560947000" expanded="true" signature="35943:36000" placeholder="SELECT COUNT... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="35943:36017" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="70818:71100" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="70818:71119" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="81616:81681" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
+            <marker date="1465560947000" expanded="true" signature="81616:81698" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1465560947000" expanded="true" signature="92347:92592" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1465560947000" expanded="true" signature="92347:92611" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1465560947000" expanded="true" signature="97940:98000" placeholder="SELECT COUNT... file_articles_all_info" />
+            <marker date="1465560947000" expanded="true" signature="97940:98017" placeholder="SELECT COUNT... file_articles_all_info" />
+            <marker date="1465560947000" expanded="true" signature="103494:103747" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1465560947000" expanded="true" signature="103494:103766" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1465560947000" expanded="true" signature="103930:104018" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
+            <marker date="1465560947000" expanded="true" signature="104144:104523" placeholder="SELECT n.nam... " />
+            <marker date="1465560947000" expanded="true" signature="104636:104696" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
+            <marker date="1465560947000" expanded="true" signature="104802:104851" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="104971:105032" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="105143:105190" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="105310:105366" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1465560947000" expanded="true" signature="105481:105532" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1465560947000" expanded="true" signature="105647:105703" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="105827:105889" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="106007:106061" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="106181:106252" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465560947000" expanded="true" signature="106497:107152" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="107404:108179" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="108309:108734" placeholder="SELECT COUNT... file_laws_all_info" />
+            <marker date="1465560947000" expanded="true" signature="108871:109416" placeholder="SELECT COUNT... file_laws_all_info" />
+          </folding>
         </state>
       </provider>
     </entry>

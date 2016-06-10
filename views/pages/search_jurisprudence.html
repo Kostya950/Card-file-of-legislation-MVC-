@@ -1,3 +1,11 @@
+<?php $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+$p = new Pagination(array(
+    'itemsCount' => $data['count'][0]['cnt'],
+    'itemsPerPage' => 50,
+    'currentPage' => $page
+));
+?>
 <table class="categoriesTxt nav_bar">
     <tr>
         <td colspan="2" class="btns_search">
@@ -72,15 +80,16 @@ if ($_GET){
 if(isset($data['search_result'][0])) {?>
     <table class='categoriesTxt'>
     <?php $i = 0;
+    if($_GET['page'] > 1) {
+        $i = ($_GET['page'] - 1) * 50;
+    }
     foreach ($data['search_result'] as $doc) {
     $i++;?>
-
                 <tr><td class='td_view_numbering'><?=$i?>.</td>
             <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
                 <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?>,
             </span><span class='text-muted h6'><?= $doc['source']?></span></td></tr>
         <?php } ?>
-    </table>
         <?php } elseif(!isset($data['search_result'][0]) AND !isset($data['empty_fields'])) {
         ?>
         <div class="col-sm-offset-2 col-sm-8 text-center h3">
@@ -88,6 +97,19 @@ if(isset($data['search_result'][0])) {?>
         </div>
         <?
     }
-
 }
+?>
+<tr>
+    <td></td>
+    <td class='td_view_content'><?php if(isset($_GET['title'])){
+            foreach ($p->buttons as $button) :
+                if ($button->isActive) : ?>
+                    <a href = '?page=<?=$button->page?><?php foreach($_GET as $key => $item){if($key !='page'){echo "&".$key."=".$item;}}?>'><?=$button->text?></a>
+                <?php else : ?>
+                    <span style="color:#555555"><?=$button->text?></span>
+                <?php endif;
+            endforeach;} ?>
+    </td>
+</tr>
+</table>
 

@@ -1,3 +1,11 @@
+<?php $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+$p = new Pagination(array(
+    'itemsCount' => $data['count'][0]['cnt'],
+    'itemsPerPage' => 50,
+    'currentPage' => $page
+));
+?>
 <table class="categoriesTxt nav_bar">
     <tr>
         <td colspan="2" class="btns_search">
@@ -83,6 +91,9 @@ if ($_GET) {
     if(isset($data['search_result'][0])) {?>
         <table class='categoriesTxt'>
         <?php $i = 0;
+        if($_GET['page'] > 1) {
+            $i = ($_GET['page'] - 1) * 50;
+        }
         foreach ($data['search_result'] as $doc) {
             $i++;?>
             <tr><td class='td_view_numbering'><?=$i?>.</td>
@@ -115,12 +126,26 @@ if ($_GET) {
                 echo "<br>" . $doc['source_4'];
             }
             echo "</td></tr>";
-        } echo "</table>";
+        }
     }  elseif(!isset($data['search_result'][0]) AND !isset($data['empty_fields'])) {
         ?>
         <div class="col-sm-offset-2 col-sm-8 text-center h3"><div class="alert alert-warning" role="alert"> В базі відсутні документи з вказаними атрибутками </div></div>
-        <?
+        <?php
     }
-}
-?>
+} ?>
+            <tr>
+                <td></td>
+                <td class='td_view_content'><?php if(isset($_GET['title'])){
+                foreach ($p->buttons as $button) :
+                    if ($button->isActive) : ?>
+                        <a href = '?page=<?=$button->page?><?php foreach($_GET as $key => $item){if($key !='page'){echo "&".$key."=".$item;}}?>'><?=$button->text?></a>
+                    <?php else : ?>
+                        <span style="color:#555555"><?=$button->text?></span>
+                    <?php endif;
+                endforeach;} ?>
+                    </td>
+            </tr>
+        </table>
+
+
 

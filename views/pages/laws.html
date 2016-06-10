@@ -4,7 +4,7 @@ $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 $p = new Pagination(array(
     'itemsCount' => $data['count'][0]['cnt'],
-    'itemsPerPage' => 100,
+    'itemsPerPage' => 50,
     'currentPage' => $page
 ));
 ?>
@@ -67,8 +67,8 @@ $p = new Pagination(array(
             </form><?php
         }
         $i = 0;
-    if($_GET['page']>1) {
-        $i = ($_GET['page']-1)*100;
+    if($_GET['page'] > 1) {
+        $i = ($_GET['page'] - 1) * 50;
     }
         foreach ($data['docs'] as $doc){
             $i++;?>

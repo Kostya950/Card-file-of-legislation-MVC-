@@ -30,6 +30,7 @@
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='' AND $_GET['number'] == '') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
              } else {
+                 $this->data['count'] = $this->model->getLawsBySearchNumberOfPages($_GET);
                  $this->data['search_result'] = $this->model->getSearchResultLaws($_GET);
              }
          }
@@ -45,6 +46,7 @@
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
              } else {
+                 $this->data['count'] = $this->model->getJurisprudenceBySearchNumberOfPages($_GET);
                  $this->data['search_result'] = $this->model->getSearchResultJurisprudence($_GET);
              }
          }
@@ -59,6 +61,7 @@
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
              } else {
+                 $this->data['count'] = $this->model->getArticlesBySearchNumberOfPages($_GET);
                  $this->data['search_result'] = $this->model->getSearchResultArticles($_GET);
              }
          }
