@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/ru.php" afterPath="$PROJECT_DIR$/lang/ru.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lang/ua.php" afterPath="$PROJECT_DIR$/lang/ua.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/button.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/pagination.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,20 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pages.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.833334">
+            <state vertical-scroll-proportion="20.416666">
               <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
               <folding />
             </state>
@@ -131,16 +122,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="laws.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -149,6 +130,26 @@
               <folding>
                 <marker date="1465503719000" expanded="true" signature="3206:4516" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="button.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/button.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/pagination.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.15384616">
+              <caret line="13" column="116" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="116" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,10 +164,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ua.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ua.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lang/ua.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09615385">
+            <state vertical-scroll-proportion="-3.125">
               <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding />
             </state>
@@ -220,6 +221,7 @@
         <option value="$PROJECT_DIR$/views/pages/laws.html" />
         <option value="$PROJECT_DIR$/lang/ru.php" />
         <option value="$PROJECT_DIR$/lang/ua.php" />
+        <option value="$PROJECT_DIR$/lib/pagination.class.php" />
       </list>
     </option>
   </component>
@@ -266,168 +268,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webroot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -447,11 +287,11 @@
       <recent name="$PROJECT_DIR$/webroot/files" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/webroot/files/new_legislative_acts" />
       <recent name="$PROJECT_DIR$/webroot/files" />
       <recent name="$PROJECT_DIR$/webroot/js" />
       <recent name="$PROJECT_DIR$/webroot" />
-      <recent name="$PROJECT_DIR$/webroot/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -499,9 +339,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34263232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34263232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -530,61 +370,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="e#6#84#0#PHP" expanded="true" />
-            <element signature="n#getCategoriesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getPublishersLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesLawsSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoriesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesJurisprudenceSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoriesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getTypesArticlesSearch#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getSearchResultJurisprudence#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getSearchResultArticles#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getRangeNewLegislativeActs#0;n#Page#0;n#!!top" expanded="false" />
-            <element signature="n#getNumbPagesNewActs#0;n#Page#0;n#!!top" expanded="false" />
-            <marker date="1465502107000" expanded="true" signature="183:257" placeholder="SELECT id, `... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="374:422" placeholder="SELECT * FRO... publishers_laws" />
-            <marker date="1465502107000" expanded="true" signature="534:576" placeholder="SELECT * FRO... type_laws_acts" />
-            <marker date="1465502107000" expanded="true" signature="702:740" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1465502107000" expanded="true" signature="861:912" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-            <marker date="1465502107000" expanded="true" signature="1033:1142" placeholder="SELECT id, `... classifier_articles" />
-            <marker date="1465502107000" expanded="true" signature="1258:1304" placeholder="SELECT * FRO... type_articles_acts" />
-            <marker date="1465502107000" expanded="true" signature="35934:36216" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1465502107000" expanded="true" signature="46704:46949" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1465502107000" expanded="true" signature="52265:52518" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1465502107000" expanded="true" signature="52682:52747" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="52682:52767" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="52682:52770" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="false" signature="52896:53275" placeholder="SELECT n.nam... " />
-            <marker date="1465502107000" expanded="true" signature="52896:53552" placeholder="SELECT n.nam... " />
-            <marker date="1465502107000" expanded="true" signature="53388:53448" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
-            <marker date="1465502107000" expanded="true" signature="53554:53603" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="53723:53784" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="53895:53942" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54062:54118" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1465502107000" expanded="true" signature="54233:54284" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1465502107000" expanded="true" signature="54399:54455" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54579:54641" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54759:54813" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="54933:55004" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1465502107000" expanded="true" signature="55126:55762" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1465502107000" expanded="true" signature="55891:56647" placeholder="SELECT numbe... file_laws_all_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/users.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -975,9 +760,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lang/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/ua.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.833334">
+        <state vertical-scroll-proportion="20.416666">
           <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
           <folding />
         </state>
@@ -993,18 +794,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/ru.php">
+    <entry file="file://$PROJECT_DIR$/lib/button.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/ua.php">
+    <entry file="file://$PROJECT_DIR$/lib/pagination.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09615385">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.15384616">
+          <caret line="13" column="116" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="116" />
           <folding />
         </state>
       </provider>

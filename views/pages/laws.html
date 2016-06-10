@@ -1,4 +1,13 @@
-<?php $params = App::getRouter()->getParams(); ?>
+<?php $params = App::getRouter()->getParams();
+
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+$p = new Pagination(array(
+    'itemsCount' => $data['count'][0]['cnt'],
+    'itemsPerPage' => 100,
+    'currentPage' => $page
+));
+?>
 <table class="categoriesTxt">
     <tr>
         <td class="td_view_h1" colspan="3"><span class='btn btn_back text-center text-danger glyphicon glyphicon-chevron-left'
@@ -58,6 +67,9 @@
             </form><?php
         }
         $i = 0;
+    if($_GET['page']>1) {
+        $i = ($_GET['page']-1)*100;
+    }
         foreach ($data['docs'] as $doc){
             $i++;?>
             <tr>
@@ -66,7 +78,7 @@
                     if ($doc['link']!=''){ ?>
                         <a href='<?=$doc['link']?>'><?=$doc['title']?></a><?php
                     } else { ?>
-                        <span class='text-info'>{$doc['title']}</span><?php
+                        <span class='text-info'><?=$doc['title']?></span><?php
                     } ?>
                     <br><?=$doc['publisher_1']?><?php
                     if($doc['publisher_2']!=''){echo ", {$doc['publisher_2']}";}
@@ -81,4 +93,15 @@
         }
 
     } ?>
+    <tr>
+        <td></td>
+        <td class='td_view_content'><?php if(isset($params[1])){
+                foreach ($p->buttons as $button) :
+                    if ($button->isActive) : ?>
+                        <a href = '?page=<?=$button->page?>&id=<?=$_GET['id']?>'><?=$button->text?></a>
+                    <?php else : ?>
+                        <span style="color:#555555"><?=$button->text?></span>
+                    <?php endif;
+                endforeach;} ?></td>
+    </tr>
 </table>

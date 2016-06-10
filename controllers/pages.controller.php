@@ -98,10 +98,12 @@
              $this->data['laws_subcategory'] = $this->model->getLawsSubcategory($params[0]."/".$params[1]);
              $this->data['laws_sub_subcategories'] = $this->model->getLawsSubSubcategories( $this->data['laws_subcategory'][0]['id']);
              if($_GET['id'] ==''){
-                 $this->data['docs'] = $this->model->getAllDocsBySubcategoryId($this->data['laws_subcategory'][0]['id']);
+                 $this->data['count'] = $this->model->getLawsBySubcategoryNumberOfPages($this->data['laws_subcategory'][0]['id']);
+                 $this->data['docs'] = $this->model->getAllDocsBySubcategoryId($_GET['page'], $this->data['laws_subcategory'][0]['id']);
              } else {
                  $sub_id = (int)$_GET['id'];
-                 $this->data['docs'] = $this->model->getAllDocsBySubSubcategoryId($sub_id);
+                 $this->data['count'] = $this->model->getLawsBySubSubcategoryNumberOfPages($sub_id);
+                 $this->data['docs'] = $this->model->getAllDocsBySubSubcategoryId($_GET['page'],$sub_id);
              }
 
          }
