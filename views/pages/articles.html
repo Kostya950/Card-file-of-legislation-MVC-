@@ -1,32 +1,30 @@
 <?php $params = App::getRouter()->getParams();
 
- $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 $p = new Pagination(array(
     'itemsCount' => $data['count'][0]['cnt'],
     'itemsPerPage' => 50,
     'currentPage' => $page
-));
- ?>
+)); ?>
 <table class="categoriesTxt">
     <tr>
         <td class="td_view_h1" colspan="3"><span class='btn btn_back text-center text-danger glyphicon glyphicon-chevron-left'
         onclick='window.history.back()'></span>
             Систематична картотека публікацій з правової тематики</td>
-    </tr>
-
-<?php
-if(!isset($params[0])){
-    foreach ($data['articles_categories'] as $item) {?>
-        <tr>
-            <td class='td_view_numbering'><?=$item['index']?>.</td>
-            <td class='td_view_content'><a href='/pages/articles/<?=$item['index']?>'><?=$item['title']?></td>
-        </tr><?php
-    }
-} elseif (isset($params[0]) AND !isset($params[1])) { ?>
+    </tr><?php
+    if(!isset($params[0])){
+        foreach ($data['articles_categories'] as $item) {?>
+            <tr>
+                <td class='td_view_numbering'><?=$item['index']?>.</td>
+                <td class='td_view_content'><a href='/pages/articles/<?=$item['index']?>'><?=$item['title']?></td>
+            </tr><?php
+        }
+    } elseif (isset($params[0]) AND !isset($params[1])) { ?>
         <tr>
             <th class='td_view_h2' colspan='2'><?=$data['articles_category'][0]['index']?>. <?=$data['articles_category'][0]['title']?></th>
-        </tr><?php foreach ($data['articles_subcategories'] as $subcategory) {
+        </tr><?php
+        foreach ($data['articles_subcategories'] as $subcategory) {
             $subcategory_index = explode('/', $subcategory['index']); ?>
             <tr>
                 <td class='td_view_numbering'><?=$subcategory_index[1]?>.</td>
@@ -44,45 +42,11 @@ if(!isset($params[0])){
                     <td class='td_view_numbering'><?=$i?>.</td>
                     <td class='td_view_content'><span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
                         <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?><?php
-                        if($doc['publisher_2']!=''){ echo ", ". $doc['publisher_2']; }?>
+                            if($doc['publisher_2']!=''){ echo ", ". $doc['publisher_2']; }?>
                         </span><span class='text-muted h6'> <?=$doc['source']?></span>
                     </td>
-                </tr>
-            <?php }?>
-            <tr>
-                <td></td>
-                <td class='td_view_content'><?php
-                    foreach ($p->buttons as $button) :
-                        if ($button->isActive) : ?>
-                            <a href = '?page=<?=$button->page?>'><?=$button->text?></a>
-                        <?php else : ?>
-                            <span style="color:#555555"><?=$button->text?></span>
-                        <?php endif;
-                    endforeach; ?></td>
-            </tr>
-       <?php }
-} elseif (isset($params[1]) AND !isset($params[2])){ ?>
-        <tr>
-            <th class='td_view_h2' colspan='2'><?=$data['articles_category'][0]['index']?>. <?=$data['articles_category'][0]['title']?></th>
-        </tr>
-        <tr>
-            <td class='td_view_h3' colspan='2'><?=$params[1]?>. <?=$data['articles_subcategory'][0]['title']?></td>
-        </tr> <?php
-        $i = 0;
-    if($_GET['page'] > 1) {
-        $i = ($_GET['page'] - 1) * 50;
-    }
-            foreach ($data['docs'] as $doc) {
-                $i++;?>
-                <tr>
-                    <td class='td_view_numbering'><?=$i?>.</td>
-                    <td class='td_view_content'><span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
-                        <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?><?php
-                        if($doc['publisher_2']!=''){ echo ", ". $doc['publisher_2']; }?>
-                        </span><span class='text-muted h6'> <?=$doc['source']?></span>
-                    </td>
-                </tr>
-            <?php } ?>
+                </tr><?php
+            }?>
                 <tr>
                     <td></td>
                     <td class='td_view_content'><?php
@@ -94,8 +58,40 @@ if(!isset($params[0])){
                             <?php endif;
                         endforeach; ?></td>
                 </tr>
+           <?php }
+    } elseif (isset($params[1]) AND !isset($params[2])){ ?>
+            <tr>
+                <th class='td_view_h2' colspan='2'><?=$data['articles_category'][0]['index']?>. <?=$data['articles_category'][0]['title']?></th>
+            </tr>
+            <tr>
+                <td class='td_view_h3' colspan='2'><?=$params[1]?>. <?=$data['articles_subcategory'][0]['title']?></td>
+            </tr> <?php
+            $i = 0;
+        if($_GET['page'] > 1) {
+            $i = ($_GET['page'] - 1) * 50;
+        }
+                foreach ($data['docs'] as $doc) {
+                    $i++;?>
+                    <tr>
+                        <td class='td_view_numbering'><?=$i?>.</td>
+                        <td class='td_view_content'><span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
+                            <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?><?php
+                            if($doc['publisher_2']!=''){ echo ", ". $doc['publisher_2']; }?>
+                            </span><span class='text-muted h6'> <?=$doc['source']?></span>
+                        </td>
+                    </tr><?php
+                } ?>
+                    <tr>
+                        <td></td>
+                        <td class='td_view_content'><?php
+                            foreach ($p->buttons as $button) :
+                                if ($button->isActive) : ?>
+                                    <a href = '?page=<?=$button->page?>'><?=$button->text?></a>
+                                <?php else : ?>
+                                    <span style="color:#555555"><?=$button->text?></span>
+                                <?php endif;
+                            endforeach; ?></td>
+                    </tr><?php
+    } ?>
 
-<?php }
-?>
-
-    </table>
+</table>

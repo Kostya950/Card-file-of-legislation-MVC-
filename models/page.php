@@ -1110,6 +1110,58 @@ class Page extends  Model
         return $this->db->query($sql);
     }
 
+    public function getJurisprudenceCategory($index)
+    {
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisprudenceSubcategories($parent_id)
+    {
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `parent_id` = '{$parent_id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getAllJurisprudenceDocsByCategoryId($page, $id)
+    {
+        if($page < 1 ){
+            $page = 1;
+        }
+        $limit = $page * 50;
+        $start = $limit - 50;
+        $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1,
+                   type, index_1, index_2, index_3, index_4, index_5 FROM file_jurisprudence_all_info WHERE n_id_1 = '{$id}'
+                   OR n_id_2 = '{$id}' OR n_id_3 = '{$id}' OR n_id_4 = '{$id}' OR n_id_5 = '{$id}'
+                   ORDER BY date DESC LIMIT {$start}, 50";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisprudenceSubcategory($index)
+    {
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisprudenceSubSubcategories($parent_id)
+    {
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `parent_id` = '{$parent_id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisprudenceSubSubcategory($index)
+    {
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getJurisprudenceNumberOfPages($id)
+    {
+        $sql = "SELECT COUNT(id) as cnt FROM file_jurisprudence_all_info WHERE n_id_1 = '{$id}'
+                   OR n_id_2 = '{$id}' OR n_id_3 = '{$id}' OR n_id_4 = '{$id}' OR n_id_5 = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+
 
 
 }

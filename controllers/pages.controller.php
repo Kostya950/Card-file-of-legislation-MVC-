@@ -108,13 +108,35 @@
                  $this->data['count'] = $this->model->getLawsBySubSubcategoryNumberOfPages($sub_id);
                  $this->data['docs'] = $this->model->getAllDocsBySubSubcategoryId($_GET['page'],$sub_id);
              }
-
          }
      }
 
      public function jurisprudence()
      {
-         $this->data['jurisprudence_categories'] = $this->model->getJurisrpudenceCategories();
+         $params = App::getRouter()->getParams();
+         if(!isset($params[0])){
+             $this->data['jurisprudence_categories'] = $this->model->getJurisrpudenceCategories();
+         } elseif(isset($params[0]) AND !isset($params[1])) {
+             $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
+             $this->data['jurisprudence_subcategories'] = $this->model->getJurisprudenceSubcategories($this->data['jurisprudence_category'][0]['id']);
+             if(!isset($this->data['jurisprudence_subcategories'][0])){
+                 $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_category'][0]['id']);
+                 $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_category'][0]['id']);
+             }
+         } elseif(isset($params[1]) AND !isset($params[2])) {
+             $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
+             $this->data['jurisprudence_subcategory'] = $this->model->getJurisprudenceSubcategory($params[0]."/".$params[1]);
+             $this->data['jurisprudence_sub_subcategories'] = $this->model->getJurisprudenceSubSubcategories($this->data['jurisprudence_subcategory'][0]['id']);
+             $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_subcategory'][0]['id']);
+             $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_subcategory'][0]['id']);
+         } elseif(isset($params[2]) AND !isset($params[3])) {
+             $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
+             $this->data['jurisprudence_subcategory'] = $this->model->getJurisprudenceSubcategory($params[0]."/".$params[1]);
+             $this->data['jurisprudence_sub_subcategory'] = $this->model->getJurisprudenceSubSubcategory($params[0]."/".$params[1]."/".$params[2]);
+             $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_sub_subcategory'][0]['id']);
+             $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_sub_subcategory'][0]['id']);
+         }
+
      }
 
      public function articles()
@@ -125,9 +147,9 @@
          } elseif(isset($params[0]) AND !isset($params[1])){
              $this->data['articles_category'] = $this->model->getArticlesCategory($params[0]);
              $this->data['articles_subcategories'] = $this->model->getArticlesSubcategories($this->data['articles_category'][0]['id']);
-             if(!isset($data['articles_subcategories'][0])){
+             if(!isset($this->data['articles_subcategories'][0])){
                  $this->data['count'] = $this->model->getArticlesNumberOfPages($this->data['articles_category'][0]['id']);
-                 $this->data['docs'] = $this->model->getAllArticlesDocsByCategoryId($_GET['page'],$this->data['articles_category'][0]['id']);
+                 $this->data['docs'] = $this->model->getAllArticlesDocsByCategoryId($_GET['page'], $this->data['articles_category'][0]['id']);
              }
          } elseif(isset($params[1]) AND !isset($params[2]))
          {
