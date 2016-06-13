@@ -119,7 +119,24 @@
 
      public function articles()
      {
-         $this->data['articles_categories'] = $this->model->getArticlesCategories();
+         $params = App::getRouter()->getParams();
+         if(!isset($params[0])) {
+             $this->data['articles_categories'] = $this->model->getArticlesCategories();
+         } elseif(isset($params[0]) AND !isset($params[1])){
+             $this->data['articles_category'] = $this->model->getArticlesCategory($params[0]);
+             $this->data['articles_subcategories'] = $this->model->getArticlesSubcategories($this->data['articles_category'][0]['id']);
+             if(!isset($data['articles_subcategories'][0])){
+                 $this->data['count'] = $this->model->getArticlesNumberOfPages($this->data['articles_category'][0]['id']);
+                 $this->data['docs'] = $this->model->getAllArticlesDocsByCategoryId($_GET['page'],$this->data['articles_category'][0]['id']);
+             }
+         } elseif(isset($params[1]) AND !isset($params[2]))
+         {
+             $this->data['articles_category'] = $this->model->getArticlesCategory($params[0]);
+             $this->data['articles_subcategory'] = $this->model->getArticlesSubcategory($params[0]."/".$params[1]);
+             $this->data['count'] = $this->model->getArticlesNumberOfPages($this->data['articles_subcategory'][0]['id']);
+             $this->data['docs'] = $this->model->getAllArticlesDocsByCategoryId($_GET['page'],$this->data['articles_subcategory'][0]['id']);
+         }
+
      }
 
 
@@ -157,7 +174,6 @@
 
      public function admin_edit()
      {
-
          if ($_POST) {
              $id = isset($_POST['id']) ? $_POST['id'] : null;
              $result = $this->model->save($_POST, $id);

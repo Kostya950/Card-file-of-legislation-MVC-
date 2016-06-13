@@ -11,7 +11,7 @@ class Pagination
 {
     public $buttons = array();
 
-    public function __construct(Array $options = array('itemsCount' => 257, 'itemsPerPage' => 10, 'currentPage' => 1))
+    public function __construct(Array $options)
     {
         extract($options);
 

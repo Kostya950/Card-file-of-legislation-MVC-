@@ -972,43 +972,55 @@ class Page extends  Model
 
     public function getLawsCategories()
     {
-        $sql = "SELECT * FROM classifier_laws WHERE parent_id=0";
+        $sql = "SELECT * FROM `classifier_laws` WHERE `parent_id` = 0";
         return $this->db->query($sql);
     }
 
     public function getJurisrpudenceCategories()
     {
-        $sql = "SELECT * FROM classifier_jurisprudence WHERE parent_id=0";
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `parent_id` = 0";
         return $this->db->query($sql);
     }
 
     public function getArticlesCategories()
     {
-        $sql = "SELECT * FROM classifier_articles WHERE parent_id=0";
+        $sql = "SELECT * FROM `classifier_articles` WHERE `parent_id` = 0";
         return $this->db->query($sql);
     }
 
     public function getLawsCategory($index)
     {
-        $sql = "SELECT * FROM classifier_laws WHERE `index` = '{$index}'";
+        $sql = "SELECT * FROM `classifier_laws` WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getArticlesCategory($index)
+    {
+        $sql = "SELECT * FROM `classifier_articles` WHERE `index` = '{$index}'";
         return $this->db->query($sql);
     }
 
     public function getLawsSubcategories($parent_id)
     {
-        $sql = "SELECT * FROM classifier_laws WHERE `parent_id`='{$parent_id}'";
+        $sql = "SELECT * FROM `classifier_laws` WHERE `parent_id`='{$parent_id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getArticlesSubcategories($parent_id)
+    {
+        $sql = "SELECT * FROM `classifier_articles` WHERE `parent_id` = '{$parent_id}'";
         return $this->db->query($sql);
     }
 
     public function getLawsSubcategory($index)
     {
-        $sql = "SELECT * FROM classifier_laws WHERE `index`='{$index}'";
+        $sql = "SELECT * FROM `classifier_laws` WHERE `index`='{$index}'";
         return $this->db->query($sql);
     }
 
     public function getLawsSubSubcategories($id)
     {
-        $sql = "SELECT * FROM classifier_laws WHERE `parent_id`= '{$id}' ORDER BY title";
+        $sql = "SELECT * FROM `classifier_laws` WHERE `parent_id`= '{$id}' ORDER BY title";
         return $this->db->query($sql);
     }
 
@@ -1050,7 +1062,7 @@ class Page extends  Model
 
     public function getLawsBySubcategoryNumberOfPages($id)
     {
-        $sql = "SELECT COUNT(*) as cnt FROM file_laws_all_info WHERE id_1 = '{$id}'
+        $sql = "SELECT COUNT(id) as cnt FROM file_laws_all_info WHERE id_1 = '{$id}'
                     OR id_2 = '{$id}' OR id_3 = '{$id}' OR id_4 = '{$id}'
                     OR id_5 = '{$id}' OR id_6 = '{$id}' OR id_7 = '{$id}'
                     OR id_8 = '{$id}' OR id_9 = '{$id}' OR id_10 = '{$id}'
@@ -1061,12 +1073,40 @@ class Page extends  Model
 
     public function getLawsBySubSubcategoryNumberOfPages($sub_id)
     {
-        $sql = "SELECT COUNT(*) as cnt FROM file_laws_all_info WHERE sub_id_1 = '{$sub_id}'
+        $sql = "SELECT COUNT(id) as cnt FROM file_laws_all_info WHERE sub_id_1 = '{$sub_id}'
                     OR sub_id_2 = '{$sub_id}' OR sub_id_3 = '{$sub_id}' OR sub_id_4 = '{$sub_id}'
                     OR sub_id_5 = '{$sub_id}' OR sub_id_6 = '{$sub_id}' OR sub_id_7 = '{$sub_id}'
                     OR sub_id_8 = '{$sub_id}' OR sub_id_9 = '{$sub_id}' OR sub_id_10 = '{$sub_id}'
                     OR sub_id_11 = '{$sub_id}' OR sub_id_12 = '{$sub_id}' OR sub_id_13 = '{$sub_id}'
                     OR sub_id_14 = '{$sub_id}' OR sub_id_15 = '{$sub_id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getAllArticlesDocsByCategoryId($page, $category_id)
+    {
+        if($page < 1 ){
+            $page = 1;
+        }
+        $limit = $page * 50;
+        $start = $limit - 50;
+        $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1, publisher_2,
+                   type, index_1, index_2, index_3, index_4, index_5 FROM file_articles_all_info WHERE n_id_1 = '{$category_id}'
+                   OR n_id_2 = '{$category_id}' OR n_id_3 = '{$category_id}' OR n_id_4 = '{$category_id}' OR n_id_5 = '{$category_id}'
+                   ORDER BY date DESC LIMIT {$start}, 50";
+        return $this->db->query($sql);
+    }
+
+    public function getArticlesSubcategory($index)
+    {
+        $sql = "SELECT * FROM classifier_articles WHERE `index` = '{$index}'";
+        return $this->db->query($sql);
+    }
+
+    public function getArticlesNumberOfPages($category_id)
+    {
+        $sql = "SELECT COUNT(id) as cnt FROM file_articles_all_info WHERE n_id_1 = '{$category_id}'
+                   OR n_id_2 = '{$category_id}' OR n_id_3 = '{$category_id}' OR n_id_4 = '{$category_id}'
+                   OR n_id_5 = '{$category_id}'";
         return $this->db->query($sql);
     }
 
