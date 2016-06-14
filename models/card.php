@@ -330,6 +330,16 @@ class Card extends Model
         return $this->db->query($sql);
     }
 
+    public function getDocToPrint($id)
+    {
+        $sql = "SELECT id, number, DATE_FORMAT(date,'%d.%m.%Y') AS date, title, number_min, DATE_FORMAT(date_min,'%d.%m.%Y') AS date_min, source_1,
+            source_2, source_3, source_4, `type`, publisher_1, publisher_2, publisher_3, publisher_4, folder, n_id_1, n_id_2, n_id_3, n_id_4,
+            n_id_5, n_id_6, n_id_7, n_id_8, n_id_9, n_id_10, n_id_11, n_id_12, n_id_13, n_id_14, n_id_15, n_1_sub_id, n_2_sub_id,
+            n_3_sub_id, n_4_sub_id, n_5_sub_id, n_6_sub_id, n_7_sub_id, n_8_sub_id, n_9_sub_id, n_10_sub_id, n_11_sub_id,
+            n_12_sub_id, n_13_sub_id, n_14_sub_id, n_15_sub_id FROM file_laws_all_info WHERE id ='{$id}'";
+        return $this->db->query($sql);
+    }
+
 
 
 }

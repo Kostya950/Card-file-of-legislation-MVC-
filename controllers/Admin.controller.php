@@ -201,6 +201,12 @@ class AdminController extends Controller
         }
     }
 
+    public function print_card_laws()
+    {
+        $params = App::getRouter()->getParams();
+        $this->data['doc_to_print'] = $this->model->getDocToPrint($params[0]);
+    }
+
 
 
     public function new_acts()

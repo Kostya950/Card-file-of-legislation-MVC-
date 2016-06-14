@@ -49,10 +49,8 @@ if(isset($_POST['number']) OR isset($_POST['date'])){
                         $numb = number_format($doc['id'], 0, ',', ' ');
                         echo "<form method='get' action='/manage/admin/edit_laws/{$numb}'>
                             <span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'></form>";
-
-                        echo "<form method='get' action='print_card_laws.php'>
-                            <input hidden name='card_id' value='{$doc['id']}'>
-                            <input type='submit' class='btn btn-default btn-sm' value='Друк'></form>";
+                        echo "<form method='get' action='/manage/admin/print_card_laws/{$doc['id']}'>
+                              <input type='submit' class='btn btn-default btn-sm' value='Друк'></form>";
                         echo"<br>";
                         echo"<br>";
                     } ?></div>

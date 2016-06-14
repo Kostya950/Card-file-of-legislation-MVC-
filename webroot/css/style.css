@@ -682,3 +682,72 @@ a.btns .disabled,fieldset[disabled] a.btns {
 .mrg_top_head {
     margin-top: 50px;
 }
+
+.table_print {
+    font-family: "Times New Roman";
+    margin-left: 70px;
+    height: 27px;
+    width: 443px;
+
+}
+.td_print {
+    table-layout:fixed;
+    border: 1px solid black;
+    line-height: 1.19;
+}
+.tr_print {
+    border: none;
+}
+
+.mrg_top {
+    margin-top: 50px; /* if Windows use margin-top: 50px else use 40px*/
+    margin-bottom: 70px; /* if Windows use margin-bottom: 70px else use 48px */
+}
+.indexes, .publisher, .number-date, .number-date-min, .source, .title, .folder {font-size: 9pt}
+.indexes {
+    font-weight: bold;
+    height: 118px;
+    width: 122px;
+
+}
+.ind_2{
+    font-size: 8pt;
+}
+.indexes, .publisher, .number-date, .number-date-min, .folder  {text-align: center}
+
+.source, .title {text-align: left; padding: 4px}
+.title {
+    max-height: 118px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.publisher {
+    height: 76px;
+    width: 530px;
+}
+.number-date {
+    font-weight: bold;
+    height: 39px;
+}
+.number-date-min{
+    width: 88px;
+}
+.source {
+    width: 140px;
+    height: 73px;
+}
+
+.footer{
+    border-top: none;
+    font-size: 7pt;
+    padding-right: 20px;
+    height: 27px;
+}
+.folder {
+    font-weight: bold;
+}
+.head_btns {
+    position: fixed;
+    margin-left: 530px
+}
+
