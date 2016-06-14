@@ -142,47 +142,6 @@ class AdminController extends Controller
                 }
             }
         }
-
-
-    }
-
-    public function articles()
-    {
-        $this->data['indexes'] = $this->model->getAllArticlesIndexes();
-        $this->data['types'] = $this->model->getAllArticlesTypes();
-        $this->model->createOrReplaceArticlesView();
-
-        function index($indexes) {
-            foreach ($indexes as $key => $index) {
-                echo "<option value='{$index['id']}'>{$index['index']}</option>";
-            }
-        }
-        function types($types) {
-            foreach ($types as $type) {
-                echo "<option value='{$type['id']}'>{$type['type']}</option>";
-            }
-        }
-
-    }
-
-    public function jurisprudence()
-    {
-        $this->data['indexes'] = $this->model->getAllJurisprudenceIndexes();
-        $this->data['types'] = $this->model->getAllJurisprudenceTypes();
-        $this->model->createOrReplaceJurisprudenceView();
-
-        function index($indexes) {
-            foreach ($indexes as $index) {
-                echo "<option value='{$index['id']}'>{$index['index']}</option>";
-            }
-        }
-        function types($types) {
-            foreach ($types as $type) {
-                echo "<option value='{$type['id']}'>{$type['type']}</option>";
-            }
-        }
-
-
     }
 
     public function success_edit_laws()
@@ -206,6 +165,106 @@ class AdminController extends Controller
         $params = App::getRouter()->getParams();
         $this->data['doc_to_print'] = $this->model->getDocToPrint($params[0]);
     }
+
+    public function articles()
+    {
+        $this->data['indexes'] = $this->model->getAllArticlesIndexes();
+        $this->data['types'] = $this->model->getAllArticlesTypes();
+        $this->model->createOrReplaceArticlesView();
+
+        function index($indexes) {
+            foreach ($indexes as $key => $index) {
+                echo "<option value='{$index['id']}'>{$index['index']}</option>";
+            }
+        }
+        function types($types) {
+            foreach ($types as $type) {
+                echo "<option value='{$type['id']}'>{$type['type']}</option>";
+            }
+        }
+
+        if(isset($_POST['submit'])){
+            $this->model->saveArticles($_POST);
+           $this->data['saved_doc'] = $this->model->getSavedArticlesDoc($_POST);
+        }
+    }
+
+    public function edit_articles()
+    {
+        $params = App::getRouter()->getParams();
+        $this->data['indexes'] = $this->model->getAllArticlesIndexes();
+        $this->data['types'] = $this->model->getAllArticlesTypes();
+        $this->data['editable_card'] = $this->model->getArticlesCard($params[0]);
+
+        function indexId($editable_card, $indexes, $id){
+            foreach ($editable_card as $card){
+                if ($card["$id"] !=0) {
+                    foreach($indexes as $index) {
+                        if ($index['id'] == $card["$id"]) {
+                            echo "<option value='{$index['id']}'>{$index['index']}</option>";
+                        }
+                    }
+                }
+                echo "<option value='132'></option>";
+                foreach($indexes as $index){
+                    echo "<option value='{$index['id']}'>{$index['index']}</option>";
+                }
+            }
+        }
+        function types($editable_card, $types)
+        {
+            foreach ($editable_card as $card) {
+                if($card['type']!=0) {
+                    foreach ($types as $type) {
+                        if ($type['id'] == $card['type']) {
+                            echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                        }
+                    }
+                }
+                echo "<option></option>";
+                foreach ($types as $type) {
+                    echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                }
+            }
+        }
+    }
+
+    public function success_edit_articles()
+    {
+        $params = App::getRouter()->getParams();
+        if($_POST['yes']){
+            $this->model->deleteArticles($params[0]);
+        }
+        if(isset($_POST['edit'])){
+            $this->model->editArticles($_POST, $params[0]);
+            $this->data['saved_doc'] = $this->model->getArticlesCard($params[0]);
+        }
+
+    }
+
+
+
+    public function jurisprudence()
+    {
+        $this->data['indexes'] = $this->model->getAllJurisprudenceIndexes();
+        $this->data['types'] = $this->model->getAllJurisprudenceTypes();
+        $this->model->createOrReplaceJurisprudenceView();
+
+        function index($indexes) {
+            foreach ($indexes as $index) {
+                echo "<option value='{$index['id']}'>{$index['index']}</option>";
+            }
+        }
+        function types($types) {
+            foreach ($types as $type) {
+                echo "<option value='{$type['id']}'>{$type['type']}</option>";
+            }
+        }
+
+
+    }
+
+
 
 
 

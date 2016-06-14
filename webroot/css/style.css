@@ -699,7 +699,7 @@ a.btns .disabled,fieldset[disabled] a.btns {
     border: none;
 }
 
-.mrg_top {
+.mrg_top2 {
     margin-top: 50px; /* if Windows use margin-top: 50px else use 40px*/
     margin-bottom: 70px; /* if Windows use margin-bottom: 70px else use 48px */
 }
@@ -751,3 +751,7 @@ a.btns .disabled,fieldset[disabled] a.btns {
     margin-left: 530px
 }
 
+.btn_mrg {
+    margin-left: 40px;
+    float: right;
+}

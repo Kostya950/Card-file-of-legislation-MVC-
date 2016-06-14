@@ -1,4 +1,4 @@
-<?php if (isset($data['doc_to_print'])) {
+<?php if (isset($data['doc_to_print'][0])) {
     if ($data['doc_to_print'][0]['n_id_1']!=''){$indexes[] = $index_1 = $data['doc_to_print'][0]['n_id_1'];}
     if ($data['doc_to_print'][0]['n_id_2']!=''){$indexes[] = $index_2 = $data['doc_to_print'][0]['n_id_2'];}
     if ($data['doc_to_print'][0]['n_id_3']!=''){$indexes[] = $index_3 = $data['doc_to_print'][0]['n_id_3'];}
@@ -44,7 +44,7 @@
 $cnt = count($indexes);
 for ($i=1; $i<=$cnt; $i++) {
     ?>
-    <table class="mrg_top table_print">
+    <table class="mrg_top2 table_print">
         <tr class="tr_print">
             <td class="indexes td_print">
                 <?php
@@ -125,7 +125,7 @@ if(isset($indexes_2[0])){
     $cnt = count($indexes_2);
     for ($i=1; $i<=$cnt; $i++) {
         ?>
-        <table class="mrg_top table_print">
+        <table class="mrg_top2 table_print">
             <tr class="tr_print">
                 <td class="indexes td_print">
                     <?php
@@ -199,7 +199,7 @@ if(isset($indexes_2[0])){
 else {
     ?>
     <form method="get" action="edit_laws.php">
-        <div class="col-sm-offset-2 col-sm-7 mrg_top">
+        <div class="col-sm-offset-2 col-sm-7 mrg_top2">
             <div class="panel panel-warning text-center">
                 <div class="panel-heading"><b>Помилка!</b></div>
                 <div class="panel-body text-left text-center"> <b>Щось пішло не так, поверніться на головну або у розділ додати!</b></div>

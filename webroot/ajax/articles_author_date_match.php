@@ -14,7 +14,7 @@ if(isset($_POST['publisher']) OR isset($_POST['date'])){
     $docs = $db->query($sql);
     if(isset($docs['0'])) {
         ?>
-        <form method="get" action="edit_articles.php">
+
             <div class="panel panel-danger text-center">
                 <div class="panel-heading"><b>В БАЗІ ВЖЕ ІСНУЄ СХОЖА СТАТТЯ</b></div>
                 <div class="panel-body  text-left">
@@ -31,7 +31,7 @@ if(isset($_POST['publisher']) OR isset($_POST['date'])){
                         echo "<br><b>";
                         echo $doc['publisher_1']; if(isset($doc['publisher_2']) AND $doc['publisher_2']!=''){echo ', '.$doc['publisher_2'];}
                         $numb = number_format($doc['id'], 0, ',', ' ');
-                        echo "<span class='text-muted'> змінити статтю № </span><input href='edit_articles.php?{$doc['id']}' name='id_change' type='submit' class='btn btn-default btn-sm' value='{$doc['id']}'>";
+                        echo "<form method='get' action='/manage/admin/edit_articles/{$doc['id']}'><span class='text-muted'> змінити статтю № </span><input type='submit' class='btn btn-default btn-sm' value='{$doc['id']}'>";
                         echo"<br>";
                         echo"<br>";
                     } ?></div>

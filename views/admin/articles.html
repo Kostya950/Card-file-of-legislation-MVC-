@@ -61,3 +61,44 @@
 </div>
 <br>
 <br>
+<?php if(isset($_POST['submit'])) { ?>
+    <div class="col-sm-offset-2 col-sm-6 mrg_top">
+    <div class="panel panel-success text-center">
+    <div class="panel-heading"><b>Вітаємо!</b> Ви успішно додали статтю</div>
+    <div class="panel-body  text-left">
+    <?php foreach ($data['saved_doc'] as $doc) {
+        echo "<b>";
+        echo $doc['index_1'];
+        if (isset($doc['n_id_2']) AND $doc['n_id_2'] != 132) {
+            echo ', ' . $doc['index_2'];
+        }
+        if (isset($doc['n_id_3']) AND $doc['n_id_3'] != 132) {
+            echo ', ' . $doc['index_3'];
+        }
+        if (isset($doc['n_id_4']) AND $doc['n_id_4'] != 132) {
+            echo ', ' . $doc['index_4'];
+        }
+        if (isset($doc['n_id_5']) AND $doc['n_id_5'] != 132) {
+            echo ', ' . $doc['index_5'];
+        }
+        echo "</b>";
+        echo "<br>";
+        echo "<b>{$doc['type']} від {$doc['date']}</b><br>";
+        echo $doc['title'];
+        echo "<br>";
+        echo "<b>" . $doc['publisher_1'] . "</b>";
+        if ($doc['publisher_2'] != '') {
+            echo '<b>, ' . $doc['publisher_2'] . '</b>';
+        }
+
+        $numb = $doc['id'];
+        echo "<form method='get' action='/manage/admin/edit_articles/{$numb}'><span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
+        echo "<br>";
+        echo "<br>";
+        ?>
+        </div>
+        </div>
+        </div>
+        </form>
+    <?php }
+}

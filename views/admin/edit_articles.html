@@ -1,0 +1,61 @@
+<?php $params = App::getRouter()->getParams();?>
+<div class="col-sm-offset-2 col-sm-7 mrg_top">
+    <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
+    <a href="/manage/admin/articles/"><input class="btn btn-default" type="text" value="Додати"></a>
+    <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
+</div>
+
+<div class="col-sm-offset-4 col-sm-4 text-center"><h4>Додавання публікацій з правової тематики</h4></div>
+<div class="col-sm-offset-2 col-sm-10">
+    <form method="post" action="/manage/admin/success_edit_articles/<?=$params[0]?>">
+        <table class="add_table_articles_jurispr">
+            <tr>
+                <td class="add_marg_left text-muted"><label for="num_db"><b>Номер в базі:</b></label></td>
+                <td class="text-muted"><input class="text-center btn publ" disabled value="<?=number_format($params[0], 0, ',', ' ')?>"></td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="date"><b>Дата публікації:<sup>*</sup></b></label></td>
+                <td><input id="date" class="publ_articles" required type="date" name="date" value="<?=$data['editable_card'][0]['date']?>"></td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="publisher"><b>Автор:<sup>*</sup></b></label></td>
+                <td><input required id="publisher" class="publ_articles" name="publisher_1" placeholder="Зразок: Федорук В." value="<?=$data['editable_card'][0]['publisher_1']?>">
+                    <input id="publisher_2" class="publ_articles" name="publisher_2" value="<?=$data['editable_card'][0]['publisher_2']?>"></td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
+                <td><select required id="id" class="id" name="id_1">
+                        <?php indexId($data['editable_card'], $data['indexes'], 'id_1') ?>
+                    </select>
+                    <select class="id" name="id_2">
+                        <?php indexId($data['editable_card'], $data['indexes'], 'id_2') ?>
+                    </select>
+                    <select class="id" name="id_3">
+                        <?php indexId($data['editable_card'], $data['indexes'], 'id_3') ?>
+                    </select>
+                    <select class="id" name="id_4">
+                        <?php indexId($data['editable_card'], $data['indexes'], 'id_4') ?>
+                    </select>
+                    <select class="id" name="id_5">
+                        <?php indexId($data['editable_card'], $data['indexes'], 'id_5') ?>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="type"><b>Вид:<sup>*</sup></b></label></td>
+                <td><select required id="type" class="form-control" name="type">
+                        <?php types($data['editable_card'], $data['types']) ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="title"><b>Назва:<sup>*</sup></b></label></td>
+                <td><textarea id="title" class="form-control ta" rows="3" cols="40" required name="title" placeholder="Напишіть назву статті"><?=$data['editable_card'][0]['title']?></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="1" class="add_marg_left"><label for="source"><b>Опублікування:<sup>*</sup></b></label></td>
+                <td><input id="source" class="form-control" required placeholder="ЮУ 2015 № 7-8 с.53" type="text" name="source_1" value="<?=$data['editable_card'][0]['source']?>"></td>
+            </tr>
+            <tr><td class="prim" colspan="2"><span class="add_marg_left text-muted"><sup>*</sup> - поля овоб'язкові для заповнення</span><input class="btn btn-warning btn_mrg" type="submit" name="edit" value="Редагувати"><input class="btn btn-danger btn_mrg" type="submit" name="delete" value="Видалити"></td></tr>
+        </table>
+    </form>
+</div>
