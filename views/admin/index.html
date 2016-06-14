@@ -1,0 +1,33 @@
+<div class="col-sm-12 text-center">
+    <a href="/pages/" class="btn headBtnMain glyphicon glyphicon-home find" type="text"> Головна</a>
+</div>
+<div class="col-sm-12 text-center count_add">
+    <span class="opac">В базі документів: <?=Config::get('count')?></span>
+    <a href="/users/logout/" class="btn btn-out btn-default" type="submit" name="out" >Вийти</a>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="col-sm-12">
+            <h2 class="text-center">Оберіть категорію для додавання картки</h2>
+        </div>
+        <div class="col-sm-12 text-center"><a href="/manage/admin/laws/">
+                <input class="btn btn-success headBtnMain" type="text" value="АКТИ ЗАКОНОДАВСТВА"></a>
+            <a href="/manage/admin/articles/">
+                <input class="btn btn-info headBtnMain" type="text" value="ПУБЛІКАЦІЇ"></a>
+            <a href="/manage/admin/jurisprudence/">
+                <input class="btn btn-primary headBtnMain" type="text" value="СУДОВА ПРАКТИКА">
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-12 text-center">
+        <a href="/manage/admin/new_acts/">
+            <input class="btn btn-warning headBtnMain" type="text" value="НОВЕ В ЗАКОНОДАВСТВІ">
+        </a>
+    </div>
+</div>
+<div class="col-sm-12 text-center">
+    <a href='registration.php'>
+        <input type="button" class="btn btn-sm btn-default headBtnMain" value="Зареєструвати нового працівника">
+    </a>
+</div>
+

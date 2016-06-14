@@ -1,0 +1,67 @@
+<div class="col-sm-offset-2 col-sm-7 mrg_top">
+    <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
+    <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
+</div>
+
+<div id="jurisprudence_show" class="col-sm-offset-1 col-sm-8"></div>
+
+<div class="col-sm-offset-4 col-sm-4 text-center"><h4>Додавання актів судової практики</h4></div>
+<div class="col-sm-offset-2 col-sm-10">
+    <form method="post" action="">
+        <table class="add_table_articles_jurispr">
+            <tr>
+                <td class="add_marg_left"><label for="date"><b>Дата прийняття:<sup>*</sup></b></label></td>
+                <td><input id="date" class="form-control" required type="date" name="date"></td>
+            </tr>
+            <tr>
+                <td rowspan="1" class="add_marg_left"><label for="publisher"><b>Видавник:</b></label></td>
+                <td>
+                    <textarea class="form-control ta" rows="3" cols="40" id="publisher" required name="publisher_1" placeholder="Напишіть видавника"></textarea>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
+                <td><select required id="id" class="id" name="id_1">
+                        <option></option>
+                        <?php index ($data['indexes']); ?>
+                    </select>
+                    <select class="id" name="id_2">
+                        <option></option>
+                        <?php index ($data['indexes']); ?>
+                    </select>
+                    <select class="id" name="id_3">
+                        <option></option>
+                        <?php index ($data['indexes']); ?>
+                    </select>
+                    <select class="id" name="id_4">
+                        <option></option>
+                        <?php index ($data['indexes']); ?>
+                    </select>
+                    <select class="id" name="id_5">
+                        <option></option>
+                        <?php index ($data['indexes']); ?>
+                    </select></td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="type"><b>Вид:<sup>*</sup></b></label></td>
+                <td><select required id="type" class="form-control" name="type">
+                        <option></option>
+                        <?php types($data['types']); ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="add_marg_left"><label for="title"><b>Назва:<sup>*</sup></b></label></td>
+                <td><textarea id="title" class="form-control ta" rows="3" cols="40" required name="title" placeholder="Напишіть назву статті"></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="1" class="add_marg_left"><label for="source"><b>Опублікування:<sup>*</sup></b></label></td>
+                <td><input id="source" class="form-control" required placeholder="ЮУ 2015 № 7-8 с.53" type="text" name="source_1"></td>
+            </tr>
+            <tr><td class="prim" colspan="2"><span class="add_marg_left text-muted"><sup>*</sup> - поля овоб'язкові для заповнення</span><input class="btn btn-warning btn-warnings" type="submit" name="submit" value="Додати"></td></tr>
+        </table>
+    </form>
+</div>
+<br>
+<br>
+</body>
+</html>

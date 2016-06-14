@@ -22,7 +22,5 @@ function __autoload($class_name) {
     } else {
         throw new Exception('Failed to include class: '.$class_name);
     }
-
-
 }
 

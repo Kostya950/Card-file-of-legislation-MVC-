@@ -1,0 +1,26 @@
+<?php
+if($_SESSION['role'] != 'logged'){
+    Router::redirect('/users/login/');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Додавання</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="/img/prokuratura_2.png" rel="shortcut icon" type="image/png">
+    <script src="/jQuery/jquery-1.12.1.min.js"></script>
+    <script rel="script" src="/js/laws_search.js"></script>
+    <script rel="script" src="/js/articles_js_functions.js"></script>
+    <script rel="script" src="/js/jurisprudence_js_functions.js"></script>
+</head>
+<body>
+<?=$data['content']?>
+</body>
+</html>
+

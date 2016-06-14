@@ -14,7 +14,7 @@ Config::set('site_name','Картотека');
 
 Config::set('routes', array (
     'default' => '',
-    'admin' => 'admin_',
+    'manage' => ''
 ));
 
 Config::set('default_route', 'default');
@@ -25,6 +25,6 @@ Config::set('db.host', 'localhost');
 Config::set('db.user', 'root');
 Config::set('db.password', '111111');
 Config::set('db.db_name', 'legis_mvc');
-Config::set('documents', 214);
 
-Config::set('salt','jd7sj3sdkd964he7e');
+Config::set('salt','Hello World');
+

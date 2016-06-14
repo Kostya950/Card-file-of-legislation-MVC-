@@ -1,0 +1,13 @@
+<div class="col-sm-12 text-center"><h4>Додавати документи можуть тільки авторизовані користувачі, авторизуйтесь будь ласка:</h4></div>
+<form method="post" action="">
+    <div class="sign">
+        <input class="signIn" type="text" name="login" placeholder="Логін">
+        <input class="signIn" type="password" name="password" placeholder="Пароль">
+        <input class="btn btn-info" type="submit" name="signIn" value="Увійти" >
+    </div>
+</form>
+<?php if($data['wrong_user'] == 'wrong user'){?>
+    <div class="alert alert-danger col-sm-offset-4 col-sm-3 h4 text-center" role="alert"><b><?php Session::flash();?></b></div>
+<?php
+}
+

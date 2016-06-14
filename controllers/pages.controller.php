@@ -161,28 +161,14 @@
 
      }
 
-
-
-     public function view() {
-         $params = App::getRouter()->getParams();
-
-         if (isset($params[0])){
-
-             $this->data = $this->model->getSubcategory($params[0]);
-
-         }
-     }
-
      public function admin_index()
      {
-        $this->data['pages'] = $this->model->getList();
+        //$this->data['pages'] = $this->model->getList();
      }
 
      public function admin_add()
      {
          if ($_POST) {
-
-
 
              $result = $this->model->save($_POST);
              if ($result) {

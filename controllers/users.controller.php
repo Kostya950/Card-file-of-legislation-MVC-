@@ -14,25 +14,28 @@ class UsersController extends Controller
         $this->model = new User();
     }
 
-    public function admin_login()
+    public function login()
     {
+        if($_SESSION['role'] == 'logged'){
+            Router::redirect('/manage/admin/');
+        }
         if($_POST && isset($_POST['login']) && isset($_POST['password'])) {
             $user = $this->model->getByLogin($_POST['login']);
-            $hash = md5(Config::get('salt'). $_POST['password']);
-            if($user && $user['is_active'] && $hash == $user['password']) {
+            $hash = md5($_POST['password'].Config::get('salt'));
+            if($user && $hash == $user['password']) {
                 Session::set('login', $user['login']);
-                Session::set('role', $user['role']);
+                Session::set('role', 'logged');
+                Router::redirect('/manage/admin/');
+            } else {
+                Session::setFlash('Невірний логін або пароль!');
+                $this->data['wrong_user'] = 'wrong user';
             }
-
-            Router::redirect('/admin/');
-
         }
     }
 
-
-    public function admin_logout()
+    public function logout()
     {
         Session::destroy();
-        Router::redirect('/admin/');
+        Router::redirect('/users/login/');
     }
 }
