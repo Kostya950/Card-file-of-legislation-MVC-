@@ -27,7 +27,7 @@ view_jurisprudence.php, view_laws.php) */
 
 .sticky {
     position: fixed;
-    top:0px;
+    top: 0;
     z-index: 101;
 }
 
@@ -668,4 +668,17 @@ a.btns .disabled,fieldset[disabled] a.btns {
 .coincidence{
     min-width: 900px;
     max-width: 900px;
+}
+
+.mrg_top1 {
+    margin-top: 40px;
+}
+
+.btn_y_n {
+    margin:15px;
+    width: 200px;
+}
+
+.mrg_top_head {
+    margin-top: 50px;
 }

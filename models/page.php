@@ -67,7 +67,7 @@ class Page extends  Model
                 $date_end = date("Y-m-d");
             }
             if ($title != '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
-                $search_content = "`title` LIKE '%{$title}%'";
+                $search_content = "title LIKE '%{$title}%'";
             } elseif ($title != '' AND $category != '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number == '') {
                 $search_content = "`title` LIKE '%{$title}%' AND (`id_1` = '{$category}' OR `id_2` = '{$category}' OR `id_3` = '{$category}' OR
             `id_4` = '{$category}' OR `id_5` = '{$category}' OR `id_6` = '{$category}' OR `id_7` = '{$category}' OR `id_8` = '{$category}' OR
@@ -702,6 +702,7 @@ class Page extends  Model
             } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
                 $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
             }
+
             $sql = "SELECT COUNT(`id`) as `cnt` FROM `file_jurisprudence_all_info` WHERE {$search_content}";
         }
         return $this->db->query($sql);
@@ -808,6 +809,7 @@ class Page extends  Model
             } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
                 $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
             }
+
             $sql = "SELECT `id`, DATE_FORMAT(`date`,'%d.%m.%Y') AS `nice_date`, `title`, `source`, `publisher_1`,
                    `type`, `index_1`, `index_2`, `index_3`, `index_4`, `index_5`
                    FROM `file_jurisprudence_all_info`
@@ -869,6 +871,7 @@ class Page extends  Model
             }elseif ($title == '' AND $category == '' AND $publisher == '' AND $date_start != '' AND $date_end != '') {
                 $search_content = "date BETWEEN '{$date_start}' AND '{$date_end}'";
             }
+
             $sql = "SELECT COUNT(`id`) as `cnt` FROM `file_articles_all_info` WHERE {$search_content}";
         }
         return $this->db->query($sql);

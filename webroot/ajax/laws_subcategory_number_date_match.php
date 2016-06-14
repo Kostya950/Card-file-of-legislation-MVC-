@@ -22,12 +22,11 @@ if(isset($_POST['number']) OR isset($_POST['date'])){
     $docs = $db->query($sql);
     if(isset($docs['0'])) {
         ?>
-        <form method="get" action="edit_laws.php">
+
             <div  class="panel panel-danger text-center">
                 <div class="panel-heading"><b>ІСНУЄ ДОКУМЕНТ З ТАКИМ НОМЕРОМ І ДАТОЮ</b></div>
                 <div class="panel-body  text-left">
                     <?php foreach ($docs as $doc) {
-
                         echo "<b>";
                         echo $doc['n_id_1']; if(isset($doc['n_id_2'])){echo ', '.$doc['n_id_2'];}
                         if(isset($doc['n_id_3'])){echo ', '.$doc['n_id_3'];} if(isset($doc['n_id_4'])){echo ', '.$doc['n_id_4'];}
@@ -48,7 +47,8 @@ if(isset($_POST['number']) OR isset($_POST['date'])){
                         if(isset($doc['publisher_4'])){echo ', '.$doc['publisher_4'];}
                         echo "</b>";
                         $numb = number_format($doc['id'], 0, ',', ' ');
-                        echo "<span class='text-muted'> змінити документ № </span><input href='edit_laws.php?{$numb}'  type='submit' class='btn btn-default btn-sm' value='{$numb}'> <input hidden name='id_change' value='{$doc['id']}' > </form>";
+                        echo "<form method='get' action='/manage/admin/edit_laws/{$numb}'>
+                            <span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'></form>";
 
                         echo "<form method='get' action='print_card_laws.php'>
                             <input hidden name='card_id' value='{$doc['id']}'>

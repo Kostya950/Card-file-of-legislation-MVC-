@@ -171,6 +171,165 @@ class Card extends Model
             LEFT JOIN classifier_jurisprudence ca_5 ON fj.id_5=ca_5.id");
     }
 
+    public function saveLaws($data)
+    {
+        $id_1 = (int)$data['id_1'];
+        $id_2 = (int)$data['id_2'];
+        $id_3 = (int)$data["id_3"];
+        $id_4 = (int)$data["id_4"];
+        $id_5 = (int)$data["id_5"];
+        $id_6 = (int)$data["id_6"];
+        $id_7 = (int)$data["id_7"];
+        $id_8 = (int)$data["id_8"];
+        $id_9 = (int)$data["id_9"];
+        $id_10 = (int)$data["id_10"];
+        $id_11 = (int)$data["id_11"];
+        $id_12 = (int)$data["id_12"];
+        $id_13 = (int)$data["id_13"];
+        $id_14 = (int)$data["id_14"];
+        $id_15 = (int)$data["id_15"];
+        $sub_id_1 = $data["sub_id_1"];
+        $sub_id_2 = $data["sub_id_2"];
+        $sub_id_3 = $data["sub_id_3"];
+        $sub_id_4 = $data["sub_id_4"];
+        $sub_id_5 = $data["sub_id_5"];
+        $sub_id_6 = $data["sub_id_6"];
+        $sub_id_7 = $data["sub_id_7"];
+        $sub_id_8 = $data["sub_id_8"];
+        $sub_id_9 = $data["sub_id_9"];
+        $sub_id_10 = $data["sub_id_10"];
+        $sub_id_11 = $data["sub_id_11"];
+        $sub_id_12 = $data["sub_id_12"];
+        $sub_id_13 = $data["sub_id_13"];
+        $sub_id_14 = $data["sub_id_14"];
+        $sub_id_15 = $data["sub_id_15"];
+        $folder = (int)$data["folder"];
+        $publisher_1 = (int)$data["publisher_1"];
+        $publisher_2 = (int)$data["publisher_2"];
+        $publisher_3 = (int)$data["publisher_3"];
+        $publisher_4 = (int)$data["publisher_4"];
+        $type = (int)$data["type"];
+        $date = $data["date"];
+        $number = $data["number"];
+        $date_min = $data["date_min"];
+        $number_min = $data["number_min"];
+        $title = $this->db->escape($data["title"]);
+        $link = $this->db->escape($data["link"]);
+        $source_1 = $this->db->escape($data["source_1"]);
+        $source_2 = $this->db->escape($data["source_2"]);
+        $source_3 = $this->db->escape($data["source_3"]);
+        $source_4 = $this->db->escape($data["source_4"]);
+        $validity = $this->db->escape($data["validity"]);
+
+        $sql = "INSERT INTO `file_laws` (`publisher_1`, `publisher_2`, `publisher_3`, `publisher_4`, `type`, `date`, `number`,
+            `date_min`, `number_min`, `title`, `link`, `source_1`, `source_2`, `source_3`, `source_4`, `validity`, `folder`, `id_1`, `id_2`, `id_3`, `id_4`,
+            `id_5`, `id_6`, `id_7`, `id_8`, `id_9`, `id_10`, `id_11`, `id_12`, `id_13`, `id_14`, `id_15`, `sub_id_1`, `sub_id_2`, `sub_id_3`, `sub_id_4`, `sub_id_5`,
+            `sub_id_6`, `sub_id_7`, `sub_id_8`, `sub_id_9`, `sub_id_10`, `sub_id_11`, `sub_id_12`, `sub_id_13`, `sub_id_14`, `sub_id_15`)
+             VALUES ('{$publisher_1}', '{$publisher_2}', '{$publisher_3}', '{$publisher_4}',
+             '{$type}', '{$date}', '{$number}', '{$date_min}', '{$number_min}', '{$title}',
+             '{$link}', '{$source_1}', '{$source_2}', '{$source_3}', '{$source_4}', '{$validity}',
+             '{$folder}', '{$id_1}', '{$id_2}', '{$id_3}', '{$id_4}', '{$id_5}', '{$id_6}',
+             '{$id_7}', '{$id_8}', '{$id_9}', '{$id_10}', '{$id_11}', '{$id_12}', '{$id_13}',
+             '{$id_14}', '{$id_15}', '{$sub_id_1}', '{$sub_id_2}', '{$sub_id_3}', '{$sub_id_4}',
+             '{$sub_id_5}', '{$sub_id_6}', '{$sub_id_7}', '{$sub_id_8}', '{$sub_id_9}',
+             '{$sub_id_10}', '{$sub_id_11}', '{$sub_id_12}', '{$sub_id_13}', '{$sub_id_14}',
+             '{$sub_id_15}')";
+        return $this->db->query($sql);
+    }
+
+    public function getSavedLawsDoc($data)
+    {
+        $sql = "SELECT * FROM file_laws_all_info WHERE `date`='{$data['date']}' AND `number`='{$data['number']}' AND title = '{$data['title']}' ";
+        return $this->db->query($sql);
+    }
+
+    public function getLawsCard($id)
+    {
+        $sql = "SELECT * FROM file_laws WHERE id = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+    public function getAllLawsSubcategories()
+    {
+        $sql = "SELECT `id`, `title` FROM `classifier_laws` WHERE `id` BETWEEN 405 AND 728";
+        return $this->db->query($sql);
+    }
+
+    public function deleteLaws($id)
+    {
+        $id = (int)$id;
+        return $this->db->query("DELETE FROM `file_laws` WHERE `id` = '{$id}'");
+    }
+
+    public function editLaws($data, $id)
+    {
+
+        $id_1 = (int)$data['id_1'];
+        $id_2 = (int)$data['id_2'];
+        $id_3 = (int)$data["id_3"];
+        $id_4 = (int)$data["id_4"];
+        $id_5 = (int)$data["id_5"];
+        $id_6 = (int)$data["id_6"];
+        $id_7 = (int)$data["id_7"];
+        $id_8 = (int)$data["id_8"];
+        $id_9 = (int)$data["id_9"];
+        $id_10 = (int)$data["id_10"];
+        $id_11 = (int)$data["id_11"];
+        $id_12 = (int)$data["id_12"];
+        $id_13 = (int)$data["id_13"];
+        $id_14 = (int)$data["id_14"];
+        $id_15 = (int)$data["id_15"];
+        $sub_id_1 = $data["sub_id_1"];
+        $sub_id_2 = $data["sub_id_2"];
+        $sub_id_3 = $data["sub_id_3"];
+        $sub_id_4 = $data["sub_id_4"];
+        $sub_id_5 = $data["sub_id_5"];
+        $sub_id_6 = $data["sub_id_6"];
+        $sub_id_7 = $data["sub_id_7"];
+        $sub_id_8 = $data["sub_id_8"];
+        $sub_id_9 = $data["sub_id_9"];
+        $sub_id_10 = $data["sub_id_10"];
+        $sub_id_11 = $data["sub_id_11"];
+        $sub_id_12 = $data["sub_id_12"];
+        $sub_id_13 = $data["sub_id_13"];
+        $sub_id_14 = $data["sub_id_14"];
+        $sub_id_15 = $data["sub_id_15"];
+        $folder = (int)$data["folder"];
+        $publisher_1 = (int)$data["publisher_1"];
+        $publisher_2 = (int)$data["publisher_2"];
+        $publisher_3 = (int)$data["publisher_3"];
+        $publisher_4 = (int)$data["publisher_4"];
+        $type = (int)$data["type"];
+        $date = $data["date"];
+        $number = $data["number"];
+        $date_min = $data["date_min"];
+        $number_min = $data["number_min"];
+        $title = $this->db->escape($data["title"]);
+        $link = $this->db->escape($data["link"]);
+        $source_1 = $this->db->escape($data["source_1"]);
+        $source_2 = $this->db->escape($data["source_2"]);
+        $source_3 = $this->db->escape($data["source_3"]);
+        $source_4 = $this->db->escape($data["source_4"]);
+        $validity = $this->db->escape($data["validity"]);
+
+        $sql ="UPDATE `file_laws` SET `publisher_1` = '{$publisher_1}', `publisher_2` = '{$publisher_2}',
+            `publisher_3` = '{$publisher_3}', `publisher_4` = '{$publisher_4}', `type` = '{$type}',
+            `date` = '{$date}', `number`='{$number}', `date_min`='{$date_min}',
+            `number_min`='{$number_min}', `title`='{$title}', `link`='{$link}',
+            `source_1`='{$source_1}', `source_2`='{$source_2}', `source_3`='{$source_3}',
+            `source_4`='{$source_4}', `validity`='{$validity}', `folder`='{$folder}',
+            `id_1`='{$id_1}', `id_2`='{$id_2}', `id_3`='{$id_3}', `id_3`='{$id_3}',
+            `id_4`='{$id_4}', `id_5`='{$id_5}', `id_6`='{$id_6}', `id_7`='{$id_7}',
+            `id_8`='{$id_8}', `id_9`='{$id_9}', `id_10`='{$id_10}', `id_11`='{$id_11}',
+            `id_12`='{$id_12}', `id_13`='{$id_13}', `id_14`='{$id_14}',`id_15`='{$id_15}',
+            `sub_id_1`='{$sub_id_1}', `sub_id_2`='{$sub_id_2}', `sub_id_3`='{$sub_id_3}',
+            `sub_id_4`='{$sub_id_4}', `sub_id_5`='{$sub_id_5}', `sub_id_6`='{$sub_id_6}',
+            `sub_id_7`='{$sub_id_7}', `sub_id_8`='{$sub_id_8}', `sub_id_9`='{$sub_id_9}',
+            `sub_id_10`='{$sub_id_10}', `sub_id_11`='{$sub_id_11}', `sub_id_12`='{$sub_id_12}',
+            `sub_id_13`='{$sub_id_13}', `sub_id_14`='{$sub_id_14}', `sub_id_15`='{$sub_id_15}' WHERE `id` = '{$id}'";
+        return $this->db->query($sql);
+    }
+
 
 
 }

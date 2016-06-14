@@ -196,8 +196,6 @@ function fetch_select_15(val)
     });
 }
 
-
-
 $(document).ready(function(){
     $("#number_show").slideUp();
     $("#number").keyup(function(){

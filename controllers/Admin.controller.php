@@ -56,6 +56,96 @@ class AdminController extends Controller
         }
     }
 
+    public function edit_laws()
+    {
+        $params = App::getRouter()->getParams();
+        $this->data['indexes'] = $this->model->getAllLawsIndexes();
+        $this->data['subcategories'] = $this->model->getAllLawsSubcategories();
+        $this->data['publishers'] = $this->model->getAllLawsPublishers();
+        $this->data['types'] = $this->model->getAllLawsTypes();
+        $this->data['folders'] = $this->model->getAllLawsFolders();
+        $this->data['editable_card'] = $this->model->getLawsCard($params[0]);
+
+        function indexId($editable_card, $indexes, $id){
+            foreach ($editable_card as $card){
+                if ($card["$id"] !=0) {
+                    foreach($indexes as $index) {
+                        if ($index['id'] == $card["$id"]) {
+                            echo "<option value='{$index['id']}'>{$index['index']}</option>";
+                        }
+                    }
+                }
+                echo "<option></option>";
+                foreach($indexes as $index){
+                    echo "<option value='{$index['id']}'>{$index['index']}</option>";
+                }
+            }
+        }
+        function subIndexId($editable_card, $subcategory, $sub_id){
+            foreach($editable_card as $card) {
+                if ($card["$sub_id"] !=0) {
+                    foreach ($subcategory as $subcateg) {
+                        if($subcateg['id']==$card["$sub_id"]){
+                            echo "<option value='{$subcateg['id']}'>{$subcateg['title']}</option>";
+                        }
+                    }
+                }
+            }
+        }
+        function publisher($editable_card, $publishers, $publ_id)
+        {
+            foreach ($editable_card as $card) {
+                if ($card["$publ_id"]!=0) {
+                    foreach ($publishers as $publisher){
+                        if($publisher['id'] == $card["$publ_id"]) {
+                            echo "<option value='{$publisher['id']}'>{$publisher['publisher']}</option>";
+                        }
+                    }
+                }
+                echo "<option></option>";
+                foreach ($publishers as $publisher) {
+                    echo "<option value='{$publisher['id']}'>{$publisher['publisher']}</option>";
+                }
+
+            }
+        }
+        function folder($editable_card, $folders)
+        {
+            foreach($editable_card as $card) {
+                if($card['folder']!=0) {
+                    foreach ($folders as $folder) {
+                        if ($folder['id'] == $card['folder']) {
+                            echo "<option value='{$folder['id']}'>{$folder['folder']}</option>";
+                        }
+                    }
+                }
+                echo "<option></option>";
+                foreach ($folders as $folder) {
+                    echo "<option value='{$folder['id']}'>{$folder['folder']}</option>";
+
+                }
+            }
+        }
+        function types($editable_card, $types)
+        {
+            foreach ($editable_card as $card) {
+                if($card['type']!=0) {
+                    foreach ($types as $type) {
+                        if ($type['id'] == $card['type']) {
+                            echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                        }
+                    }
+                }
+                echo "<option></option>";
+                foreach ($types as $type) {
+                    echo "<option value='{$type['id']}'>{$type['type']}</option>";
+                }
+            }
+        }
+
+
+    }
+
     public function articles()
     {
         $this->data['indexes'] = $this->model->getAllArticlesIndexes();
@@ -94,6 +184,24 @@ class AdminController extends Controller
 
 
     }
+
+    public function success_edit_laws()
+    {
+        $params = App::getRouter()->getParams();
+        if(isset($_POST['submit'])){
+            $this->model->saveLaws($_POST);
+            $this->data['saved_doc'] = $this->model->getSavedLawsDoc($_POST);
+        }
+        if($_POST['yes']){
+            $this->model->deleteLaws($params[0]);
+        }
+        if(isset($_POST['edit'])){
+            $this->model->editLaws($_POST, $params[0]);
+            $this->data['saved_doc'] = $this->model->getSavedLawsDoc($_POST);
+        }
+    }
+
+
 
     public function new_acts()
     {

@@ -1,0 +1,200 @@
+<?php $params = App::getRouter()->getParams();?>
+<script rel="script" src="/js/laws_search.js"></script>
+<div class="col-sm-offset-1 col-sm-11 mrg_top">
+            <div class="col-sm-6">
+                <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
+                <a href="/manage/admin/laws/"><input class="btn btn-default" type="text" value="Додати"></a>
+                <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
+            </div>
+<div class="col-sm-6">
+    <form method="get" action="print_card_laws.php">
+        <input class="btn btn-default" type="submit" value="Друк"></form>
+</div>
+<div class="header col-sm-offset-2 mrg_top_head "><h4>Редагування актів законодавства</h4></div>
+<form method="post" action="/manage/admin/success_edit_laws/<?=$params[0]?>">
+    <table class="add_table">
+        <tr>
+            <td class="add_marg_left text-muted"><label for="num_db"><b>Номер в базі:</b></label></td>
+            <td class="text-muted"><input class="text-center btn publ" disabled value="<?=number_format($params[0], 0, ',', ' ')?>"></td>
+            <input type="hidden" name="id_change" value="<?=$params[0]?>">
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="date"><b>Дата прийняття:<sup>*</sup></b></label></td>
+            <td><input id="date" class="publ" required type="date" name="date" value="<?=$data['editable_card'][0]['date']?>">
+                <label for="number"><b>Номер:<sup>*</sup></b></label>
+                <input id="number" class="publ marg_left" required type="text" name="number" value="<?=$data['editable_card'][0]['number']?>"></td>
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="date_min"><b>Дата реєстрації в  Мін'юсті:</b></label></td>
+            <td><input id="date_min" class="publ" type="date" name="date_min" value="<?=$data['editable_card'][0]['date_min']?>">
+
+                <label for="number_min"><b>Номер Мін'юст:</b></label>
+                <input id="number_min" class="publ" type="text" name="number_min" value="<?=$data['editable_card'][0]['number_min']?>"></td>
+        </tr>
+        <tr>
+        <tr>
+            <td class="add_marg_left" rowspan="1"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
+            <td><select required  class="id_laws" onchange="fetch_select_1(this.value);" name="id_1">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_1')?>
+                </select>
+                <select id="new_select_1" class="sub_id" name="sub_id_1">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_1')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_9(this.value);"  name="id_9">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_9')?>
+                </select>
+                <select class="sub_id" id="new_select_9" name="sub_id_9">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_9')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_2(this.value);" name="id_2">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_2')?>
+                </select>
+                <select class="sub_id" id="new_select_2" name="sub_id_2">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_2')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_10(this.value);" name="id_10">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_10')?>
+                </select>
+                <select class="sub_id" id="new_select_10" name="sub_id_10">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_10')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_3(this.value);" name="id_3">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_3')?>
+                </select>
+                <select class="sub_id" id="new_select_3" name="sub_id_3">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_3')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_11(this.value);" name="id_11">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_11')?>
+                </select>
+                <select class="sub_id" id="new_select_11" name="sub_id_11">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_11')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_4(this.value);" name="id_4">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_4')?>
+                </select>
+                <select class="sub_id" id="new_select_4" name="sub_id_4">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_4')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_12(this.value);"  name="id_12">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_12')?>
+                </select>
+                <select class="sub_id" id="new_select_12" name="sub_id_12">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_12')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_5(this.value);"  name="id_5">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_5')?>
+                </select>
+                <select class="sub_id" id="new_select_5" name="sub_id_5">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_5')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_13(this.value);" name="id_13">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_13')?>
+                </select>
+                <select class="sub_id" id="new_select_13" name="sub_id_13">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_13')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_6(this.value);"  name="id_6">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_6')?>
+                </select>
+                <select class="sub_id" id="new_select_6" name="sub_id_6">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_6')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_14(this.value);"  name="id_14">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_14')?>
+                </select>
+                <select class="sub_id" id="new_select_14" name="sub_id_14">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_14')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_7(this.value);" name="id_7">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_7')?>
+                </select>
+                <select class="sub_id" id="new_select_7" name="sub_id_7">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_7')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_15(this.value);" name="id_15">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_15')?>
+                </select>
+                <select class="sub_id" id="new_select_15" name="sub_id_15">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_15')?>
+                    <option></option>
+                </select>
+                <select class="id_laws" onchange="fetch_select_8(this.value);" name="id_8">
+                    <?php indexId($data['editable_card'], $data['indexes'], 'id_8')?>
+                </select>
+                <select class="sub_id" id="new_select_8" name="sub_id_8">
+                    <?php subIndexId($data['editable_card'], $data['subcategories'], 'sub_id_8')?>
+                    <option></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="id"><b>Папка:</b></label></td>
+            <td><select id="id" class="id_laws" name="folder">
+                    <?php folder($data['editable_card'], $data['folders'])?>
+                </select>
+        </tr>
+        <tr>
+            <td class="add_marg_left" rowspan="2"><label for="publisher"><b>Видавник:<sup>*</sup></b></label></td>
+            <td><select id="publisher" required class="publ_laws" name="publisher_1">
+                    <?php publisher($data['editable_card'], $data['publishers'], 'publisher_1')?>
+                </select>
+                <select class="publ_laws" name="publisher_3">
+                    <?php publisher($data['editable_card'], $data['publishers'], 'publisher_2')?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><select class="publ_laws" name="publisher_2">
+                    <?php publisher($data['editable_card'], $data['publishers'], 'publisher_3')?>
+                </select>
+                <select class="publ_laws" name="publisher_4">
+                    <?php publisher($data['editable_card'], $data['publishers'], 'publisher_4')?>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="type"><b>Вид:<sup>*</sup></b></label></td>
+            <td><select required id="type" class="form-control" name="type">
+                    <?php types($data['editable_card'], $data['types'])?>
+                </select>
+            </td>
+        </tr>
+        <td class="add_marg_left"><label for="title"><b>Назва:<sup>*</sup></b></label></td>
+        <td><textarea id="title" class="form-control ta" rows="3" cols="40" name="title" placeholder="Напишіть назву документа"><?=$data['editable_card'][0]['title']?></textarea></td>
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="title"><b>Посилання:</b></label></td>
+            <td><input id="link" class="form-control"  name="link" placeholder="Додайте посилання: http://zakon2.rada.gov.ua/laws/show/935-19" value="<?=$data['editable_card'][0]['link']?>"></td>
+        </tr>
+        <tr>
+            <td class="add_marg_left" rowspan="2"><label for="source"><b>Опублікування:</b></label></td>
+            <td><input id="source" class="publ" placeholder="ОВУ 2014 № 97" type="text" name="source_1" value="<?=$data['editable_card'][0]['source_1']?>">
+                <input class="publ" type="text" name="source_2" value="<?=$data['editable_card'][0]['source_2']?>"></td>
+        </tr>
+        <tr>
+            <td><input class="publ" type="text" name="source_3" value="<?=$data['editable_card'][0]['source_3']?>">
+                <input class="publ" type="text" name="source_4" value="<?=$data['editable_card'][0]['source_4']?>"></td>
+        </tr>
+        <tr>
+            <td class="add_marg_left"><label for="validity"><b>Набирає чинності:</b></label></td>
+            <td><textarea id="validity" class="form-control ta" placeholder="Напишіть коли набирає чинності" rows="2" cols="40" name="validity"><?=$data['editable_card'][0]['validity']?></textarea></td>
+        </tr>
+        <tr><td class="prim" colspan="2"><span class="add_marg_left text-muted"><sup>*</sup> - поля овоб'язкові для заповнення</span><input class="btn btn-warnings btn-warning" type="submit" name="edit" value="Редагувати"><input class="btn btn-warnings btn-danger" type="submit" name="delete" value="Видалити">
+            </td></tr>
+    </table>
+</form>
+</div>
