@@ -460,4 +460,66 @@ class Card extends Model
                `id_4`='{$id_4}', `id_5`='{$id_5}' WHERE `id` = '{$id}'";
         return $this->db->query($sql);
     }
+
+    public function getNewActsRange()
+    {
+        $sql = "SELECT *  FROM `new_legislative_acts_range_date` ORDER BY `id` DESC LIMIT 5";
+        return $this->db->query($sql);
+    }
+
+    public function addNewActsRange($range)
+    {
+        $range = $this->db->escape($range['range']);
+        $sql = "INSERT INTO `new_legislative_acts_range_date` (`id`, `range_date`) VALUES (NULL, '{$range}')";
+        return $this->db->query($sql);
+    }
+
+    public function saveDocForNewActsRange($range, $link)
+    {
+        $range = $this->db->escape($range);
+        $link = '/'.$link;
+        $sql = "UPDATE `new_legislative_acts_range_date` SET `link` = '{$link}' WHERE range_date = '{$range}'";
+        return $this->db->query($sql);
+    }
+
+    public function getNewActsTypes()
+    {
+        $sql = "SELECT * FROM type_laws_acts WHERE id BETWEEN 1 AND 9";
+        return $this->db->query($sql);
+    }
+
+    public function getNewActsPublishers()
+    {
+        $sql = "SELECT * FROM new_legislative_acts_publishers";
+        return $this->db->query($sql);
+    }
+
+    public function getNewActsRangeDates()
+    {
+        $sql = "SELECT * FROM new_legislative_acts_range_date";
+        return $this->db->query($sql);
+    }
+
+    public function saveNewAct($data, $range_dates, $range_date)
+    {
+        $publisher = $data['publisher'];
+        $date = $data['date'];
+        $type = $data['type'];
+        $number = $data['number'];
+        $title = $this->db->escape($data['title']);
+        $link = $data['link'];
+        $notice = $data['notice'];
+
+        foreach ($range_dates as $range) {
+            if ($range_date == $range ['range_date']){
+                $range_date = $range['id'];
+            }
+        }
+
+        $sql = "INSERT INTO `new_legislative_acts` (`name`, `number`, `date`, `link`,`notice`,
+                `id_range_data`, `id_publisher`, `id_type`) VALUES ('{$title}', '{$number}', '{$date}', '{$link}',
+                 '{$notice}', '{$range_date}', '{$publisher}','{$type}')";
+        return $this->db->query($sql);
+    }
+
 }

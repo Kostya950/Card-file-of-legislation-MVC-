@@ -338,10 +338,38 @@ class AdminController extends Controller
 
     }
 
-
-
     public function new_acts()
     {
+        $params = App::getRouter()->getParams();
+        if(!isset($params[0])) {
+            $this->data['new_acts_range'] = $this->model->getNewActsRange();
 
+            if (isset($_POST['add_range'])) {
+                if ($_POST['range'] != '') {
+                    $this->model->addNewActsRange($_POST);
+                }
+            }
+
+            if (isset($_POST['upload'])) {
+                if ($_POST['ch_range'] != '') {
+                    if ($_FILES && isset ($_FILES['new_doc'])) {
+                        $link = 'files/new_legislative_acts/new_legislative_acts_' . $_POST['ch_range'] . '.doc';
+                        move_uploaded_file($_FILES['new_doc']['tmp_name'], $link);
+                        echo 1;
+                        $this->model->saveDocForNewActsRange($_POST['ch_range'], $link);
+                    }
+                }
+            }
+        } else{
+            $this->data['types'] = $this->model->getNewActsTypes();
+            $this->data['publishers'] =  $this->model->getNewActsPublishers();
+            $this->data['range_dates'] =  $this->model->getNewActsRangeDates();
+            if(isset($_POST['submit'])){
+                if(($_POST['publisher']!='') AND ($_POST['type']!='') AND ($_POST['date']!='') AND ($_POST['number']!='') AND ($_POST['title']!='')){
+                    $this->model->saveNewAct($_POST, $this->data['range_dates'], $params[0]);
+                }
+            }
+
+        }
     }
 }

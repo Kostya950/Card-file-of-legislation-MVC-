@@ -1,0 +1,161 @@
+<?php $params = App::getRouter()->getParams();?>
+    <div class="col-sm-offset-3 col-sm-9 mrg_top3">
+        <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
+        <a href="/users/logout/" class="btn btn-default out" type="submit" name="out">Вийти</a>
+    </div>
+<?php
+if(!isset($params[0])) {
+    ?>
+   
+    <div class='col-sm-offset-3 col-sm-6 ch'>
+        <div class='panel-group'>
+            <div class='panel panel-default'>
+                <div class='panel-heading text-center te'><span class="text-info h4">Оберіть період за який надаються нові нормативні акти, або додайте його:</span>
+                </div>
+                <div class='panel-body h5'>
+                    <form role="form" class="form-inline" method="post" action="" enctype="multipart/form-data">
+                        <div class="col-sm-12 add_ch">Додайте період:
+                            <input type="text" name="range" class="form-control inputs">
+                            <button type="submit" name="add_range" class="btn btn_na btn-default">Додати</button>
+                        </div>
+                        <div class="col-sm-12 add_ch">Оберіть період:
+                            <select class="form-control inputs_ch_range text-center" style="width: 270px"
+                                    onchange="window.location.href=this.options[this.selectedIndex].value">
+                                <option></option>
+                                <?php
+                                foreach ($data['new_acts_range'] as $key => $date) {
+                                    echo "<option value='/manage/admin/new_acts/{$date['range_date']}'>{$date['range_date']}</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 add_ch">Оберіть період для завантаження:
+                            <select class="form-control inputs_ch_range text-center" name="ch_range">
+                                <option></option>
+                                <?php
+                                foreach ($data['new_acts_range'] as $key => $date) {
+                                    echo "<option value='{$date['range_date']}'>{$date['range_date']}</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="col-sm-6 add_ch"><input class="input-sm" type="file"
+                                                            data-filename-placement="inside" name="new_doc"></div>
+                        <div class="col-sm-6 add_ch">
+                            <button type="submit" name="upload" class="btn btn_na btn-default">Завантажити</button>
+                        </div>
+                    </form>
+                    <div class="col-sm-12 add_ch">
+                        <span class="add_ch text-muted h6 ">Зразок для додавання:<br> <span class="text-warning">01.01.-15.01.2016</span> для першої половини місяця;<br> <span
+                                class="text-warning">16.01.-31.01.2016</span> для другої половини місяця.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+    if (isset($_POST['add_range'])) {
+        if ($_POST['range'] == '') {
+            echo "<div class='form-group'><div class='col-sm-offset-3 col-sm-6  alert alert-warning' role='alert'>Спочатку заповніть поле \"Додайте період\", а потім натисніть \"Додати\".</div></div>";
+        } else {
+            echo "<div class='form-group'><div class='col-sm-offset-3 col-sm-6  alert alert-success' role='alert'>
+                Вітаємо! Ви успішно додали період (<b>{$_POST['range']}</b>) в базу, щоб додати документи за вибраний період натисніть
+                 <a href='/manage/admin/new_acts/{$_POST['range']}'>далі</a> </div></div>";
+        }
+
+    }
+    if (isset($_POST['upload'])) {
+        if ($_POST['ch_range'] == '') {
+            echo "<div class='form-group'><div class='col-sm-offset-3 col-sm-6  alert alert-warning' role='alert'>Ви не вибрали період, для якого хочете завантажити файл. Оберіть спочатку період, потім виберіть файл, а потім натисніть \"Завантажити\".</div></div>";
+        } else {
+            if ($_FILES && isset ($_FILES['new_doc'])) {
+                echo "<div class='form-group'><div class='col-sm-offset-3 col-sm-6  alert alert-success' role='alert'><b>Вітаємо!</b> Ви завантажили файл \"Нове в законодавстві\" за період: {$_POST['ch_range']}</div></div>";
+            }
+        }
+    }
+} else { ?>
+    <div class="col-sm-offset-3 col-sm-6">
+        <form role="form" class="form-inline" method="post" action="">
+            <table class="add_table_legislative">
+                <caption class="h4">Додавання нового в законодавстві</caption>
+                <tr>
+                    <td class="add_marg_left"><label for="publisher"><b>Видавник:<sup>*</sup></b></label></td>
+                    <td><select id="publisher" class="publ1" name="publisher">
+                            <option value=""></option>
+                            <?php
+                            foreach ($data['publishers'] as $publisher) {
+                                echo "<option value='{$publisher['id']}'>{$publisher['publisher']}</option>";
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="type"><b>Вид:<sup>*</sup></b></label></td>
+                    <td><select id="type" class="publ1" name="type">
+                            <option value=""></option>
+                            <?php
+                            foreach ($data['types'] as $type) {
+                                echo $type;
+                                echo "<option value = '{$type['id']}'>{$type['type']}</option>";
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="date"><b>Дата прийняття:<sup>*</sup></b></label></td>
+                    <td><input id="date" class="publ1" type="date" name="date"></td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="number"><b>Номер:<sup>*</sup></b></label></td>
+                    <td><input id="number" class="publ1" type="text" name="number"></td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="title"><b>Назва:<sup>*</sup></b></label></td>
+                    <td><textarea id="title" class="form-control ta" rows="7" cols="35" name="title"
+                                  placeholder="Напишіть назву документа"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="title"><b>Примітка:</b></label></td>
+                    <td><textarea id="title" class="form-control ta" rows="2" cols="35" name="notice"
+                                  placeholder="(набирає чинності з 18.05.2016)"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="link"><b>Посилання:</b></label></td>
+                    <td>
+                        <input id="link" class="link" type="text" name="link"
+                               placeholder="http://zakon0.rada.gov.ua/laws/show/1697-18"></td>
+                </tr>
+                <tr>
+                    <td class="add_marg_left"><label for="range_date"><b>Період нового в законодавстві:</b></label></td>
+                    <td><a href="/manage/admin/new_acts/"
+                        <button class="btn btn-default btn_change">Змінити</button>
+                        </a>
+                        <input disabled id="range_date" class="form-control" type="text" name="range_date"
+                               value="<?= $params[0] ?>"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="prim" colspan="2"><span class="add_marg_left text-muted"><sup>*</sup> - поля овоб'язкові для заповнення</span><input
+                            class="btn btn-warnings btn-warning" type="submit" name="submit" value="Додати"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        if (($_POST['publisher'] == '') OR ($_POST['type'] == '') OR ($_POST['date'] == '') OR ($_POST['number'] == '') OR ($_POST['title'] == '')) {  // проверка что введеный все поля кроме ссылки заполнены
+            echo "<div class='form-group'><div class='col-sm-offset-3 col-sm-6  alert alert-warning h3' role='alert'>Всі поля з поміткою <span class='text-danger'>*</span> обов'язкові для заповнення!</div></div>";
+        }
+        else {?>
+                  <div class='form-group'>
+                      <div class='col-sm-offset-3 col-sm-6  alert alert-success h4' role='alert'>
+                          <b>Вітаємо!</b> Ви успішно додали документ в список нового в законодастві: <br>
+                          <span class='text-muted h4'><?=$_POST['type']?>, від <?=$_POST['date']?>, № <?=$_POST['number']?>, <?=$_POST['title']?></span>
+                      </div>
+                  </div><?php
+        }
+    }
+}
