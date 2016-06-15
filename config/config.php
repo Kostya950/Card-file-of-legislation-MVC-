@@ -22,9 +22,9 @@ Config::set('default_language', 'ua');
 Config::set('default_controller', 'pages');
 Config::set('default_action', 'index');
 Config::set('db.host', 'mysql.hostinger.com.ua');
-Config::set('db.user', 'u457181443_pravo');
+Config::set('db.user', 'u887968569_legis');
 Config::set('db.password', '0442007547');
-Config::set('db.db_name', 'u457181443_legis');
+Config::set('db.db_name', 'u887968569_pravo');
 
 Config::set('salt','Hello World');
 
