@@ -15,102 +15,112 @@
          $this->model = new Page();
      }
 
-     public function index(){
-         $this->data['classifier'] = $this->model->getClassifier();
-
+     public function index()
+     {
      }
-
+     // раздел поиска законодательных актов
      public function search()
      {
-         $this->data['categories'] = $this->model->getCategoriesLawsSearch();
-         $this->data['publishers'] = $this->model->getPublishersLawsSearch();
-         $this->data['types'] = $this->model->getTypesLawsSearch();
+         $this->data['categories'] = $this->model->getCategoriesLawsSearch(); // получаем все категории
+         $this->data['publishers'] = $this->model->getPublishersLawsSearch(); // получаем всех издателей
+         $this->data['types'] = $this->model->getTypesLawsSearch(); // получаем все виды документов
          if($_GET) {
+             // если не заполнено ни одне поле для поиска выводим сообщение заполнить хоть одно поле
              if ($_GET['title'] =='' AND $_GET['category'] == '' AND $_GET['type'] =='' AND $_GET['publisher'] ==''
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='' AND $_GET['number'] == '') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
-             } else {
-                 $this->data['count'] = $this->model->getLawsBySearchNumberOfPages($_GET);
-                 $this->data['search_result'] = $this->model->getSearchResultLaws($_GET);
+             } else {  // если хоть одно поле для поиска заполнено ищем документы соответствующие критериям поиска
+                 $this->data['count'] = $this->model->getLawsBySearchNumberOfPages($_GET); // получаем количество докум.
+                 $this->data['search_result'] = $this->model->getSearchResultLaws($_GET); // получаем документы
              }
          }
      }
-
+    // раздел для поиска актов судебной практики
      public function search_jurisprudence()
      {
-         $this->data['categories'] = $this->model->getCategoriesJurisprudenceSearch();
-         $this->data['types'] = $this->model->getTypesJurisprudenceSearch();
+         $this->data['categories'] = $this->model->getCategoriesJurisprudenceSearch(); // получаем все категории
+         $this->data['types'] = $this->model->getTypesJurisprudenceSearch(); // получаем все виды
 
          if($_GET) {
+             // если не заполнено ни одне поле для поиска выводим сообщение заполнить хоть одно поле
              if ($_GET['title'] =='' AND $_GET['category'] == '' AND $_GET['type'] =='' AND $_GET['publisher'] ==''
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
-             } else {
-                 $this->data['count'] = $this->model->getJurisprudenceBySearchNumberOfPages($_GET);
-                 $this->data['search_result'] = $this->model->getSearchResultJurisprudence($_GET);
+             } else { // если хоть одно поле для поиска заполнено ищем документы соответствующие критериям поиска
+                 $this->data['count'] = $this->model->getJurisprudenceBySearchNumberOfPages($_GET); // колич. документов
+                 $this->data['search_result'] = $this->model->getSearchResultJurisprudence($_GET); // получаем документы
              }
          }
      }
-
+     // раздел для поиска актов судебной практики
      public function search_articles()
      {
-         $this->data['categories'] = $this->model->getCategoriesArticlesSearch();
-         $this->data['types'] = $this->model->getTypesArticlesSearch();
+         $this->data['categories'] = $this->model->getCategoriesArticlesSearch(); // получаем все категории
+         $this->data['types'] = $this->model->getTypesArticlesSearch(); // получаем все виды
          if($_GET) {
+             // если не заполнено ни одне поле для поиска выводим сообщение заполнить хоть одно поле
              if ($_GET['title'] =='' AND $_GET['category'] == ''  AND $_GET['publisher'] ==''
                  AND $_GET['date_start'] =='' AND $_GET['date_end'] =='') {
                  $this->data['empty_fields'] = "Заповніть хоча б один критерій для пошуку";
-             } else {
-                 $this->data['count'] = $this->model->getArticlesBySearchNumberOfPages($_GET);
-                 $this->data['search_result'] = $this->model->getSearchResultArticles($_GET);
+             } else {  // если хоть одно поле для поиска заполнено ищем документы соответствующие критериям поиска
+                 $this->data['count'] = $this->model->getArticlesBySearchNumberOfPages($_GET); // кличество документов
+                 $this->data['search_result'] = $this->model->getSearchResultArticles($_GET); // получаем документы
              }
          }
      }
-
+     // раздел справочной информации
      public function information()
      {
 
      }
-
+     // раздел новых законодательных актов
      public function new_acts()
      {
          $params = App::getRouter()->getParams();
 
-         $this->data['numb_pages'] = $this->model->getNumbPagesNewActs();
+         $this->data['numb_pages'] = $this->model->getNumbPagesNewActs(); // получаем количество документов
          if(!isset($params[0])){
              $params[0]=1;
          }
          if(isset($params[0])) {
-             $this->data['range_legislative_acts'] = $this->model->getRangeNewLegislativeActs($params[0]);
+             $this->data['range_legislative_acts'] = $this->model->getRangeNewLegislativeActs($params[0]); // получаем выбранный период законодательных актов
+             // получаем новые законодательные акты
              $this->data['new_legislative_acts'] = $this->model->getNewLegislativeActs($this->data['range_legislative_acts'][0]['range_date']);
 
         }
 
      }
-
+     // раздел для отображения законодательных актов
      public function laws()
      {
          $params = App::getRouter()->getParams();
          if(!isset($params[0])) {
-             $this->data['laws_categories'] = $this->model->getLawsCategories();
+             $this->data['laws_categories'] = $this->model->getLawsCategories(); // полуае классификатор
          } elseif (isset($params[0]) AND !isset($params[1])) {
-             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]);
+             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]); // получаем выбранную категорию
+             // получаем все подкатегории выбранной категории классификатора
              $this->data['laws_subcategories'] = $this->model->getLawsSubcategories($this->data['laws_category'][0]['id']);
          } elseif (isset($params[1]) AND !isset($params[2])) {
-             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]);
+             $this->data['laws_category'] = $this->model->getLawsCategory($params[0]); // получаем выбранную категорию
+             // получаем выбранную подкатегорию
              $this->data['laws_subcategory'] = $this->model->getLawsSubcategory($params[0]."/".$params[1]);
+             // получаем все под-подкатегории выбранной подкатегории
              $this->data['laws_sub_subcategories'] = $this->model->getLawsSubSubcategories( $this->data['laws_subcategory'][0]['id']);
              if($_GET['id'] ==''){
+                 // получаем количество документов если не выбрання под-подкатегория
                  $this->data['count'] = $this->model->getLawsBySubcategoryNumberOfPages($this->data['laws_subcategory'][0]['id']);
+                 // получаем все документы выбранной подкатегории классификатора
                  $this->data['docs'] = $this->model->getAllDocsBySubcategoryId($_GET['page'], $this->data['laws_subcategory'][0]['id']);
              } else {
                  $sub_id = (int)$_GET['id'];
+                 // получаем количество документов выбранной под-подкатегории
                  $this->data['count'] = $this->model->getLawsBySubSubcategoryNumberOfPages($sub_id);
+                 // получаем все документы выбранной под-подкатегории
                  $this->data['docs'] = $this->model->getAllDocsBySubSubcategoryId($_GET['page'],$sub_id);
              }
          }
      }
-
+    
      public function jurisprudence()
      {
          $params = App::getRouter()->getParams();
