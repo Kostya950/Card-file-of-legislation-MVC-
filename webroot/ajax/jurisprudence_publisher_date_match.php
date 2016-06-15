@@ -13,7 +13,6 @@ if(isset($_POST['publisher']) OR isset($_POST['date'])){
     $docs = $db->query($sql);
     if(isset($docs['0'])) {
         ?>
-        <form method="get" action="edit_jurisprudence.php">
             <div class="panel panel-danger text-center">
                 <div class="panel-heading"><b>В БАЗІ ВЖЕ ІСНУЄ CХОЖИЙ ДОКУМЕНТ</b></div>
                 <div class="panel-body  text-left">
@@ -30,7 +29,7 @@ if(isset($_POST['publisher']) OR isset($_POST['date'])){
                         echo "<br><b>";
                         echo $doc['publisher_1']; if(isset($doc['publisher_2']) AND $doc['publisher_2']!=''){echo ', '.$doc['publisher_2'];}
                         $numb = number_format($doc['id'], 0, ',', ' ');
-                        echo "<span class='text-muted'> змінити документ № </span><input href='edit_jurisprudence.php?{$numb}' name='id_change' type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
+                        echo "<form method='get' action='/manage/admin/edit_jurisprudence/{$doc['id']}'><span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
                         echo"<br>";
                         echo"<br>";
                     } ?></div>

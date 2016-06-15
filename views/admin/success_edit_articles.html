@@ -32,9 +32,7 @@ if (isset($_POST['delete'])) {
         </form>
 <?php
 }
-            if(isset($_POST['edit'])){
-
-            ?>
+            if(isset($_POST['edit'])){?>
 
                 <div class="col-sm-offset-2 col-sm-8 mrg_top">
                     <div class="panel panel-success text-center">
@@ -69,25 +67,24 @@ if (isset($_POST['delete'])) {
                                 echo "<form method='get' action='/manage/admin/edit_articles/{$doc['id']}'><span class='text-muted'> змінити документ № </span><input href='edit_articles.php?{$numb}' name='id_change' type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
                                 echo "<br>";
                                 echo "<br></form>";
-                            }
-                            }
+                            }?>
+                        </div>
+                    </div>
+                </div><?php
+            }
 
-                            if(!$no AND !$yes AND !$_POST['edit'] AND !$_POST['delete']) {
-                                ?>
-                                <form method="get" action="edit_articles.php">
-                                    <div class="col-sm-offset-2 col-sm-7 mrg_top">
-                                        <div class="panel panel-warning text-center">
-                                            <div class="panel-heading"><b>Помилка!</b></div>
-                                            <div class="panel-body text-left text-center"> <b>Щось пішло не так, поверніться на головну або у розділ додати!</b>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <?php
-                            }
-                            ?>
+            if(!$no AND !$yes AND !$_POST['edit'] AND !$_POST['delete']) {
+                ?>
+                <div class="col-sm-offset-2 col-sm-7 mrg_top">
+                    <div class="panel panel-warning text-center">
+                        <div class="panel-heading"><b>Помилка!</b></div>
+                        <div class="panel-body text-left text-center"> <b>Щось пішло не так, поверніться в "Категорії" або у розділ "Додати"!</b>
                         </div>
                     </div>
                 </div>
+                <?php
+            }
+            ?>
+
 
 

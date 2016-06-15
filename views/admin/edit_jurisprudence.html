@@ -1,26 +1,25 @@
 <?php $params = App::getRouter()->getParams();?>
 <div class="col-sm-offset-2 col-sm-7 mrg_top">
     <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
-    <a href="/manage/admin/articles/"><input class="btn btn-default" type="text" value="Додати"></a>
+    <a href="/manage/admin/jurisprudence/"><input class="btn btn-default" type="text" value="Додати"></a>
     <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
 </div>
-
-<div class="col-sm-offset-4 col-sm-4 text-center"><h4>Редагування публікацій з правової тематики</h4></div>
+<div class="col-sm-offset-4 col-sm-4 text-center"><h4>Додавання актів судової практики</h4></div>
 <div class="col-sm-offset-2 col-sm-10">
-    <form method="post" action="/manage/admin/success_edit_articles/<?=$params[0]?>">
+    <form method="post" action="/manage/admin/success_edit_jurisprudence/<?=$params[0]?>">
         <table class="add_table_articles_jurispr">
             <tr>
                 <td class="add_marg_left text-muted"><label for="num_db"><b>Номер в базі:</b></label></td>
                 <td class="text-muted"><input class="text-center btn publ" disabled value="<?=number_format($params[0], 0, ',', ' ')?>"></td>
             </tr>
             <tr>
-                <td class="add_marg_left"><label for="date"><b>Дата публікації:<sup>*</sup></b></label></td>
-                <td><input id="date" class="publ_articles" required type="date" name="date" value="<?=$data['editable_card'][0]['date']?>"></td>
+                <td class="add_marg_left"><label for="date"><b>Дата прийняття:<sup>*</sup></b></label></td>
+                <td><input id="date" class="form-control" required type="date" name="date" value="<?=$data['editable_card'][0]['date']?>"></td>
             </tr>
             <tr>
-                <td class="add_marg_left"><label for="publisher"><b>Автор:<sup>*</sup></b></label></td>
-                <td><input required id="publisher" class="publ_articles" name="publisher_1" placeholder="Зразок: Федорук В." value="<?=$data['editable_card'][0]['publisher_1']?>">
-                    <input id="publisher_2" class="publ_articles" name="publisher_2" value="<?=$data['editable_card'][0]['publisher_2']?>"></td>
+                <td rowspan="1" class="add_marg_left"><label for="publisher"><b>Видавник:</b></label></td>
+                <td>
+                    <textarea class="form-control ta" rows="3" cols="40" id="publisher" required name="publisher_1"><?=$data['editable_card'][0]['publisher_1']?></textarea>
             </tr>
             <tr>
                 <td class="add_marg_left"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
@@ -43,7 +42,7 @@
             <tr>
                 <td class="add_marg_left"><label for="type"><b>Вид:<sup>*</sup></b></label></td>
                 <td><select required id="type" class="form-control" name="type">
-                        <?php types($data['editable_card'], $data['types']) ?>
+                        <?php types($data['editable_card'], $data['types']);?>
                     </select>
                 </td>
             </tr>

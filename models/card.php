@@ -402,8 +402,62 @@ class Card extends Model
         return $this->db->query($sql);
     }
 
+    public function saveJurisprudence($data)
+    {
+        $id_1 = (int)$data['id_1'];
+        $id_2 = (int)$data['id_2'];
+        $id_3 = (int)$data['id_3'];
+        $id_4 = (int)$data['id_4'];
+        $id_5 = (int)$data['id_5'];
+        $publisher_1 = $data['publisher_1'];
+        $type = $data['type'];
+        $date = $data['date'];
+        $title = $this->db->escape($data['title']);
+        $source = $data['source_1'];
 
+        $sql = "INSERT INTO `file_jurisprudence` (`publisher_1`, `type`, `date`, `title`,
+            `source`, `id_1`, `id_2`, `id_3`, `id_4`, `id_5`) VALUES ('{$publisher_1}', '{$type}', '{$date}', '{$title}',
+            '{$source}', '{$id_1}', '{$id_2}', '{$id_3}',
+            '{$id_4}', '{$id_5}')";
+        return $this->db->query($sql);
+    }
 
+    public function getSavedJurisprudenceDoc($data)
+    {
+        $sql = "SELECT * FROM `file_jurisprudence_all_info`
+                WHERE `date`='{$data['date']}' AND `publisher_1`='{$data['publisher_1']}' AND `title` = '{$data['title']}'";
+        return $this->db->query($sql);
+    }
 
+    public function getJurisprudenceCard($id)
+    {
+        $sql = "SELECT * FROM `file_jurisprudence` WHERE `id` = '{$id}'";
+        return $this->db->query($sql);
+    }
 
+    public function deleteJurisprudence($id)
+    {
+        $sql = "DELETE FROM `file_jurisprudence` WHERE `id` = '{$id}'";
+        return $this->db->query($sql);
+    }
+
+    public function editJurisprudence($data, $id)
+    {
+        $id_1 = (int)$data['id_1'];
+        $id_2 = (int)$data['id_2'];
+        $id_3 = (int)$data["id_3"];
+        $id_4 = (int)$data["id_4"];
+        $id_5 = (int)$data["id_5"];
+        $publisher_1 = $this->db->escape($data["publisher_1"]);
+        $type = (int)$data["type"];
+        $date = $data["date"];
+        $title = $this->db->escape($data["title"]);
+        $source = $this->db->escape($data["source_1"]);
+
+        $sql = "UPDATE `file_jurisprudence` SET `publisher_1` = '{$publisher_1}',
+               `type` = '{$type}',`date` = '{$date}', `title`='{$title}', `source`='{$source}',
+               `id_1`='{$id_1}', `id_2`='{$id_2}', `id_3`='{$id_3}', `id_3`='{$id_3}',
+               `id_4`='{$id_4}', `id_5`='{$id_5}' WHERE `id` = '{$id}'";
+        return $this->db->query($sql);
+    }
 }
