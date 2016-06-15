@@ -784,3 +784,16 @@ a.btns .disabled,fieldset[disabled] a.btns {
     width: 486px;
 }
 
+.starter-template {
+    padding: 20px 15px;
+    margin-top: 40px;
+}
+
+.mrg_top4 {
+    padding-left: 33px;
+}
+
+.reg {
+    height: 40px;
+    font-size: 14pt;
+}

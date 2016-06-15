@@ -372,4 +372,16 @@ class AdminController extends Controller
 
         }
     }
+    public function registration()
+    {
+
+        if(isset($_POST['sign_up'])){
+            $this->data['user_exists'] = $this->model->getByLogin($_POST['login']);
+            if(!isset($this->data['user_exists'][0])){
+                $salt = Config::get('salt');
+                $this->model->saveNewUser($_POST, $salt);
+            }
+        }
+
+    }
 }

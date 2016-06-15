@@ -38,4 +38,6 @@ class UsersController extends Controller
         Session::destroy();
         Router::redirect('/users/login/');
     }
+
+
 }

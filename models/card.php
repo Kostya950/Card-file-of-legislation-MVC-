@@ -522,4 +522,21 @@ class Card extends Model
         return $this->db->query($sql);
     }
 
+    public function getByLogin($login)
+    {
+        $login = $this->db->escape($login);
+        $sql = "SELECT * FROM users WHERE `login` = '{$login}' LIMIT 1";
+        return $this->db->query($sql);
+
+    }
+
+    public function saveNewUser($data, $salt)
+    {
+        $name = $this->db->escape($data['name']);
+        $login = $data['login'];
+        $password = md5($data['password'] . $salt);
+        $sql = "INSERT INTO `users` (`login`, `password`, `name`) VALUES ('{$login}', '{$password}','{$name}')";
+        return $this->db->query($sql);
+    }
+
 }

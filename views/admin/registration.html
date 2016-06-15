@@ -1,0 +1,29 @@
+<div class="col-sm-offset-2 col-sm-10 mrg_top3">
+    <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
+    <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
+</div>
+<div class="container">
+    <div class="starter-template">
+        <form method="post"  action="">
+            <h4>Заповніть поля:</h4>
+            <input required type="text" class="form-control" name="name" placeholder="Прізвище та ім'я"><br>
+            <input required type="text" class="form-control" name="login" placeholder="Логін"><br>
+            <input required type="password" class="form-control" name="password" placeholder="Пароль"><br>
+            <button class="btn btn-info btn-block form-control reg" name="sign_up"  type="submit">Зареєструвати</button><br>
+        </form>
+    </div>
+</div>
+
+<?php
+if(isset($_POST['sign_up'])) {
+
+    if (isset($data['user_exists'][0])) { ?>
+        <div class='text-center col-sm-offset-2 col-sm-5 text-danger h4'>Такий логін вже зареєстрований в базі, оберіть
+            інший.
+        </div><?php
+    } else { ?>
+        <div class='text-center col-sm-offset-2 col-sm-5 text-success h4'>Ви успішно зареєстрували нового працівника: <?=$_POST['name']?></div>
+    <?php }
+}
+
+
