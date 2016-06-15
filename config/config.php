@@ -21,10 +21,10 @@ Config::set('default_route', 'default');
 Config::set('default_language', 'ua');
 Config::set('default_controller', 'pages');
 Config::set('default_action', 'index');
-Config::set('db.host', 'localhost');
-Config::set('db.user', 'root');
-Config::set('db.password', '111111');
-Config::set('db.db_name', 'legis_mvc');
+Config::set('db.host', 'mysql.hostinger.com.ua');
+Config::set('db.user', 'u457181443_pravo');
+Config::set('db.password', '0442007547');
+Config::set('db.db_name', 'u457181443_legis');
 
 Config::set('salt','Hello World');
 
