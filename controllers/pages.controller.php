@@ -95,7 +95,7 @@
      {
          $params = App::getRouter()->getParams();
          if(!isset($params[0])) {
-             $this->data['laws_categories'] = $this->model->getLawsCategories(); // полуае классификатор
+             $this->data['laws_categories'] = $this->model->getLawsCategories(); // полуаем классификатор
          } elseif (isset($params[0]) AND !isset($params[1])) {
              $this->data['laws_category'] = $this->model->getLawsCategory($params[0]); // получаем выбранную категорию
              // получаем все подкатегории выбранной категории классификатора
@@ -120,24 +120,33 @@
              }
          }
      }
-    
+     // раздел для отображения актов судебной практики
      public function jurisprudence()
      {
          $params = App::getRouter()->getParams();
          if(!isset($params[0])){
-             $this->data['jurisprudence_categories'] = $this->model->getJurisrpudenceCategories();
+             $this->data['jurisprudence_categories'] = $this->model->getJurisrpudenceCategories(); // получаем классификатор
          } elseif(isset($params[0]) AND !isset($params[1])) {
+             // получаем выбранную категорию
              $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
+             // получаем все подкатегории выбранной категории
              $this->data['jurisprudence_subcategories'] = $this->model->getJurisprudenceSubcategories($this->data['jurisprudence_category'][0]['id']);
              if(!isset($this->data['jurisprudence_subcategories'][0])){
+                 // если нет подкатегория для выбранной получаем количество документов
                  $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_category'][0]['id']);
+                 // получаем документы если нет подкатегорий для выбранной категории
                  $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_category'][0]['id']);
              }
-         } elseif(isset($params[1]) AND !isset($params[2])) {
+         } elseif(isset($params[1]) AND !isset($params[2])) { 
+             // получаем выбранную категорию
              $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
+             // получаем выбранную подкатегорию выбранной категории
              $this->data['jurisprudence_subcategory'] = $this->model->getJurisprudenceSubcategory($params[0]."/".$params[1]);
+             // получаем под-подкатегории для выбранной подкатегории
              $this->data['jurisprudence_sub_subcategories'] = $this->model->getJurisprudenceSubSubcategories($this->data['jurisprudence_subcategory'][0]['id']);
+             // получаем количество документов для выбранной под-подкатегории
              $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_subcategory'][0]['id']);
+             // получаем документы для выбранной под-подкатегории
              $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_subcategory'][0]['id']);
          } elseif(isset($params[2]) AND !isset($params[3])) {
              $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
