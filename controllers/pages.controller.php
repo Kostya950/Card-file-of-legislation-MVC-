@@ -137,7 +137,7 @@
                  // получаем документы если нет подкатегорий для выбранной категории
                  $this->data['docs'] = $this->model->getAllJurisprudenceDocsByCategoryId($_GET['page'],$this->data['jurisprudence_category'][0]['id']);
              }
-         } elseif(isset($params[1]) AND !isset($params[2])) { 
+         } elseif(isset($params[1]) AND !isset($params[2])) {
              // получаем выбранную категорию
              $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
              // получаем выбранную подкатегорию выбранной категории

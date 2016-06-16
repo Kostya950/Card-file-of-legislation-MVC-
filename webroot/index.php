@@ -18,7 +18,7 @@ try {
     header('Content-Type: text/html; charset=utf-8');
     App::run($_SERVER['REQUEST_URI']);
 } catch (Exception $e) {
-   // Router::redirect('/pages/');
-    echo $e->getMessage();
+    Router::redirect('/pages/');
+    //echo $e->getMessage();
 
 }
