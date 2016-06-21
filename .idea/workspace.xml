@@ -191,10 +191,11 @@
       <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8046768">
-              <caret line="127" column="78" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.3810179">
+              <caret line="127" column="72" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
               <folding>
-                <marker date="1466510618000" expanded="true" signature="2820:2889" placeholder="..." />
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#5;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#10;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1099,10 +1100,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8046768">
-          <caret line="127" column="78" selection-start-line="127" selection-start-column="78" selection-end-line="127" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.3810179">
+          <caret line="127" column="72" selection-start-line="127" selection-start-column="72" selection-end-line="127" selection-end-column="72" />
           <folding>
-            <marker date="1466510618000" expanded="true" signature="2820:2889" placeholder="..." />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#5;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#10;n#table#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -39,7 +39,7 @@ $p = new Pagination(array(
                         <tr>
                         <td class='td_view_numbering'><?=$i?>.</td>
                         <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?> <?php if($doc['number'] !='') {?>№ <?=$doc['number'] ?> <?php } ?>
-                                <?php if($doc['nice_date'] !='0000-00-00'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
+                                <?php if($doc['nice_date'] !='00.00.0000'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
                             <?php if ($doc['link']!=''){ ?>
                                 <a href='<?=$doc['link']?>'><?=$doc['title']?></a><?php
                             } else { ?>
@@ -84,7 +84,7 @@ $p = new Pagination(array(
                         <tr>
                         <td class='td_view_numbering'><?=$i?>.</td>
                         <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?> <?php if($doc['number'] !='') {?>№ <?=$doc['number'] ?> <?php } ?>
-                                <?php if($doc['nice_date'] !='0000-00-00'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
+                                <?php if($doc['nice_date'] !='00.00.0000'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
                             <?php if ($doc['link']!=''){ ?>
                                 <a href='<?=$doc['link']?>'><?=$doc['title']?></a><?php
                             } else { ?>
@@ -125,7 +125,7 @@ $p = new Pagination(array(
                         <tr>
                         <td class='td_view_numbering'><?=$i?>.</td>
                         <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?> <?php if($doc['number'] !='') {?>№ <?=$doc['number'] ?> <?php } ?>
-                                <?php if($doc['nice_date'] !='0000-00-00'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
+                                <?php if($doc['nice_date'] !='00.00.0000'){?>, від <?=$doc['nice_date']?><?php }?> </span> <br>
                             <?php if ($doc['link']!=''){ ?>
                                 <a href='<?=$doc['link']?>'><?=$doc['title']?></a><?php
                             } else { ?>
