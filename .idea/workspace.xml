@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/page.php" afterPath="$PROJECT_DIR$/models/page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/edit_jurisprudence.html" afterPath="$PROJECT_DIR$/views/admin/edit_jurisprudence.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
@@ -225,7 +224,7 @@
         <entry file="file://$PROJECT_DIR$/views/admin/edit_jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.71153843">
-              <caret line="58" column="131" selection-start-line="58" selection-start-column="131" selection-end-line="58" selection-end-column="131" />
+              <caret line="58" column="124" selection-start-line="58" selection-start-column="124" selection-end-line="58" selection-end-column="124" />
               <folding />
             </state>
           </provider>
@@ -1103,7 +1102,7 @@
     <entry file="file://$PROJECT_DIR$/views/admin/edit_jurisprudence.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71153843">
-          <caret line="58" column="131" selection-start-line="58" selection-start-column="131" selection-end-line="58" selection-end-column="131" />
+          <caret line="58" column="124" selection-start-line="58" selection-start-column="124" selection-end-line="58" selection-end-column="124" />
           <folding />
         </state>
       </provider>
