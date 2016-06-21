@@ -159,7 +159,7 @@ class Card extends Model
 
     public function createOrReplaceJurisprudenceView()
     {
-        return $this->db->query("CREATE OR REPLACE VIEW file_jurisprudence_all_info AS SELECT fj.id, fj.date, fj.title, fj.source, fj.publisher_1,
+        return $this->db->query("CREATE OR REPLACE VIEW file_jurisprudence_all_info AS SELECT fj.id, fj.date, fj.number, fj.title, fj.source, fj.publisher_1,
             tj.type, fj.type AS type_id, ca_1.index AS index_1, ca_2.index AS index_2,
             ca_3.index AS index_3, ca_4.index AS index_4, ca_5.index AS index_5, fj.id_1 AS n_id_1, fj.id_2 AS n_id_2, fj.id_3 AS n_id_3,
             fj.id_4 AS n_id_4, fj.id_5 AS n_id_5 FROM file_jurisprudence fj
@@ -414,11 +414,12 @@ class Card extends Model
         $date = $data['date'];
         $title = $this->db->escape($data['title']);
         $source = $data['source_1'];
+        $number = $data['number'];
 
         $sql = "INSERT INTO `file_jurisprudence` (`publisher_1`, `type`, `date`, `title`,
-            `source`, `id_1`, `id_2`, `id_3`, `id_4`, `id_5`) VALUES ('{$publisher_1}', '{$type}', '{$date}', '{$title}',
+            `source`, `id_1`, `id_2`, `id_3`, `id_4`, `id_5`, `number`) VALUES ('{$publisher_1}', '{$type}', '{$date}', '{$title}',
             '{$source}', '{$id_1}', '{$id_2}', '{$id_3}',
-            '{$id_4}', '{$id_5}')";
+            '{$id_4}', '{$id_5}', '{$number}')";
         return $this->db->query($sql);
     }
 
@@ -453,11 +454,12 @@ class Card extends Model
         $date = $data["date"];
         $title = $this->db->escape($data["title"]);
         $source = $this->db->escape($data["source_1"]);
+        $number = $data['number'];
 
         $sql = "UPDATE `file_jurisprudence` SET `publisher_1` = '{$publisher_1}',
                `type` = '{$type}',`date` = '{$date}', `title`='{$title}', `source`='{$source}',
                `id_1`='{$id_1}', `id_2`='{$id_2}', `id_3`='{$id_3}', `id_3`='{$id_3}',
-               `id_4`='{$id_4}', `id_5`='{$id_5}' WHERE `id` = '{$id}'";
+               `id_4`='{$id_4}', `id_5`='{$id_5}', `number`='{$number}' WHERE `id` = '{$id}'";
         return $this->db->query($sql);
     }
 
