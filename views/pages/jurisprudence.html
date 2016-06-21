@@ -39,7 +39,12 @@ $p = new Pagination(array(
                            <tr>
                                <td class='td_view_numbering'><?=$i?>.</td>
                                <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, <?php if($doc['number'] !='') {?>№ <?=$doc['number'] ?> <?php } ?>від <?=$doc['nice_date']?> </span> <br>
-                               <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?>
+                                   <?php if ($doc['link']!=''){ ?>
+                                       <a href='<?=$doc['link']?>'><?=$doc['title']?></a><?php
+                                   } else { ?>
+                                       <span class='text-info'><?=$doc['title']?></span><?php
+                                   } ?>
+                                <br><span class='h6'><?=$doc['publisher_1']?>
                                    </span><span class='text-muted h6'> <?=$doc['source']?></span>
                                </td>
                             </tr><?php

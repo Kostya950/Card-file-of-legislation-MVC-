@@ -14,7 +14,7 @@
             </tr>
             <tr>
                 <td class="add_marg_left"><label for="date"><b>Дата прийняття:<sup>*</sup></b></label></td>
-                <td><input id="date" class="form-control" required type="date" name="date" value="<?=$data['editable_card'][0]['date']?>"></td>
+                <td><input id="date" class="form-control" type="date" name="date" value="<?=$data['editable_card'][0]['date']?>"></td>
             </tr>
             <tr>
                 <td class="add_marg_left"><label for="number"><b>Номер:</b></label></td>
@@ -53,6 +53,10 @@
             <tr>
                 <td class="add_marg_left"><label for="title"><b>Назва:<sup>*</sup></b></label></td>
                 <td><textarea id="title" class="form-control ta" rows="3" cols="40" required name="title" placeholder="Напишіть назву статті"><?=$data['editable_card'][0]['title']?></textarea></td>
+            </tr>
+            <tr>
+                <td rowspan="1" class="add_marg_left"><label for="link"><b>Посилання:<sup>*</sup></b></label></td>
+                <td><input id="link" class="form-control"  type="text" name="link"></td>
             </tr>
             <tr>
                 <td rowspan="1" class="add_marg_left"><label for="source"><b>Опублікування:<sup>*</sup></b></label></td>
