@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/page.php" afterPath="$PROJECT_DIR$/models/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/jurisprudence.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5935897">
+            <state vertical-scroll-proportion="-16.166666">
               <caret line="1143" column="0" selection-start-line="1143" selection-start-column="0" selection-end-line="1143" selection-end-column="0" />
               <folding>
                 <marker date="1466499280000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
@@ -188,13 +188,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.82353">
-              <caret line="115" column="116" selection-start-line="115" selection-start-column="111" selection-end-line="115" selection-end-column="116" />
+            <state vertical-scroll-proportion="0.2988048">
+              <caret line="40" column="173" selection-start-line="40" selection-start-column="173" selection-end-line="40" selection-end-column="173" />
               <folding>
-                <marker date="1466499006000" expanded="true" signature="2462:2531" placeholder="..." />
+                <marker date="1466499407000" expanded="true" signature="2505:2574" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -294,8 +294,8 @@
         <option value="$PROJECT_DIR$/views/admin/jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/admin/edit_jurisprudence.html" />
         <option value="$PROJECT_DIR$/models/card.php" />
-        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
         <option value="$PROJECT_DIR$/models/page.php" />
+        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
       </list>
     </option>
   </component>
@@ -1017,16 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.82353">
-          <caret line="115" column="116" selection-start-line="115" selection-start-column="111" selection-end-line="115" selection-end-column="116" />
-          <folding>
-            <marker date="1466499006000" expanded="true" signature="2462:2531" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-19.375">
@@ -1037,7 +1027,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5935897">
+        <state vertical-scroll-proportion="-16.166666">
           <caret line="1143" column="0" selection-start-line="1143" selection-start-column="0" selection-end-line="1143" selection-end-column="0" />
           <folding>
             <marker date="1466499280000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
@@ -1101,6 +1091,16 @@
             <marker date="1466499280000" expanded="true" signature="112647:112722" placeholder="SELECT * FRO... classifier_jurisprudence" />
             <marker date="1466499280000" expanded="true" signature="112852:112919" placeholder="SELECT * FRO... classifier_jurisprudence" />
             <marker date="1466499280000" expanded="true" signature="113045:113223" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2988048">
+          <caret line="40" column="173" selection-start-line="40" selection-start-column="173" selection-end-line="40" selection-end-column="173" />
+          <folding>
+            <marker date="1466499407000" expanded="true" signature="2505:2574" placeholder="..." />
           </folding>
         </state>
       </provider>

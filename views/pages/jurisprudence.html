@@ -38,7 +38,7 @@ $p = new Pagination(array(
                             $i++; ?>
                            <tr>
                                <td class='td_view_numbering'><?=$i?>.</td>
-                               <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, № <?=$doc['number'] ?> від <?=$doc['nice_date']?> </span> <br>
+                               <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, <?php if($doc['number'] !='') {?>№ <?=$doc['number'] ?> <?php } ?>від <?=$doc['nice_date']?> </span> <br>
                                <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?>
                                    </span><span class='text-muted h6'> <?=$doc['source']?></span>
                                </td>
