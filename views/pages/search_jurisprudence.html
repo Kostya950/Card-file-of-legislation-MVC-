@@ -86,7 +86,7 @@ if(isset($data['search_result'][0])) {?>
     foreach ($data['search_result'] as $doc) {
     $i++;?>
                 <tr><td class='td_view_numbering'><?=$i?>.</td>
-            <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?>, від <?=$doc['nice_date']?> </span> <br>
+            <td colspan='' class='td_view_content'> <span class='h6'><?=$doc['type']?><?php if(($doc['nice_date'] !='00.00.0000') AND ($doc['nice_date'] !='01.01.1900' )){?> від <?=$doc['nice_date']?><?php }?>  </span> <br>
                 <span class='text-info'><?=$doc['title']?></span> <br><span class='h6'><?=$doc['publisher_1']?>,
             </span><span class='text-muted h6'><?= $doc['source']?></span></td></tr>
         <?php } ?>
