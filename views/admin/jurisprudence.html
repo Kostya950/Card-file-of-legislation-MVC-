@@ -3,9 +3,7 @@
     <a href="/manage/admin/"><input class="btn btn-default" type="text" value="Категорії"></a>
     <a href="/users/logout/" class="btn btn-default out" type="submit" name="out" >Вийти</a>
 </div>
-
 <div id="jurisprudence_show" class="col-sm-offset-1 col-sm-8"></div>
-
 <div class="col-sm-offset-4 col-sm-4 text-center"><h4>Додавання актів судової практики</h4></div>
 <div class="col-sm-offset-2 col-sm-10">
     <form method="post" action="">
@@ -92,15 +90,12 @@
         if (isset($doc['n_id_5']) AND $doc['n_id_5']!=0) {
             echo ', ' . $doc['index_5'];
         }
-
         echo "</b>";
         echo "<br>";
         echo "<b>{$doc['type']} від {$doc['date']}</b><br>";
         echo $doc['title'];
         echo "<br>";
         echo "<b>".$doc['publisher_1']."</b>";
-
-
         $numb = $doc['id'];
         echo "<form method='get' action='/manage/admin/edit_jurisprudence/{$numb}'><span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
         echo "<br>";

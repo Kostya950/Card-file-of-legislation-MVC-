@@ -811,7 +811,7 @@ class Page extends  Model
             }
 
             $sql = "SELECT `id`, DATE_FORMAT(`date`,'%d.%m.%Y') AS `nice_date`, `title`, `source`, `publisher_1`,
-                   `type`, `index_1`, `index_2`, `index_3`, `index_4`, `index_5`
+                   `type`, `index_1`, `index_2`, `index_3`, `index_4`, `index_5`, `number`, `link`
                    FROM `file_jurisprudence_all_info`
                    WHERE {$search_content}
                    ORDER BY `date` DESC LIMIT {$start}, 50";
