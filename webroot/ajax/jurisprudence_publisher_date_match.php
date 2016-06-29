@@ -28,8 +28,7 @@ if(isset($_POST['publisher']) OR isset($_POST['date'])){
                         echo $doc['title'];
                         echo "<br><b>";
                         echo $doc['publisher_1']; if(isset($doc['publisher_2']) AND $doc['publisher_2']!=''){echo ', '.$doc['publisher_2'];}
-                        $numb = number_format($doc['id'], 0, ',', ' ');
-                        echo "<form method='get' action='/manage/admin/edit_jurisprudence/{$doc['id']}'><span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$numb}'>";
+                        echo "<form method='get' action='/manage/admin/edit_jurisprudence/{$doc['id']}'><span class='text-muted'> змінити документ № </span><input type='submit' class='btn btn-default btn-sm' value='{$doc['id']}'>";
                         echo"<br>";
                         echo"<br>";
                     } ?></div>
