@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" afterPath="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php" afterPath="$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,16 +106,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="181" selection-start-line="94" selection-start-column="23" selection-end-line="96" selection-end-column="181" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,13 +146,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jurisprudence_publisher_date_match.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jurisprudence_publisher_date_match.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769231">
+            <state vertical-scroll-proportion="-18.75">
               <caret line="30" column="236" selection-start-line="30" selection-start-column="236" selection-end-line="30" selection-end-column="236" />
               <folding>
                 <marker date="1467200142000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles_author_date_match.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.625">
+              <caret line="33" column="229" selection-start-line="33" selection-start-column="229" selection-end-line="33" selection-end-column="229" />
+              <folding>
+                <marker date="1467200370000" expanded="true" signature="410:540" placeholder="SELECT * FRO... file_articles_all_info" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="laws_subcategory_number_date_match.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webroot/ajax/laws_subcategory_number_date_match.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6923077">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <marker date="1465915750000" expanded="true" signature="320:393" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1465915750000" expanded="true" signature="716:800" placeholder="SELECT * FRO... file_laws_all_info" />
+                <marker date="1465915750000" expanded="true" signature="2906:3062" placeholder="..." />
+                <marker date="1465915750000" expanded="true" signature="3166:3269" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -173,16 +190,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="100" column="183" selection-start-line="100" selection-start-column="183" selection-end-line="100" selection-end-column="183" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="77" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -227,7 +234,6 @@
         <option value="$PROJECT_DIR$/views/admin/edit_laws.html" />
         <option value="$PROJECT_DIR$/webroot/ajax/laws_subcategory_number_date_match.php" />
         <option value="$PROJECT_DIR$/views/admin/articles.html" />
-        <option value="$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php" />
         <option value="$PROJECT_DIR$/views/admin/print_card_laws.html" />
         <option value="$PROJECT_DIR$/views/admin/edit_articles.html" />
         <option value="$PROJECT_DIR$/views/admin/success_edit_laws.html" />
@@ -254,6 +260,7 @@
         <option value="$PROJECT_DIR$/views/pages/search.html" />
         <option value="$PROJECT_DIR$/models/page.php" />
         <option value="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" />
+        <option value="$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php" />
       </list>
     </option>
   </component>
@@ -628,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/ajax/laws_subcategory_number_date_match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.875">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/print_card_laws.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-79.375">
@@ -894,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="33" column="224" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="224" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/articles.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.125">
@@ -1066,10 +1059,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769231">
+        <state vertical-scroll-proportion="-18.75">
           <caret line="30" column="236" selection-start-line="30" selection-start-column="236" selection-end-line="30" selection-end-column="236" />
           <folding>
             <marker date="1467200142000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.625">
+          <caret line="33" column="229" selection-start-line="33" selection-start-column="229" selection-end-line="33" selection-end-column="229" />
+          <folding>
+            <marker date="1467200370000" expanded="true" signature="410:540" placeholder="SELECT * FRO... file_articles_all_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/ajax/laws_subcategory_number_date_match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6923077">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1465915750000" expanded="true" signature="320:393" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1465915750000" expanded="true" signature="716:800" placeholder="SELECT * FRO... file_laws_all_info" />
+            <marker date="1465915750000" expanded="true" signature="2906:3062" placeholder="..." />
+            <marker date="1465915750000" expanded="true" signature="3166:3269" placeholder="..." />
           </folding>
         </state>
       </provider>
