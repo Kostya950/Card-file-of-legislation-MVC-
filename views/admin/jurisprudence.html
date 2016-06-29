@@ -19,7 +19,15 @@
             <tr>
                 <td rowspan="1" class="add_marg_left"><label for="publisher"><b>Видавник:<sup>*</sup></b></label></td>
                 <td>
-                    <textarea class="form-control ta" rows="3" cols="40" id="publisher" required name="publisher_1" placeholder="Напишіть видавника"></textarea>
+                    <input class="form-control ta" list="publishers" id="publisher" required name="publisher_1" placeholder="Напишіть видавника">
+                <datalist id="publishers">
+                    <option>Конституційний Суд України</option>
+                    <option>Пленум Верховного Суду України</option>
+                    <option>Пленум Вищого Господарського Суду України</option>
+                    <option>Пленум вищого спеціалізованого суду України з розгляду цивільних і кримінальних справ</option>
+                    <option>Колегія суддів судової палати у цивільних справах Вищого спеціалізованого суду України з розгляду цивільних і кримінальних справ</option>
+                    </datalist>
+
             </tr>
             <tr>
                 <td class="add_marg_left"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
