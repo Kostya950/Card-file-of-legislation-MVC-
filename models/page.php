@@ -600,7 +600,7 @@ class Page extends  Model
             } elseif ($title == '' AND $category == '' AND $type == '' AND $publisher == '' AND $date_start == '' AND $date_end == '' AND $number != '') {
                 $search_content = "number LIKE '{$number}%'";
             }
-            $sql = "SELECT number, DATE_FORMAT(`date`,'%d.%m.%Y') AS `nice_date`, `title`, `link`, type, `publisher_1`,
+            $sql = "SELECT `id`, `number`, DATE_FORMAT(`date`,'%d.%m.%Y') AS `nice_date`, `title`, `link`, type, `publisher_1`,
                     `publisher_2`, `publisher_3`, `publisher_4`, `source_1`, `source_2`, `source_3`, `source_4`, `folder`
                     FROM `file_laws_all_info` WHERE {$search_content} ORDER BY `date` DESC LIMIT {$start}, 50";
         }
