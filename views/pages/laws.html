@@ -84,8 +84,12 @@ $p = new Pagination(array(
                     if($doc['publisher_2']!=''){echo ", {$doc['publisher_2']}";}
                     if($doc['publisher_3']!=''){echo ", {$doc['publisher_3']}";}
                     if($doc['publisher_4']!=''){echo ", {$doc['publisher_4']}";}
-                    echo "<br><span class='text-muted'>{$doc['notice']}</span></td>
-                                <td class='text-muted mrg'><b>{$doc['folder']}</b><br>{$doc['source_1']}";
+                    echo "<br><span class='text-muted'>{$doc['notice']}</span><br>"?>
+                    <?php
+                    if($_SESSION['role'] == 'logged'){
+                        echo "<form method='get' action='/manage/admin/edit_laws/{$doc['id']}'><input type='submit' class='btn btn-default btn-sm' value='Редагувати'></form>";}?>
+                        </td>
+                               <?php echo  "<td class='text-muted mrg'><b>{$doc['folder']}</b><br>{$doc['source_1']}";
                     if($doc['source_2']!=''){echo "<br>".$doc['source_2'];}
                     if($doc['source_3']!=''){echo "<br>".$doc['source_3'];}
                     if($doc['source_4']!=''){echo "<br>".$doc['source_4'];}

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/articles.html" afterPath="$PROJECT_DIR$/views/pages/articles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/jurisprudence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/laws.html" afterPath="$PROJECT_DIR$/views/pages/laws.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search.html" afterPath="$PROJECT_DIR$/views/pages/search.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,26 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/jurisprudence.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="articles_author_date_match.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="33" column="224" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="224" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/page.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,26 +99,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/articles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.125">
-              <caret line="94" column="200" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="200" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="success_edit_articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/success_edit_articles.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.375">
-              <caret line="86" column="14" selection-start-line="75" selection-start-column="12" selection-end-line="86" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search_articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -160,6 +122,43 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.117647">
+              <caret line="140" column="86" selection-start-line="140" selection-start-column="80" selection-end-line="140" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="laws.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.176471">
+              <caret line="89" column="178" selection-start-line="87" selection-start-column="20" selection-end-line="89" selection-end-column="178" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#!!top" expanded="true" />
+                <marker date="1467197299000" expanded="true" signature="5089:5339" placeholder="..." />
+                <marker date="1467197299000" expanded="true" signature="5144:5339" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/pages/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45285526">
+              <caret line="120" column="36" selection-start-line="120" selection-start-column="36" selection-end-line="120" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+                <marker date="1467197299000" expanded="true" signature="5947:6034" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pages.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/pages.controller.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -170,10 +169,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="articles.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_jurisprudence.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.125">
+              <caret line="100" column="183" selection-start-line="100" selection-start-column="183" selection-end-line="100" selection-end-column="183" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4621514">
+            <state vertical-scroll-proportion="-6.8235292">
               <caret line="82" column="77" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="77" />
               <folding />
             </state>
@@ -205,8 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/view.class.php" />
-        <option value="$PROJECT_DIR$/webroot/static.html" />
         <option value="$PROJECT_DIR$/webroot/static.php" />
         <option value="$PROJECT_DIR$/views/pages/login.html" />
         <option value="$PROJECT_DIR$/views/default.html" />
@@ -250,12 +257,14 @@
         <option value="$PROJECT_DIR$/webroot/index.php" />
         <option value="$PROJECT_DIR$/models/card.php" />
         <option value="$PROJECT_DIR$/views/admin/edit_jurisprudence.html" />
-        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
         <option value="$PROJECT_DIR$/models/page.php" />
-        <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/admin/jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/pages/search_articles.html" />
         <option value="$PROJECT_DIR$/views/pages/articles.html" />
+        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
+        <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
+        <option value="$PROJECT_DIR$/views/pages/laws.html" />
+        <option value="$PROJECT_DIR$/views/pages/search.html" />
       </list>
     </option>
   </component>
@@ -602,13 +611,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webroot/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webroot/js/default_page.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -827,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875">
-          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="81" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/admin.controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -912,22 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="85" selection-start-line="57" selection-start-column="85" selection-end-line="57" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="29" selection-start-line="124" selection-start-column="24" selection-end-line="136" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125">
-          <caret line="99" column="13" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1081,9 +1060,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4621514">
+        <state vertical-scroll-proportion="-6.8235292">
           <caret line="82" column="77" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.117647">
+          <caret line="140" column="86" selection-start-line="140" selection-start-column="80" selection-end-line="140" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.125">
+          <caret line="100" column="183" selection-start-line="100" selection-start-column="183" selection-end-line="100" selection-end-column="183" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.176471">
+          <caret line="89" column="178" selection-start-line="87" selection-start-column="20" selection-end-line="89" selection-end-column="178" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#!!top" expanded="true" />
+            <marker date="1467197299000" expanded="true" signature="5089:5339" placeholder="..." />
+            <marker date="1467197299000" expanded="true" signature="5144:5339" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45285526">
+          <caret line="120" column="36" selection-start-line="120" selection-start-column="36" selection-end-line="120" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
+            <marker date="1467197299000" expanded="true" signature="5947:6034" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
