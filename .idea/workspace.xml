@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search_articles.html" afterPath="$PROJECT_DIR$/views/pages/search_articles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/articles.html" afterPath="$PROJECT_DIR$/views/pages/articles.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,14 +137,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_articles.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_articles.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43076923">
-              <caret line="96" column="98" selection-start-line="96" selection-start-column="98" selection-end-line="96" selection-end-column="98" />
+            <state vertical-scroll-proportion="-14.625">
+              <caret line="96" column="181" selection-start-line="94" selection-start-column="23" selection-end-line="96" selection-end-column="181" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
-                <marker date="1467196463000" expanded="true" signature="4749:4812" placeholder="..." />
+                <marker date="1467196757000" expanded="true" signature="4749:4812" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -169,24 +170,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="articles.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4621514">
+              <caret line="82" column="77" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="users.controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/users.controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-8.125">
               <caret line="18" column="41" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="41" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jurisprudence_publisher_date_match.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.375">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding>
-                <marker date="1465934072000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -206,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/pages/articles.html" />
         <option value="$PROJECT_DIR$/lib/view.class.php" />
         <option value="$PROJECT_DIR$/webroot/static.html" />
         <option value="$PROJECT_DIR$/webroot/static.php" />
@@ -257,6 +255,7 @@
         <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/admin/jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/pages/search_articles.html" />
+        <option value="$PROJECT_DIR$/views/pages/articles.html" />
       </list>
     </option>
   </component>
@@ -814,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.375">
@@ -1078,12 +1070,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/search_articles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43076923">
-          <caret line="96" column="98" selection-start-line="96" selection-start-column="98" selection-end-line="96" selection-end-column="98" />
+        <state vertical-scroll-proportion="-14.625">
+          <caret line="96" column="181" selection-start-line="94" selection-start-column="23" selection-end-line="96" selection-end-column="181" />
           <folding>
             <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#1;n#!!top" expanded="true" />
-            <marker date="1467196463000" expanded="true" signature="4749:4812" placeholder="..." />
+            <marker date="1467196757000" expanded="true" signature="4749:4812" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/pages/articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4621514">
+          <caret line="82" column="77" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
