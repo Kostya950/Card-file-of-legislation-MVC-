@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" afterPath="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
@@ -160,10 +159,10 @@
       <file leaf-file-name="jurisprudence_publisher_date_match.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63461536">
-              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.5769231">
+              <caret line="30" column="236" selection-start-line="30" selection-start-column="236" selection-end-line="30" selection-end-column="236" />
               <folding>
-                <marker date="1467199965000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
+                <marker date="1467200142000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
               </folding>
             </state>
           </provider>
@@ -1067,10 +1066,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63461536">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.5769231">
+          <caret line="30" column="236" selection-start-line="30" selection-start-column="236" selection-end-line="30" selection-end-column="236" />
           <folding>
-            <marker date="1467199965000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
+            <marker date="1467200142000" expanded="true" signature="410:509" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
           </folding>
         </state>
       </provider>
