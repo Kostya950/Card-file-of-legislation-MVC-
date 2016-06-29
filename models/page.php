@@ -29,7 +29,7 @@ class Page extends  Model
 
     public function getCategoriesJurisprudenceSearch()
     {
-        $sql = "SELECT `index`, `id` FROM `classifier_jurisprudence` WHERE `id` NOT BETWEEN 2 AND 13`";
+        $sql = "SELECT * FROM `classifier_jurisprudence` WHERE `id` NOT BETWEEN 2 AND 13";
         return $this->db->query($sql);
     }
 

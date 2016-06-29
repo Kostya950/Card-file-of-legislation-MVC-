@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/page.php" afterPath="$PROJECT_DIR$/models/page.php" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
@@ -39,69 +38,68 @@
         <entry file="file://$PROJECT_DIR$/models/page.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.37317398">
-              <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+              <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
               <folding>
-                <marker date="1467201545000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="380:431" placeholder="SELECT * FRO... publishers_laws" />
-                <marker date="1467201545000" expanded="true" signature="380:432" placeholder="SELECT * FRO... publishers_laws" />
-                <marker date="1467201545000" expanded="true" signature="544:588" placeholder="SELECT * FRO... type_laws_acts" />
-                <marker date="1467201545000" expanded="true" signature="714:798" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="714:799" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="920:973" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-                <marker date="1467201545000" expanded="true" signature="1094:1211" placeholder="SELECT id, `... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="1327:1375" placeholder="SELECT * FRO... type_articles_acts" />
-                <marker date="1467201545000" expanded="true" signature="36070:36127" placeholder="SELECT COUNT... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="36070:36144" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="70945:71265" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="70945:71284" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="81782:81851" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="81782:81868" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="92518:92847" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="92518:92866" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="98196:98260" placeholder="SELECT COUNT... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="98196:98277" placeholder="SELECT COUNT... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="103754:104037" placeholder="SELECT id, D... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="103754:104056" placeholder="SELECT id, D... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="104220:104308" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1467201545000" expanded="true" signature="104434:104827" placeholder="SELECT n.nam... " />
-                <marker date="1467201545000" expanded="true" signature="104434:104841" placeholder="SELECT n.id,... " />
-                <marker date="1467201545000" expanded="true" signature="104954:105014" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
-                <marker date="1467201545000" expanded="true" signature="105120:105169" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="105289:105350" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="105461:105514" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="105634:105696" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="105811:105868" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="105983:106041" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="106160:106186" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="106160:106209" placeholder="SELECT * FRO... classifier_articels" />
-                <marker date="1467201545000" expanded="true" signature="106160:106221" placeholder="SELECT * FRO... classifier_articels" />
-                <marker date="1467201545000" expanded="true" signature="106160:106222" placeholder="SELECT * FRO... classifier_articels" />
-                <marker date="1467201545000" expanded="true" signature="106346:106410" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="106538:106587" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="106538:106608" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="106726:106782" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="106902:106975" placeholder="SELECT * FRO... classifier_laws" />
-                <marker date="1467201545000" expanded="true" signature="107220:107875" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="108127:108902" placeholder="SELECT numbe... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="109032:109458" placeholder="SELECT COUNT... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="109595:110141" placeholder="SELECT COUNT... file_laws_all_info" />
-                <marker date="1467201545000" expanded="true" signature="110400:110796" placeholder="SELECT id, D... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="110400:110815" placeholder="SELECT id, D... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="110937:110970" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="110937:110997" placeholder="SELECT * FRO... classifier_articles" />
-                <marker date="1467201545000" expanded="true" signature="111127:111364" placeholder="SELECT COUNT... file_articles_all_info" />
-                <marker date="1467201545000" expanded="true" signature="111488:111528" placeholder="SELECT * FRO... " />
-                <marker date="1467201545000" expanded="true" signature="111488:111534" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="111488:111555" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="111688:111746" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="111688:111763" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="112018:112381" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="112018:112400" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-                <marker date="1467201545000" expanded="true" signature="112527:112594" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="112730:112788" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="112730:112805" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="112935:113002" placeholder="SELECT * FRO... classifier_jurisprudence" />
-                <marker date="1467201545000" expanded="true" signature="113128:113306" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="380:431" placeholder="SELECT * FRO... publishers_laws" />
+                <marker date="1467201628000" expanded="true" signature="380:432" placeholder="SELECT * FRO... publishers_laws" />
+                <marker date="1467201628000" expanded="true" signature="544:588" placeholder="SELECT * FRO... type_laws_acts" />
+                <marker date="1467201628000" expanded="true" signature="714:786" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="907:960" placeholder="SELECT * FRO... type_jurisprudence_acts" />
+                <marker date="1467201628000" expanded="true" signature="1081:1198" placeholder="SELECT id, `... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="1314:1362" placeholder="SELECT * FRO... type_articles_acts" />
+                <marker date="1467201628000" expanded="true" signature="36057:36114" placeholder="SELECT COUNT... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="36057:36131" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="70932:71252" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="70932:71271" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="81769:81838" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="81769:81855" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="92505:92834" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="92505:92853" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="98183:98247" placeholder="SELECT COUNT... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="98183:98264" placeholder="SELECT COUNT... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="103741:104024" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="103741:104043" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="104207:104295" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
+                <marker date="1467201628000" expanded="true" signature="104421:104814" placeholder="SELECT n.nam... " />
+                <marker date="1467201628000" expanded="true" signature="104421:104828" placeholder="SELECT n.id,... " />
+                <marker date="1467201628000" expanded="true" signature="104941:105001" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
+                <marker date="1467201628000" expanded="true" signature="105107:105156" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="105276:105337" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="105448:105501" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="105621:105683" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="105798:105855" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="105970:106028" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="106147:106173" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="106147:106196" placeholder="SELECT * FRO... classifier_articels" />
+                <marker date="1467201628000" expanded="true" signature="106147:106208" placeholder="SELECT * FRO... classifier_articels" />
+                <marker date="1467201628000" expanded="true" signature="106147:106209" placeholder="SELECT * FRO... classifier_articels" />
+                <marker date="1467201628000" expanded="true" signature="106333:106397" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="106525:106574" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="106525:106595" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="106713:106769" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="106889:106962" placeholder="SELECT * FRO... classifier_laws" />
+                <marker date="1467201628000" expanded="true" signature="107207:107862" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="108114:108889" placeholder="SELECT numbe... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="109019:109445" placeholder="SELECT COUNT... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="109582:110128" placeholder="SELECT COUNT... file_laws_all_info" />
+                <marker date="1467201628000" expanded="true" signature="110387:110783" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="110387:110802" placeholder="SELECT id, D... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="110924:110957" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="110924:110984" placeholder="SELECT * FRO... classifier_articles" />
+                <marker date="1467201628000" expanded="true" signature="111114:111351" placeholder="SELECT COUNT... file_articles_all_info" />
+                <marker date="1467201628000" expanded="true" signature="111475:111515" placeholder="SELECT * FRO... " />
+                <marker date="1467201628000" expanded="true" signature="111475:111521" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="111475:111542" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="111675:111733" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="111675:111750" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="112005:112368" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="112005:112387" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+                <marker date="1467201628000" expanded="true" signature="112514:112581" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="112717:112775" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="112717:112792" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="112922:112989" placeholder="SELECT * FRO... classifier_jurisprudence" />
+                <marker date="1467201628000" expanded="true" signature="113115:113293" placeholder="SELECT id, D... file_jurisprudence_all_info" />
               </folding>
             </state>
           </provider>
@@ -1061,69 +1059,68 @@
     <entry file="file://$PROJECT_DIR$/models/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37317398">
-          <caret line="31" column="100" selection-start-line="31" selection-start-column="100" selection-end-line="31" selection-end-column="100" />
+          <caret line="31" column="88" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
           <folding>
-            <marker date="1467201545000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="380:431" placeholder="SELECT * FRO... publishers_laws" />
-            <marker date="1467201545000" expanded="true" signature="380:432" placeholder="SELECT * FRO... publishers_laws" />
-            <marker date="1467201545000" expanded="true" signature="544:588" placeholder="SELECT * FRO... type_laws_acts" />
-            <marker date="1467201545000" expanded="true" signature="714:798" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="714:799" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="920:973" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-            <marker date="1467201545000" expanded="true" signature="1094:1211" placeholder="SELECT id, `... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="1327:1375" placeholder="SELECT * FRO... type_articles_acts" />
-            <marker date="1467201545000" expanded="true" signature="36070:36127" placeholder="SELECT COUNT... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="36070:36144" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="70945:71265" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="70945:71284" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="81782:81851" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="81782:81868" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="92518:92847" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="92518:92866" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="98196:98260" placeholder="SELECT COUNT... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="98196:98277" placeholder="SELECT COUNT... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="103754:104037" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="103754:104056" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="104220:104308" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-            <marker date="1467201545000" expanded="true" signature="104434:104827" placeholder="SELECT n.nam... " />
-            <marker date="1467201545000" expanded="true" signature="104434:104841" placeholder="SELECT n.id,... " />
-            <marker date="1467201545000" expanded="true" signature="104954:105014" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
-            <marker date="1467201545000" expanded="true" signature="105120:105169" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="105289:105350" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="105461:105514" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="105634:105696" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="105811:105868" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="105983:106041" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="106160:106186" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="106160:106209" placeholder="SELECT * FRO... classifier_articels" />
-            <marker date="1467201545000" expanded="true" signature="106160:106221" placeholder="SELECT * FRO... classifier_articels" />
-            <marker date="1467201545000" expanded="true" signature="106160:106222" placeholder="SELECT * FRO... classifier_articels" />
-            <marker date="1467201545000" expanded="true" signature="106346:106410" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="106538:106587" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="106538:106608" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="106726:106782" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="106902:106975" placeholder="SELECT * FRO... classifier_laws" />
-            <marker date="1467201545000" expanded="true" signature="107220:107875" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="108127:108902" placeholder="SELECT numbe... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="109032:109458" placeholder="SELECT COUNT... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="109595:110141" placeholder="SELECT COUNT... file_laws_all_info" />
-            <marker date="1467201545000" expanded="true" signature="110400:110796" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="110400:110815" placeholder="SELECT id, D... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="110937:110970" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="110937:110997" placeholder="SELECT * FRO... classifier_articles" />
-            <marker date="1467201545000" expanded="true" signature="111127:111364" placeholder="SELECT COUNT... file_articles_all_info" />
-            <marker date="1467201545000" expanded="true" signature="111488:111528" placeholder="SELECT * FRO... " />
-            <marker date="1467201545000" expanded="true" signature="111488:111534" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="111488:111555" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="111688:111746" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="111688:111763" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="112018:112381" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="112018:112400" placeholder="SELECT id, D... file_jurisprudence_all_info" />
-            <marker date="1467201545000" expanded="true" signature="112527:112594" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="112730:112788" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="112730:112805" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="112935:113002" placeholder="SELECT * FRO... classifier_jurisprudence" />
-            <marker date="1467201545000" expanded="true" signature="113128:113306" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="183:263" placeholder="SELECT id, `... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="380:431" placeholder="SELECT * FRO... publishers_laws" />
+            <marker date="1467201628000" expanded="true" signature="380:432" placeholder="SELECT * FRO... publishers_laws" />
+            <marker date="1467201628000" expanded="true" signature="544:588" placeholder="SELECT * FRO... type_laws_acts" />
+            <marker date="1467201628000" expanded="true" signature="714:786" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="907:960" placeholder="SELECT * FRO... type_jurisprudence_acts" />
+            <marker date="1467201628000" expanded="true" signature="1081:1198" placeholder="SELECT id, `... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="1314:1362" placeholder="SELECT * FRO... type_articles_acts" />
+            <marker date="1467201628000" expanded="true" signature="36057:36114" placeholder="SELECT COUNT... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="36057:36131" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="70932:71252" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="70932:71271" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="81769:81838" placeholder="SELECT COUNT... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="81769:81855" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="92505:92834" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="92505:92853" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="98183:98247" placeholder="SELECT COUNT... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="98183:98264" placeholder="SELECT COUNT... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="103741:104024" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="103741:104043" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="104207:104295" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
+            <marker date="1467201628000" expanded="true" signature="104421:104814" placeholder="SELECT n.nam... " />
+            <marker date="1467201628000" expanded="true" signature="104421:104828" placeholder="SELECT n.id,... " />
+            <marker date="1467201628000" expanded="true" signature="104941:105001" placeholder="SELECT COUNT... new_legislative_acts_range_date" />
+            <marker date="1467201628000" expanded="true" signature="105107:105156" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="105276:105337" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="105448:105501" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="105621:105683" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="105798:105855" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="105970:106028" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="106147:106173" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="106147:106196" placeholder="SELECT * FRO... classifier_articels" />
+            <marker date="1467201628000" expanded="true" signature="106147:106208" placeholder="SELECT * FRO... classifier_articels" />
+            <marker date="1467201628000" expanded="true" signature="106147:106209" placeholder="SELECT * FRO... classifier_articels" />
+            <marker date="1467201628000" expanded="true" signature="106333:106397" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="106525:106574" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="106525:106595" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="106713:106769" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="106889:106962" placeholder="SELECT * FRO... classifier_laws" />
+            <marker date="1467201628000" expanded="true" signature="107207:107862" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="108114:108889" placeholder="SELECT numbe... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="109019:109445" placeholder="SELECT COUNT... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="109582:110128" placeholder="SELECT COUNT... file_laws_all_info" />
+            <marker date="1467201628000" expanded="true" signature="110387:110783" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="110387:110802" placeholder="SELECT id, D... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="110924:110957" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="110924:110984" placeholder="SELECT * FRO... classifier_articles" />
+            <marker date="1467201628000" expanded="true" signature="111114:111351" placeholder="SELECT COUNT... file_articles_all_info" />
+            <marker date="1467201628000" expanded="true" signature="111475:111515" placeholder="SELECT * FRO... " />
+            <marker date="1467201628000" expanded="true" signature="111475:111521" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="111475:111542" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="111675:111733" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="111675:111750" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="112005:112368" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="112005:112387" placeholder="SELECT id, D... file_jurisprudence_all_info" />
+            <marker date="1467201628000" expanded="true" signature="112514:112581" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="112717:112775" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="112717:112792" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="112922:112989" placeholder="SELECT * FRO... classifier_jurisprudence" />
+            <marker date="1467201628000" expanded="true" signature="113115:113293" placeholder="SELECT id, D... file_jurisprudence_all_info" />
           </folding>
         </state>
       </provider>
