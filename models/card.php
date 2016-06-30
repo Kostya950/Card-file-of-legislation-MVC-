@@ -147,7 +147,7 @@ class Card extends Model
 
     public function getAllJurisprudenceIndexes()
     {
-        $sql = "SELECT `index`, `id` FROM `classifier_jurisprudence` WHERE `id` NOT BETWEEN 2 AND 13";
+        $sql = "SELECT `index`, `id` FROM `classifier_jurisprudence` WHERE (`id` NOT BETWEEN 2 AND 4) AND (`id` NOT BETWEEN 6 AND 13 )";
         return $this->db->query($sql);
     }
 
