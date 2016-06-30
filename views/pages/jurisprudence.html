@@ -29,7 +29,7 @@ $p = new Pagination(array(
                     <td class='td_view_numbering'><?=$subcategory_index[1]?>.</td>
                     <td class='td_view_content'><a href='/pages/jurisprudence/<?=$subcategory['index']?>'><?=$subcategory['title']?></td>
                 </tr><?php }
-                 if(!isset($data['jurisprudence_subcategories'][0])){
+                 if(!isset($data['jurisprudence_subcategories'][0]) AND ($params[0] == 'V')){
                     $i = 0;
                     if($_GET['page'] > 1) {
                         $i = ($_GET['page'] - 1) * 50;
