@@ -131,7 +131,7 @@
              $this->data['jurisprudence_category'] = $this->model->getJurisprudenceCategory($params[0]);
              // получаем все подкатегории выбранной категории
              $this->data['jurisprudence_subcategories'] = $this->model->getJurisprudenceSubcategories($this->data['jurisprudence_category'][0]['id']);
-             if(!isset($this->data['jurisprudence_subcategories'][0]) AND $this->params[0]=='V'){
+             if(!isset($this->data['jurisprudence_subcategories'][0]) OR $this->params[0]=='V'){
                  // если нет подкатегория для выбранной получаем количество документов
                  $this->data['count'] = $this->model->getJurisprudenceNumberOfPages($this->data['jurisprudence_category'][0]['id']);
                  // получаем документы если нет подкатегорий для выбранной категории
