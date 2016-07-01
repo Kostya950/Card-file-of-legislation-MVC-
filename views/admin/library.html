@@ -9,3 +9,11 @@
         </form>
 
 </div>
+
+<?php
+if ($_FILES && isset ($_FILES['new_doc'])){?>
+    <div class="col-offset-1 col-sm-11">
+        <span class="text-success h4">Вітаємо! Ви успішно оновоили фонд літерутури.</span>
+        <a href='/pages/index/'class="btn btn-default">Головна</a>
+    </div>
+<?php }
