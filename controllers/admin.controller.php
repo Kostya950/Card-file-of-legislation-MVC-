@@ -391,4 +391,12 @@ class AdminController extends Controller
         }
 
     }
+
+    public function library()
+    {
+        if ($_FILES && isset ($_FILES['new_doc'])) {
+            $link = 'files/library' . $_POST['ch_range'] . '.xls';
+            move_uploaded_file($_FILES['new_doc']['tmp_name'], $link);
+        }
+    }
 }
