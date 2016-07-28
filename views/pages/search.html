@@ -117,7 +117,11 @@ if ($_GET) {
             echo "<br><span class='text-muted'>{$doc['notice']}</span>";?>
             <?php
                     if($_SESSION['role'] == 'logged'){
-                        echo "<form method='get' action='/manage/admin/edit_laws/{$doc['id']}'><input type='submit' class='btn btn-default btn-sm' value='Редагувати'></form>";}?></td>
+                        echo "<form method='get' style='display: inline' action='/manage/admin/edit_laws/{$doc['id']}'><input type='submit' class='btn btn-default btn-sm' value='Редагувати'></form>".
+                            "<form method='get' style='display: inline' action='/manage/admin/print_card_laws/{$doc['id']}'>
+                        <input type='submit' class='btn btn-default btn-sm' value='Друк'></form>";
+                        ;}?>
+            </td>
                         <?php echo "<td class='text-muted mrg'><b>{$doc['folder']}</b><br>{$doc['source_1']}";
             if ($doc['source_2'] != '') {
                 echo "<br>" . $doc['source_2'];
