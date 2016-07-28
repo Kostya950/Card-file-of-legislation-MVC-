@@ -342,7 +342,7 @@ class Card extends Model
 
     public function getDocJurisprudenceToPrint($id)
     {
-        $sql = "SELECT id, number, DATE_FORMAT(date,'%d.%m.%Y') AS date, source, type, publisher_1, index_1, index_2, index_3, index_4, index_5
+        $sql = "SELECT id, number, DATE_FORMAT(date,'%d.%m.%Y') AS date, title, source, type, publisher_1, index_1, index_2, index_3, index_4, index_5
         FROM file_jurisprudence_all_info WHERE id='{$id}'";
         return $this->db->query($sql);
     }
