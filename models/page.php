@@ -1135,7 +1135,7 @@ class Page extends  Model
         }
         $limit = $page * 50;
         $start = $limit - 50;
-        $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1, publisher_2
+        $sql = "SELECT id, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, source, publisher_1, publisher_2,
                    `type`, index_1, index_2, index_3, index_4, index_5, `number`, `link` FROM file_jurisprudence_all_info WHERE n_id_1 = '{$id}'
                    OR n_id_2 = '{$id}' OR n_id_3 = '{$id}' OR n_id_4 = '{$id}' OR n_id_5 = '{$id}'
                    ORDER BY date DESC LIMIT {$start}, 50";
