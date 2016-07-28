@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/jurisprudence.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" afterPath="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/jurisprudence.html" afterPath="$PROJECT_DIR$/views/admin/jurisprudence.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
+            <state vertical-scroll-proportion="-4.9215684">
               <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
               <folding>
                 <marker date="1469730218000" expanded="true" signature="2937:2952" placeholder="..." />
@@ -74,6 +73,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.9215684">
               <caret line="123" column="27" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/admin/jurisprudence.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5922975">
+              <caret line="35" column="84" selection-start-line="35" selection-start-column="84" selection-end-line="35" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -166,16 +175,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print_card_jurisprudence.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/print_card_jurisprudence.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="104" selection-start-line="5" selection-start-column="104" selection-end-line="5" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webroot/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -238,7 +237,6 @@
         <option value="$PROJECT_DIR$/views/pages/articles.html" />
         <option value="$PROJECT_DIR$/webroot/ajax/jurisprudence_publisher_date_match.php" />
         <option value="$PROJECT_DIR$/webroot/ajax/articles_author_date_match.php" />
-        <option value="$PROJECT_DIR$/views/admin/jurisprudence.html" />
         <option value="$PROJECT_DIR$/controllers/pages.controller.php" />
         <option value="$PROJECT_DIR$/views/admin/index.html" />
         <option value="$PROJECT_DIR$/views/admin/library.html" />
@@ -252,6 +250,7 @@
         <option value="$PROJECT_DIR$/models/card.php" />
         <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
+        <option value="$PROJECT_DIR$/views/admin/jurisprudence.html" />
       </list>
     </option>
   </component>
@@ -840,14 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/jurisprudence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1109,7 +1100,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
+        <state vertical-scroll-proportion="-4.9215684">
           <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
           <folding>
             <marker date="1469730218000" expanded="true" signature="2937:2952" placeholder="..." />
@@ -1122,6 +1113,14 @@
             <marker date="1469730218000" expanded="true" signature="9503:9518" placeholder="..." />
             <marker date="1469730218000" expanded="true" signature="9580:9677" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/jurisprudence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5922975">
+          <caret line="35" column="84" selection-start-line="35" selection-start-column="84" selection-end-line="35" selection-end-column="84" />
+          <folding />
         </state>
       </provider>
     </entry>
