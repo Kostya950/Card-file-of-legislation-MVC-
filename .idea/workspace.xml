@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/laws.html" afterPath="$PROJECT_DIR$/views/pages/laws.html" />
     </list>
     <ignored path="Card-file-of-legislation(MVC).iws" />
@@ -163,13 +162,15 @@
       <file leaf-file-name="laws.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3625498">
-              <caret line="89" column="157" selection-start-line="89" selection-start-column="154" selection-end-line="89" selection-end-column="157" />
+            <state vertical-scroll-proportion="0.38247013">
+              <caret line="90" column="67" selection-start-line="90" selection-start-column="67" selection-end-line="90" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#!!top" expanded="true" />
-                <marker date="1469728001000" expanded="true" signature="4739:4836" placeholder="..." />
-                <marker date="1469728001000" expanded="true" signature="5313:5563" placeholder="..." />
-                <marker date="1469728001000" expanded="true" signature="5368:5563" placeholder="..." />
+                <marker date="1469728111000" expanded="true" signature="4524:4539" placeholder="..." />
+                <marker date="1469728111000" expanded="true" signature="4719:4734" placeholder="..." />
+                <marker date="1469728111000" expanded="true" signature="4787:4884" placeholder="..." />
+                <marker date="1469728111000" expanded="true" signature="5361:5611" placeholder="..." />
+                <marker date="1469728111000" expanded="true" signature="5416:5611" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1102,13 +1103,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/pages/laws.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3625498">
-          <caret line="89" column="157" selection-start-line="89" selection-start-column="154" selection-end-line="89" selection-end-column="157" />
+        <state vertical-scroll-proportion="0.38247013">
+          <caret line="90" column="67" selection-start-line="90" selection-start-column="67" selection-end-line="90" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#!!top" expanded="true" />
-            <marker date="1469728001000" expanded="true" signature="4739:4836" placeholder="..." />
-            <marker date="1469728001000" expanded="true" signature="5313:5563" placeholder="..." />
-            <marker date="1469728001000" expanded="true" signature="5368:5563" placeholder="..." />
+            <marker date="1469728111000" expanded="true" signature="4524:4539" placeholder="..." />
+            <marker date="1469728111000" expanded="true" signature="4719:4734" placeholder="..." />
+            <marker date="1469728111000" expanded="true" signature="4787:4884" placeholder="..." />
+            <marker date="1469728111000" expanded="true" signature="5361:5611" placeholder="..." />
+            <marker date="1469728111000" expanded="true" signature="5416:5611" placeholder="..." />
           </folding>
         </state>
       </provider>
