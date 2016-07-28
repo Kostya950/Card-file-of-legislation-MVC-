@@ -159,7 +159,7 @@ class Card extends Model
 
     public function createOrReplaceJurisprudenceView()
     {
-        return $this->db->query("CREATE OR REPLACE VIEW file_jurisprudence_all_info AS SELECT fj.id, fj.date, fj.number, fj.title, fj.source, fj.publisher_1,
+        return $this->db->query("CREATE OR REPLACE VIEW file_jurisprudence_all_info AS SELECT fj.id, fj.date, fj.number, fj.title, fj.source, fj.publisher_1, fj.publisher_2,
             tj.type, fj.type AS type_id, fj.link, ca_1.index AS index_1, ca_2.index AS index_2,
             ca_3.index AS index_3, ca_4.index AS index_4, ca_5.index AS index_5, fj.id_1 AS n_id_1, fj.id_2 AS n_id_2, fj.id_3 AS n_id_3,
             fj.id_4 AS n_id_4, fj.id_5 AS n_id_5 FROM file_jurisprudence fj
@@ -417,6 +417,7 @@ class Card extends Model
         $id_4 = (int)$data['id_4'];
         $id_5 = (int)$data['id_5'];
         $publisher_1 = $data['publisher_1'];
+        $publisher_2 = $data['publisher_2'];
         $type = $data['type'];
         $date = $data['date'];
         $title = $this->db->escape($data['title']);
@@ -424,8 +425,8 @@ class Card extends Model
         $number = $data['number'];
         $link = $data['link'];
 
-        $sql = "INSERT INTO `file_jurisprudence` (`publisher_1`, `type`, `date`, `title`,
-            `source`, `id_1`, `id_2`, `id_3`, `id_4`, `id_5`, `number`, `link`) VALUES ('{$publisher_1}', '{$type}', '{$date}', '{$title}',
+        $sql = "INSERT INTO `file_jurisprudence` (`publisher_1`,`publisher_2`, `type`, `date`, `title`,
+            `source`, `id_1`, `id_2`, `id_3`, `id_4`, `id_5`, `number`, `link`) VALUES ('{$publisher_1}', '{$publisher_2}','{$type}', '{$date}', '{$title}',
             '{$source}', '{$id_1}', '{$id_2}', '{$id_3}',
             '{$id_4}', '{$id_5}', '{$number}', '{$link}')";
         return $this->db->query($sql);
