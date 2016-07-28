@@ -45,12 +45,10 @@ $p = new Pagination(array(
                             } else { ?>
                                 <span class='text-info'><?=$doc['title']?></span><?php
                             } ?>
-                            <br><br><span class='h6'><?=$doc['publisher_1']?>
-                                   </span> <?php if($doc['publisher_2']!=''){
-                                echo",";?>
+                            <br><span class='h6'><?=$doc['publisher_1']?>
+                                   </span>,
                                 <span class='h6'><?=$doc['publisher_2']?>
                                 </span>
-                            <?php } ?>
                                    </span><span class='text-muted h6'> <?=$doc['source']?></span><br>
                             <?php
                             if($_SESSION['role'] == 'logged'){
@@ -103,11 +101,9 @@ $p = new Pagination(array(
                                 <span class='text-info'><?=$doc['title']?></span><?php
                             } ?>
                             <br><span class='h6'><?=$doc['publisher_1']?>
-                                   </span> <?php if($doc['publisher_2']!=''){
-                                echo",";?>
+                                   </span>,
                                 <span class='h6'><?=$doc['publisher_2']?>
                                 </span>
-                            <?php } ?>
 
 
                             <span class='text-muted h6'> <?=$doc['source']?></span><br>
@@ -157,12 +153,10 @@ $p = new Pagination(array(
                             } else { ?>
                                 <span class='text-info'><?=$doc['title']?></span><?php
                             } ?>
-                            <br><br><span class='h6'><?=$doc['publisher_1']?>
-                                   </span> <?php if($doc['publisher_2']!=''){
-                                echo",";?>
+                            <br><span class='h6'><?=$doc['publisher_1']?>
+                                   </span>,
                                 <span class='h6'><?=$doc['publisher_2']?>
                                 </span>
-                            <?php } ?>
                                    </span><span class='text-muted h6'> <?=$doc['source']?></span><br>
                             <?php
                             if($_SESSION['role'] == 'logged'){
