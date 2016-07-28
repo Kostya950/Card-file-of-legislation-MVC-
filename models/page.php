@@ -1037,7 +1037,7 @@ class Page extends  Model
         }
         $limit = $page * 50;
         $start = $limit - 50;
-        $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
+        $sql = "SELECT id, number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
                     publisher_2, publisher_3, publisher_4,source_1, source_2, source_3, source_4, folder FROM file_laws_all_info
                     WHERE id_1 = '{$id}'
                     OR id_2 = '{$id}' OR id_3 = '{$id}' OR id_4 = '{$id}'
@@ -1055,7 +1055,7 @@ class Page extends  Model
         }
         $limit = $page * 50;
         $start = $limit - 50;
-        $sql = "SELECT number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
+        $sql = "SELECT id, number, DATE_FORMAT(date,'%d.%m.%Y') AS nice_date, title, link, type, publisher_1,
                     publisher_2, publisher_3, publisher_4,source_1, source_2, source_3, source_4, folder FROM file_laws_all_info
                     WHERE sub_id_1 = '{$sub_id}'
                     OR sub_id_2 = '{$sub_id}' OR sub_id_3 = '{$sub_id}' OR sub_id_4 = '{$sub_id}'
