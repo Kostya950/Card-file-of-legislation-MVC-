@@ -21,9 +21,12 @@
                 <td><input id="date" class="form-control" type="text" name="number" value="<?=$data['editable_card'][0]['number']?>"></td>
             </tr>
             <tr>
-                <td rowspan="1" class="add_marg_left"><label for="publisher"><b>Видавник:<sup>*</sup></b></label></td>
+                <td rowspan="2" class="add_marg_left"><label for="publisher"><b>Видавник:<sup>*</sup></b></label></td>
                 <td>
                     <textarea class="form-control ta" rows="3" cols="40" id="publisher" required name="publisher_1"><?=$data['editable_card'][0]['publisher_1']?></textarea>
+            </tr>
+            <tr>
+                <td><textarea class="form-control ta" rows="3" cols="40" id="publisher" name="publisher_2"><?=$data['editable_card'][0]['publisher_2']?></textarea></td>
             </tr>
             <tr>
                 <td class="add_marg_left"><label for="id"><b>Індекс розмітки:<sup>*</sup></b></label></td>
