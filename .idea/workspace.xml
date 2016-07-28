@@ -35,31 +35,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="jurisprudence.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8235292">
-              <caret line="151" column="177" selection-start-line="151" selection-start-column="171" selection-end-line="151" selection-end-column="177" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
               <folding>
-                <marker date="1469730141000" expanded="true" signature="3158:3173" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="3235:3332" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="6458:6473" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="6535:6632" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="9431:9446" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="9508:9605" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="2937:2952" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="3182:3197" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="3259:3356" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="6253:6268" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="6506:6521" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="6583:6680" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="9250:9265" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="9503:9518" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="9580:9677" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_jurisprudence.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search_jurisprudence.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="100" column="165" selection-start-line="100" selection-start-column="159" selection-end-line="100" selection-end-column="165" />
+            <state vertical-scroll-proportion="-4.9215684">
+              <caret line="100" column="189" selection-start-line="100" selection-start-column="183" selection-end-line="100" selection-end-column="189" />
               <folding>
-                <marker date="1469730141000" expanded="true" signature="4609:4624" placeholder="..." />
-                <marker date="1469730141000" expanded="true" signature="4686:4783" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="4404:4419" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="4633:4648" placeholder="..." />
+                <marker date="1469730218000" expanded="true" signature="4710:4807" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -246,8 +250,8 @@
         <option value="$PROJECT_DIR$/webroot/index.php" />
         <option value="$PROJECT_DIR$/controllers/admin.controller.php" />
         <option value="$PROJECT_DIR$/models/card.php" />
-        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
         <option value="$PROJECT_DIR$/views/pages/search_jurisprudence.html" />
+        <option value="$PROJECT_DIR$/views/pages/jurisprudence.html" />
       </list>
     </option>
   </component>
@@ -575,7 +579,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3004292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3004292" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1091,28 +1095,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
+    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8235292">
-          <caret line="151" column="177" selection-start-line="151" selection-start-column="171" selection-end-line="151" selection-end-column="177" />
+        <state vertical-scroll-proportion="-4.9215684">
+          <caret line="100" column="189" selection-start-line="100" selection-start-column="183" selection-end-line="100" selection-end-column="189" />
           <folding>
-            <marker date="1469730141000" expanded="true" signature="3158:3173" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="3235:3332" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="6458:6473" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="6535:6632" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="9431:9446" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="9508:9605" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="4404:4419" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="4633:4648" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="4710:4807" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/pages/search_jurisprudence.html">
+    <entry file="file://$PROJECT_DIR$/views/pages/jurisprudence.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
-          <caret line="100" column="165" selection-start-line="100" selection-start-column="159" selection-end-line="100" selection-end-column="165" />
+          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
           <folding>
-            <marker date="1469730141000" expanded="true" signature="4609:4624" placeholder="..." />
-            <marker date="1469730141000" expanded="true" signature="4686:4783" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="2937:2952" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="3182:3197" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="3259:3356" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="6253:6268" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="6506:6521" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="6583:6680" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="9250:9265" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="9503:9518" placeholder="..." />
+            <marker date="1469730218000" expanded="true" signature="9580:9677" placeholder="..." />
           </folding>
         </state>
       </provider>
