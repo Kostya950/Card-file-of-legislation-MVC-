@@ -181,8 +181,8 @@ class AdminController extends Controller
 
     public function print_card_jurisprudence()
     {
-        //$params = App::getRouter()->getParams();
-        //$this->data['doc_to_print'] = $this->model->getDocJurisprudenceToPrint($params[0]);
+        $params = App::getRouter()->getParams();
+        $this->data['doc_to_print'] = $this->model->getDocJurisprudenceToPrint($params[0]);
     }
 
     // раздел для добавления публикций с правовой тематики
