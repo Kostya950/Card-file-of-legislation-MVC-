@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="750105f9-2b54-4166-b136-8b55cdc0cd40" name="Default" comment="" />
     <ignored path="Card-file-of-legislation(MVC).iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,16 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/admin.controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="344" column="36" selection-start-line="344" selection-start-column="36" selection-end-line="344" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/page.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,6 +117,26 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.375">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -190,59 +197,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="card.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/card.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="463" column="30" selection-start-line="463" selection-start-column="30" selection-end-line="463" selection-end-column="30" />
-              <folding>
-                <marker date="1469732801000" expanded="true" signature="167:209" placeholder="SELECT COUNT... file_laws" />
-                <marker date="1469732801000" expanded="true" signature="316:362" placeholder="SELECT COUNT... file_articles" />
-                <marker date="1469732801000" expanded="true" signature="474:527" placeholder="SELECT COUNT... file_jurisprudence" />
-                <marker date="1469732801000" expanded="true" signature="652:712" placeholder="UPDATE `coun... " />
-                <marker date="1469732801000" expanded="true" signature="777:804" placeholder="SELECT `coun... count" />
-                <marker date="1469732801000" expanded="true" signature="915:988" placeholder="SELECT `id`,... classifier_laws" />
-                <marker date="1469732801000" expanded="true" signature="1102:1174" placeholder="SELECT `id`,... publishers_laws" />
-                <marker date="1469732801000" expanded="true" signature="1283:1333" placeholder="SELECT * FRO... type_laws_acts" />
-                <marker date="1469732801000" expanded="true" signature="1444:1471" placeholder="SELECT * FRO... folder_laws" />
-                <marker date="1469732801000" expanded="true" signature="6044:6146" placeholder="SELECT `inde... classifier_articles" />
-                <marker date="1469732801000" expanded="true" signature="6259:6313" placeholder="SELECT * FRO... type_articles_acts" />
-                <marker date="1469732801000" expanded="true" signature="7344:7427" placeholder="SELECT `inde... classifier_jurisprudence" />
-                <marker date="1469732801000" expanded="true" signature="7344:7428" placeholder="SELECT `inde... classifier_jurisprudence" />
-                <marker date="1469732801000" expanded="true" signature="7344:7462" placeholder="SELECT `inde... classifier_jurisprudence" />
-                <marker date="1469732801000" expanded="true" signature="7580:7639" placeholder="SELECT * FRO... type_jurisprudence_acts" />
-                <marker date="1469732801000" expanded="true" signature="10688:12036" placeholder="INSERT INTO `file_laws`... " />
-                <marker date="1469732801000" expanded="true" signature="12150:12277" placeholder="SELECT * FRO... file_laws_all_info" />
-                <marker date="1469732801000" expanded="true" signature="12386:12428" placeholder="SELECT * FRO... file_laws" />
-                <marker date="1469732801000" expanded="true" signature="12545:12619" placeholder="SELECT `id`,... classifier_laws" />
-                <marker date="1469732801000" expanded="true" signature="12767:12811" placeholder="DELETE FROM " />
-                <marker date="1469732801000" expanded="true" signature="14851:16206" placeholder="UPDATE `file... " />
-                <marker date="1469732801000" expanded="true" signature="16316:16946" placeholder="SELECT id, n... " />
-                <marker date="1469732801000" expanded="true" signature="17069:17261" placeholder="SELECT id, n... " />
-                <marker date="1469732801000" expanded="true" signature="17799:18098" placeholder="INSERT INTO file_articles... " />
-                <marker date="1469732801000" expanded="true" signature="18216:18375" placeholder="SELECT * FRO... file_articles_all_info" />
-                <marker date="1469732801000" expanded="true" signature="18487:18537" placeholder="SELECT * FRO... file_articles" />
-                <marker date="1469732801000" expanded="true" signature="18648:18696" placeholder="DELETE FROM " />
-                <marker date="1469732801000" expanded="true" signature="19238:19587" placeholder="UPDATE `file... " />
-                <marker date="1469732801000" expanded="true" signature="20191:20551" placeholder="INSERT INTO `file_jurisprudence`... " />
-                <marker date="1469732801000" expanded="true" signature="20674:20840" placeholder="SELECT * FRO... file_jurisprudence_all_info" />
-                <marker date="1469732801000" expanded="true" signature="20957:21012" placeholder="SELECT * FRO... file_jurisprudence" />
-                <marker date="1469732801000" expanded="true" signature="21128:21181" placeholder="DELETE FROM " />
-                <marker date="1469732801000" expanded="true" signature="21852:22244" placeholder="UPDATE `file... " />
-                <marker date="1469732801000" expanded="true" signature="22353:22428" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1469732801000" expanded="true" signature="22596:22688" placeholder="INSERT INTO `new_legislative_acts_range_date`... " />
-                <marker date="1469732801000" expanded="true" signature="22888:22981" placeholder="UPDATE `new_... " />
-                <marker date="1469732801000" expanded="true" signature="23090:23143" placeholder="SELECT * FRO... type_laws_acts" />
-                <marker date="1469732801000" expanded="true" signature="23257:23302" placeholder="SELECT * FRO... new_legislative_acts_publishers" />
-                <marker date="1469732801000" expanded="true" signature="23416:23461" placeholder="SELECT * FRO... new_legislative_acts_range_date" />
-                <marker date="1469732801000" expanded="true" signature="24021:24287" placeholder="INSERT INTO `new_legislative_acts`... " />
-                <marker date="1469732801000" expanded="true" signature="24441:24495" placeholder="SELECT * FRO... users" />
-                <marker date="1469732801000" expanded="true" signature="24748:24842" placeholder="INSERT INTO `users`... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -258,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controllers/administration.controller.php" />
         <option value="$PROJECT_DIR$/views/administration.html" />
         <option value="$PROJECT_DIR$/views/administrate.html" />
         <option value="$PROJECT_DIR$/views/administration/index.html" />
@@ -285,7 +238,6 @@
         <option value="$PROJECT_DIR$/views/admin/new_acts.html" />
         <option value="$PROJECT_DIR$/webroot/css/style.css" />
         <option value="$PROJECT_DIR$/views/admin/registration.html" />
-        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/controllers/users.controller.php" />
         <option value="$PROJECT_DIR$/webroot/js/laws_search.js" />
         <option value="$PROJECT_DIR$/views/pages/search_articles.html" />
@@ -309,6 +261,8 @@
         <option value="$PROJECT_DIR$/models/page.php" />
         <option value="$PROJECT_DIR$/views/default.html" />
         <option value="$PROJECT_DIR$/views/manage.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/config.php" />
       </list>
     </option>
   </component>
@@ -366,6 +320,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Card-file-of-legislation(MVC)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,7 +419,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -481,13 +449,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webroot/js/jurisprudence_js_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/app.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.916667">
@@ -583,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -965,10 +919,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
         </state>
       </provider>
