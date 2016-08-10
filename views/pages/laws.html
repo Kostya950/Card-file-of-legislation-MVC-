@@ -20,8 +20,13 @@ $p = new Pagination(array(
                 <td class='td_view_numbering'><?=$item['index']?>.</td>
                 <td class='td_view_content'><a href='/pages/laws/<?=$item['index']?>'><?=$item['title']?></td>
             </tr><?php
-        }
-    } elseif (isset($params[0]) AND !isset($params[1])) { ?>
+        }?>
+        <tr>
+            <td></td>
+            <td class="td_view_content"><a href="http://pravo.pe.hu/pages/search/?title=&category=&type=&publisher=21&date_start=&date_end=&number=">Накази Генерального прокурора України</a> </td>
+        </tr>
+
+    <?php } elseif (isset($params[0]) AND !isset($params[1])) { ?>
         <tr>
             <th class='td_view_h2' colspan='2'><?=$data['laws_category'][0]['index']?>. <?=$data['laws_category'][0]['title']?></th>
         </tr><?php
