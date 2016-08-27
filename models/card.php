@@ -467,7 +467,7 @@ class Card extends Model
         $number = $data['number'];
         $link = $data['link'];
 
-        $sql = "UPDATE `file_jurisprudence` SET `publisher_1` = '{$publisher_1}', `publisher_2` = '{$publisher_2}'
+        $sql = "UPDATE `file_jurisprudence` SET `publisher_1` = '{$publisher_1}', `publisher_2` = '{$publisher_2}',
                `type` = '{$type}',`date` = '{$date}', `title`='{$title}', `source`='{$source}',
                `id_1`='{$id_1}', `id_2`='{$id_2}', `id_3`='{$id_3}', `id_3`='{$id_3}',
                `id_4`='{$id_4}', `id_5`='{$id_5}', `number`='{$number}', `link`='{$link}' WHERE `id` = '{$id}'";
