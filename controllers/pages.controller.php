@@ -18,6 +18,13 @@
      public function index()
      {
      }
+
+     public function robots(){
+         header('Content-type: text/pain');
+         echo "User-agent: *
+Disallow: ";
+
+     }
      // раздел поиска законодательных актов
      public function search()
      {
