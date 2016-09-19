@@ -1,5 +1,4 @@
-<?php
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+<?php $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
 $p = new Pagination(array(
     'itemsCount' => $data['count'][0]['cnt'],
@@ -7,6 +6,11 @@ $p = new Pagination(array(
     'currentPage' => $page
 ));
 ?>
+<script>
+    function copyDate(){
+        alert($('#date_start'));
+    }
+</script>
 <table class="categoriesTxt nav_bar">
     <tr>
         <td colspan="2" class="btns_search">
@@ -69,7 +73,7 @@ $p = new Pagination(array(
             <td class="btns_search first_td"><label for="date_start">Дата прийняття:</label></td>
             <td class="text-left">
                 <label for="date_start"> від </label> <input type="date" id="date_start" class="publ date" name="date_start">
-                <label for="date_end"> <span onclick="copyDate()">до</span> </label> <input type="date" id="date_end" class="publ date" name="date_end">
+                <label for="date_end"> <span onclick="copyDate()"> до </span></label> <input type="date" id="date_end" class="publ date" name="date_end">
             </td>
         </tr>
         <tr>
