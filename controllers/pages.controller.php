@@ -19,6 +19,11 @@
      {
      }
 
+     public function top_secret()
+     {
+        $this->data['docs']=$this->model->getTopSecretDocs();
+     }
+
      // раздел поиска законодательных актов
      public function search()
      {

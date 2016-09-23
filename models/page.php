@@ -1167,6 +1167,14 @@ class Page extends  Model
         return $this->db->query($sql);
     }
 
+    public function getTopSecretDocs()
+    {
+        $sql = "SELECT `id`, `number`, DATE_FORMAT(`date`,'%d.%m.%Y') AS `nice_date`, `title`, `link`, type, `publisher_1`,
+                    `publisher_2`, `publisher_3`, `publisher_4`, `source_1`, `source_2`, `source_3`, `source_4`, `folder`
+                    FROM `file_laws_all_info` WHERE `folder`='ДСК' ORDER BY `date` DESC";
+        return $this->db->query($sql);
+    }
+
 
 
 
